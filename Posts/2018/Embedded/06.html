@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>임베디드 개발 과정 3교시</title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="sider"></div>
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+        <div class="main-title">
+          <h1>임베디드 개발 과정 3교시 </h1>
+          <h2>임베디드 시스템</h2>
+          <p class="main-title-time">작성일 : 2018-03-14</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+<p class="posts">
+  <font style="font-weight:600; font-size:32px;"> 임베디드 개발과정</font><br>
+1.요구 분석 -> 어떤기능을 구현 하는가<br>
+2. Digtal System 구성 결정 -> 구현하기 위한 H.W결정<br>
+3. Digtal System 회로 설계 -> 회로 설계, 제작<br>
+4. 상태도기반 제어 프로그램 의 설계 제작 -> 알고리즘 설계 프로그램 제작<br>
+5. 컴파일, 파일생성<br>
+6. 다운로드<br>
+7. 디버깅<br>
+<br>
+실행파일 = 실행코드+ 디버깅...등 여러 정보가 내장 되어 있음.<br>
+ELF =유닉스,리눅스 실행파일 (.EXE 같은것)<br>
+HEX =실행파일에서 실행 코드만 뽑은것.<br>
+  <br>
+<font style="font-weight:600; font-size:32px;"> 최적화 설정</font><br>
+-O0 = 최적화 하지 않음 [High Level Languge]<br>
+-0,O1 = 기본 최적화<br>
+-O2 = -O1보다 더 최적화<br>
+[실행속도 + 프로그램 길이를 절충해서 최적화 함]<br>
+-O3 = 실행속도 최적화<br><br>
+[함수코드를 프로그램 내부로 포함 => 코드가 길어짐 => 프로그램 용량이 커질수 있다.] <br>
+-O4 = 프로그램 크기를 줄인다.<br>
+[실행속도 상관 않함]<br><br>
+<font style="font-weight:600; font-size:32px;color:#F361DC;"> 최적화 설정<br>
+*중요{<br>
+인터럽트 안에서 일어나는 변수는 Volatile 선언을 해줘야한다.<br>
+최적화에 따른 비동기적 문제를 해결하기 위해서 최적화에서 제외해줘야 함.<br>
+}
+  </font><br>
+
+        </p>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Embedded/05/00.jfif?raw=true" ><br>
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+  <div id="footers"></div>
+</body>
+</html>

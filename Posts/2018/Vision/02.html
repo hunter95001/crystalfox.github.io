@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>해상도 </title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sider"></div>
+
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+
+
+        <div class="main-title">
+          <h1>해상도 </h1>
+          <h2>Computer Vision</h2>
+          <p class="main-title-time">작성일 : 2018-09-12</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+ <p class="posts">
+<h3>해상도</h3>
+<h3>영상 해상도</h3>
+-영상을 구성하는 픽셀의 수<br>
+<h3>픽셀 해상도</h3>
+픽셀에 표현 할 수 있는 비트 수<br>
+
+<h3>화면 해상도</h3>
+화면에 표시 할 수 있는 최대 픽셀수<br>
+<br>
+<h3>양자화</h3>
+샘플링된 포인터 값을 이진수로 바꾸는것. <br>
+<br>
+C,C++을 포인터를 사용해서 구현한다면<br>
+1. 동적 바인딩  -구조체를 사용해서 포인터를 사용함<br>
+2. 정적 바인딩 -포인터배열을 이용해서 포인터에 포인터를 적용합니다.<br>
+</p>
+
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

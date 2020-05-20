@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>인공지능 보안 논문 리뷰 </title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="sider"></div>
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+        <div class="main-title">
+          <h1>인공지능 보안 논문 리뷰</h1>
+          <h2>Security</h2>
+          <p class="main-title-time">작성일 : 2020-03-30</p>
+        </div>
+        <hr>
+    <!--  본문 시작-->
+    
+<p class="posts">
+1. Explaining and Harnessing Adversarial Examples (ICLR 2015)<br>
+- Adversarial Examples가 존재하는 이유(뉴럴 네트워크 모델의 선형성)에 대해서 설명<br>
+- Adversarial Examples를 빠르게 만드는 방법(FGSM)을 제안
+</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/99uxhAjNwps" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p class="posts">
+2. Towards Evaluating the Robustness of Neural Networks (S&P 2017)<br>
+- Norm 기반의 매우 강력한 Adversararial Examples을 만드는 방법(CW Attack)에 대해서 소개<br>
+- 기존에 존재하던 방어 기법(Defensive Distillation)의 한계점을 지적하고 뚫음
+</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9kRWHKPyfwQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p class="posts">
+3. Towards Deep Learning Models Resistant to Adversarial Attacks (ICLR 2018)<br>
+- Adversarial Examples에 대항하기 위한 효과적인 학습 방법(PGD Adversarial Training) 제안<br>
+- 아직까지 살아 남은 몇 안 되는 휴리스틱한 방어 기법
+</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6RBpdAC9nwY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p class="posts">
+4. Adversarial Examples Are Not Bugs, They Are Features (NIPS 2019)<br>
+- Adversarial Examples을 Non-robust Features의 일종으로 보는 새로운 시각 제시<br>
+- Robust Dataset과 Non-robust Dataset을 분리할 수 있음을 보임
+</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Y7O47Kq8pmU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p class="posts">
+5. Certified Robustness to Adversarial Examples with Differential Privacy (S&P 2019)<br>
+- Differential Privacy의 개념을 이용해, 수학적으로 '증명된' Norm 기반의 방어 방법(Pixel DP) 제안<br>
+- 증명론적인 논문 중에서 상당히 읽기 쉬우며 재미있는 논문
+</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ySJUlEVlXfk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p class="posts">
+6. Obfuscated Gradients Give a False Sense of Security (ICML 2018)<br>
+- 2018년 이전에 등재된 상당수 방어 기법들이 가지는 문제점을 정리 및 지적<br>
+- Adversarial Training을 제외한 사실상 대부분의 방어 기법을 뚫음<br>
+- 미분이 불가능한 연산을 우회하여 뚫는 BPDA 제안
+</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0O_Bxln9bTw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p class="posts">
+7. Constructing Unrestricted Adversarial Examples with Generative Models (NIPS 2018)<br>
+- Norm 기반이 아닌 제약 조건이 없는(Unrestricted) 공격을 제안<br>
+- 기존에 존재하던 강력한 방어 방법(Adversarial Training, Certifed Defense 등)을 뚫음
+</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IDtaVjJoV4g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+<h2 class="posts">출처</h2>
+	   <a class=" posts" href="
+  https://www.facebook.com/groups/TensorFlowKR/permalink/1155349004806156/
+  " target="_blank">
+           <img class="link"src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/link-icon.png?raw=true">
+          https://www.facebook.com/groups/TensorFlowKR/permalink/1155349004806156/
+	   </a>
+ <br>
+           
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+  <div id="footers"></div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Github[Git Bash] 처음 사용법</title>
+  <link rel="stylesheet" type="text/css" href="../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../CSS/Post.css">
+   <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="sider"></div>
+
+
+    <div id="main-wrapper">
+      <!--  본문 시작-->
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="container" style="display: block;"></div>
+      <div class="main-post">
+
+        <div class="main-title">
+          <h1>Github[Git Bash] 처음 사용법 </h1>
+          <h2>GitHub</h2>
+          <p class="main-title-time">작성일 : 2019-01-06</p>
+        </div>
+        <hr>
+
+        <div class="main-post-text">
+
+          <h3 class="posts"> Step#1</h3>
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/01/00.jpg?raw=true"><br>
+            <p class="posts">01. GitHub에 있는 자료를 받거나[clone] 올릴때[push] 사용할 폴더를 생성 해줍니다.</p>
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/01/01.jpg?raw=true"><br>
+            <p class="posts">02. Github 사이트에 가서 Respoitories에서 새로 만듬(new)</p>
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/01/02.jpg?raw=true"><br>
+            <p class="posts">03. Respository 의 이름을 정해줍니다 [저는 Test로 생성]<br>
+            -Desciption은 이 Respository에 대한 설명으로 통과 하셔도 상관없습니다<br>
+            -Private은 유료이기 때문에 Public으로 실행합니다.
+            </p>
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/01/03.jpg?raw=true"><br>
+            <p class="posts">04. 생성이 완료되면 https라는 깃의 사이트 주소가 나올겁니다.</p>
+
+            <h3 class="posts"> Step#2</h3>
+            <p class="posts">
+            cd e:/crystalfox.github.io <br >
+            ls -al <br >
+            git init<br >
+            git add .<br >
+            git config --global user.email hunter95001@naver.com<br >
+            git config --global user.name hunter95001<br >
+            git commit -m "crystalfox"<br >
+            git remote add origin https://github.com/hunter95001/crystalfox.github.io.git<br >
+            git push -u origin master
+            </p>
+
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/01/00.png?raw=true">
+            <p class="posts">cd e:/crystalfox.github.io<br>
+            -cd "경로"  리눅스 이동 명령어 입니다.
+            -업로드할 경로를 설정해 주세요 [d:/ <-D 드라이버] x:/ x드라이버로 이동]</p>
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/01/01.png?raw=true">
+            <p class="posts">git init<br>
+            -비어있는 레포지토리를 초기화 합니다 <br>
+            -git init을 하시면 그림과 같이 숨긴폴더로 .git이 생성됩니다. </p>
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/01/02.png?raw=true">
+            <p class="posts">ls -al<br>
+            -폴더에 있는 목록을 보는 리눅스 명령어 입니다.</p>
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/01/03.png?raw=true">
+            <p class="posts">git status<br>
+            -폴더에 있는 목록의 상태를 보는 명령어 입니다<br>
+            -변경되어 있는 자료는 붉은색 입니다.</p>
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/01/04.png?raw=true">
+            <p class="posts">git add .[git add *]<br>
+            -변경되어 있는 상태를 추가하는 명령어 입니다.<br>
+            -add 뒤에 띄어쓰기 입니다[add.(X) add .(o)]
+            -add *과 같은 명령어 입니다.</p>
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/01/05.png?raw=true">
+            <p class="posts">git status<br>
+            -폴더에 있는 목록의 상태를 보는 명령어 입니다<br>
+            -추가되어서 푸른색 입니다.</p>
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/01/06.png?raw=true">
+            <p class="posts">
+            git config --global user.email hunter95001@naver.com<br>
+            git config --global user.name crystalfox<br>
+            -git config --global user.email "유저 이메일"<br>
+            -git config --global user.name "유저 이름"</p>
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/01/07.png?raw=true">
+            <p class="posts">git commit -m "crystalfox"<br>
+            -git commit -m "메시지"<br>
+            -push 하기 전에 변경된 상태까지의 변경 이력을 기록합니다.<br>
+            -이전 까지의 추가된 폴더를 저장소에 저장하고 그 저장소를 Git에 올린다고 생각하시면 됩니다.</p>
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/01/08.png?raw=true">
+            <p class="posts"> git commit -m "메시지"<br>
+            -git config --global user.email "유저 이메일",git config --global user.name "유저 이름"을 설정하지 않은 경우 오류입니다.<br>
+            -git config --global user.email "유저 이메일",it config --global user.name "유저 이름"을 설정해 주세요</p>
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/01/09.png?raw=true">
+            <p class="posts">git status<br>
+            -폴더에 있는 목록의 상태를 보는 명령어 입니다<br>
+            -Commit이 완료되어 있거나 작업이 이루어져 있지 않는 경우 아무것도 보이지 않습니다.</p>
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/01/10.png?raw=true">
+            <p class="posts">git remote add origin https://github.com/hunter95001/crystalfox.github.io.git<br>
+            -git remote add origin "레포지토리주소."<br>
+            -폴더에 있는 목록의 상태를 보는 명령어 입니다<br>
+            -Commit이 완료되어 있거나 작업이 이루어져 있지 않는 경우 아무것도 보이지 않습니다.</p>
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/01/11.PNG?raw=true">
+            <p class="posts">git remote add -v<br>
+            -현재 연결되어 있는 레포지토리 주소를 보는 명령어 입니다.<br>
+            -폴더에 있는 목록의 상태를 보는 명령어 입니다<br>
+            -Commit이 완료되어 있거나 작업이 이루어져 있지 않는 경우 아무것도 보이지 않습니다.</p>
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/01/12.PNG?raw=true">
+            <p class="posts">git push -u origin master<br>
+            -commit 되어있는 저장소를 레포지토리에 올리는 명령어 입니다.</p>
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/01/13.PNG?raw=true">
+            <p class="posts">GitHub Login<br>
+            -GitHub에 로그인 해주셔야 합니다.</p>
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/01/14.PNG?raw=true">
+            <p class="posts">git push -u origin master<br>
+            -에러가 발생한 경우입니다.<br>
+            -강제로 push해줘야 합니다.</p>
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/01/15.PNG?raw=true">
+            <p class="posts">git push origin +master<br>
+            -강제로 push 해줄 경우 정상적으로 업로드 가능합니다.</p>
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/01/16.PNG?raw=true">
+            <p class="posts">git status 에러<br>
+            -git init이 없을 경우 git status를 사용할 경우 에러가 발생 합니다.</p>
+
+
+
+        </div>
+      </div><!--  본문 끝-->
+    </div>
+    <div id="footers"></div>
+</body>

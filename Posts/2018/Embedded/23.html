@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Motor</title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Attach.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="sider"></div>
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+        <div class="main-title">
+          <h1>Motor</h1>
+          <h2>임베디드 시스템</h2>
+          <p class="main-title-time">작성일 : 2018-05-15</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+        <a href="https://github.com/hunter95001/Embedded/blob/master/23/es-lecture-11.pdf"><div  class ="attachment"><img  class="icon" align="left"  src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Folder.png?raw=true" > 
+		<font class="attach-text">es-lecture-11</font><img class="icon" align="right"src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/File.png?raw=true" ></div></a> 
+        <p class="posts">
+        전기에너지를 운동에너지로 바꾸는 것을 모터라고합니다.<br>
+<br>
+전원을 어떤거 사용하는지에 대해서 AC모터 DC모터<br>
+        </p>
+           <h2 class="posts">모터</h2>
+        <p class="posts">
+모터 외벽은 자석으로 감싸져 있습니다.<br>
+전원을 공급하면 코일에 자기장이 형성 되고<br>
+자기장에 의해서 끌어당기고 미는 힘에 대해서 모터가 돌아갑니다.<br>
+역 전류를 흡수하도록 만든 브러쉬가 있습니다.<br>
+        </p>
+        
+        <table>
+	<tbody>
+              <tr>
+                <td>AC 모터</td>
+                <td>DC 모터</td> 
+                  <td>BLDC 모터</td>
+                <td>Servo 모터</td> 
+                  <td>Sepping 모터</td>
+                <td>	Geared 모터</td> 
+              </tr> 
+           </tbody> 
+          <tbody>
+              <tr>
+                <td></td>
+                <td></td> 
+                  <td>정교하고 파워가 좀더 쌔다.<br>
+제어가 복잡하고 엄청 작음<br>
+대형화가 안됨.<br>
+소형화 위주</td>
+                <td>각도 제어가 가능하다<br>
+DC에 컨트롤러 적용해서<br>
+일정 단위로 이동하게 만든 것이다.</td> 
+                  <td>계단.<br>
+단계 단계 회전하며 제어할수 있음.</td>
+                <td>토크 = 모터가 회전하는 힘<br>
+모터가 회전하면 힘이없음</td> 
+              </tr> 
+           </tbody> 
+          <tbody>
+              <tr>
+                <td>선풍기</td>
+                <td></td> 
+                  <td>전동치솔<br>
+하드디스크 드라이버<br>
+드론<br>
+무선 청소기
+</td>
+                <td></td> 
+                  <td></td>
+                <td></td> 
+              </tr> 
+           </tbody> 
+
+ </table><br />
+        <p class="posts">
+        Transistor[TR] =전기소자의 기본.<br>
+전류의 흐름에 따라 스위칭[on(흐르게 하거나),off(차단하거나)], 증폭 동작<br>
+        </p>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Embedded/23/00.png?raw=true"><br>
+            <p class="posts">
+      B에 흐르는 전류를 10mA 가 들어오면 최대 100mA까지 흘릴수 있다.<br>
+일정수준이상 전류이득을 받으면 전류가 증폭된다.<br>
+크기 이하의 전류를 보내면
+              <br>
+        </p>
+        <h2 class="posts">TR의 기본 동작</h2>
+        <table>
+	<tbody>
+              <tr>
+                <td>DC 모터</td> 
+                  <td>차단</td>
+                <td>	포화</td> 
+              </tr> 
+           </tbody> 
+           	<tbody>
+              <tr>
+                <td>차단영역 보다 많고<br>
+포화 기준 보다 적은<br>
+전력이 흐를때.</td> 
+                  <td>	차단 영역 이하의 전류를 흘리면 더이상 흐르지 않음</td>
+                <td>	
+어느 기준 이상의 전류가 흐르면 더이상 전류를 증폭 시키지 않음<br>
+전류양을 유지함.</td> 
+              </tr> 
+           </tbody> 
+
+ </table><br />
+        <p class="posts">
+        전류<br>
+차단 < 활성화 < 포화
+        </p>
+        
+        <table>
+	<tbody>
+              <tr>
+                <td>NPN (N= collect, P =Base , N=Emit)</td> 
+                  <td>PNP (P=Emit ,N =Base , P= Collect)</td>
+              </tr> 
+           </tbody> 
+           	<tbody>
+              <tr>
+                <td>Base의 전류가 흐르면 [전자가 모인다.]<br>
+Collect에서 Emit로 전류가 흐른다<br>
+[Collect -> Emit]</td> 
+                  <td>	Base의 전류가 차단되면 [전자가 모인다.]<br>
+Emit에서 Collect로 전류가 흐른다<br>
+[Emit -> Collect]
+</td>
+          
+              </tr> 
+           </tbody> 
+          	<tbody>
+              <tr>
+                <td>Base의 전류가 차단되면 [전자가 모인다.]<br>
+Collect에서 Emit로 전류가 차단된다<br>
+[Collect !-> Emit]</td> 
+                  <td>Base의 전류가 흐르면 <br>
+Emit에서 Collect의 전류가 차단된다<br>
+[Emit !-> Collect]</td>
+              </tr> 
+           </tbody> 
+          	<tbody>
+              <tr>
+                <td>흐르면 흐르고<br>
+차단되면 차단됨</td> 
+                  <td>차단하면 흐르고<br>
+흐르면 차단된다.</td>
+              </tr> 
+           </tbody> 
+           </table><br />
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Embedded/23/01.png?raw=true"><br>
+        <p class="posts">NPN PNP 그래프</p>
+         <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Embedded/23/02.png?raw=true"><br>
+        <p class="posts">NPN PNP</p>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Embedded/23/03.png?raw=true"><br>
+        <p class="posts">NPN =GND에 붙힌다 PNP면 VCC에다 붙인다.</p><br>
+         <p class="posts">가열되기 때문에 6mA가 되게끔 저항을 달아줍니다.<br>
+<br>
+직렬 =80mA이다. [MCU는 40mA가 최고이다.]<br>
+5V =3.2V+ 0.3V[전압강화] +20 Ic[c->e까지 흐르는 양[저항 * 전류]]</p>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Embedded/23/04.png?raw=true"><br>
+         <p class="posts">TR을 사용할 경우 40mA이상의 전류가 흐른다[77mA가 흐른다]</p><br>
+        <h2 class="posts">DC 모터</h2>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Embedded/23/05.png?raw=true"><br>
+        <p class="posts">모양이 H라서 H브릿지 회로라고 합니다.</p><br>
+        <p class="posts">극성은 없다.<br>
+정방향 (M+ high,M- Low)<br>
+역방향 (M- high,M+ Low)<br>
+<br>
+스위치 대신에 TR을 사용하게 되는대 이때<br>
+GND =NPN (2N2222A)<br>
+VCC =PNP (2N2907)<br>
+</p><br>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Embedded/23/06.png?raw=true"><br>
+        <p class="posts">A==C 같고 B== D가 같다 그래서 AC를 하나로 묶고 BD를 하나로 묵는다.</p><br>
+         <p class="posts">DC모터의 속도를 제어하는 방법은? [NPN형 TR소자를 하나더 사용해서 만듬.]<br>
+전류의 양을 많이 주면 속도가 빨라지고<br>
+전류의 양이 적으면 속도가 느려진다
+</p><br>
+         <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Embedded/23/07.png?raw=true"><br>
+         <p class="posts">A==C 같고 B== D가 같다 그래서 AC를 하나로 묶고 BD를 하나로 묵는다.</p><br>
+         <p class="posts">전원(VCC)쪽에는 PNP형<br>
+GND쪽에는 NPN형이 달려있다.<br>
+<br>
+속도제어 하기위해서는 전류의 크기를 제어해줘야한다.<br>
+NPN형 타입을 붙여준다. (직렬 연결) <br>
+[왜? 직렬 연결을 통해서 흘리는 전류를 제어한다.]<br>
+V= iR (R은 고정값)<br>
+V의 값을 통해서 속도를 제어 한다.<br>
+</p><br>
+	      <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Embedded/23/08.png?raw=true"><br>
+ <p class="posts"> 가장 많이 사용하는 DC 드라이버.<br>
+        과열이 되는 것을 방지하기 위해 방열판을 가지고 있다</p><br>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Embedded/23/09.png?raw=true"><br>
+         <p class="posts"> 회로<br>
+        MOT 다이오드 = 한쪽 방향으로만 흐르게끔 만드는 것<br>
+역전류가 흐르는 것을  방지합니다
+</p><br>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Embedded/23/10.png?raw=true"><br>
+           <p class="posts"> 각도 제어가 가능한 DC모터.<br>
+회전 각도제어가 가능하다.<br>
+회전축에 가변 저항이 있다. 회전한 만큼 저항 값이 바뀐다. 그 저항값으로 회전각도를 측정합니다. [일반적으로 0~180]<br>
+RC 모형에 주로 사용합니다.
+</p><br>
+             <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Embedded/23/11.png?raw=true"><br>
+         <p class="posts"> 주황색이 신호라인, 나무색이 그라운드.<br>
+             <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Embedded/23/12.png?raw=true"><br>
+           <p class="posts"> 1.펄스를 내보낸다.<br>
+2.주기가 20mSec [50Hz 펄스 신호]<br>
+3. High width = active width [각도를 제어합니다]
+        </p>
+        <table>
+	<tbody>
+              <tr>
+                <td>각도</td>
+                <td>0</td> 
+                <td>90</td>
+                <td>180</td> 
+              </tr> 
+           </tbody>
+          	<tbody>
+              <tr>
+                <td>표준  Neutral </td>
+                <td>1Ms</td> 
+                <td>1.5Ms</td>
+                <td>2Ms</td> 
+              </tr> 
+           </tbody> 
+          	<tbody>
+              <tr>
+                <td>실제로 Neutral </td>
+                <td>0.6Ms</td> 
+                <td>1.5Ms</td>
+                <td>2.4Ms</td> 
+              </tr> 
+           </tbody> 
+
+ </table><br />
+             
+             
+        
+        
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+  <div id="footers"></div>
+</body>
+</html>

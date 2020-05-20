@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>GROUP BY,HAVING</title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+<style>
+table {
+    width: 100%;
+    border: 1px solid #444444;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #444444;
+	background-color:#F3F3F3;
+  }
+</style>
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sider"></div>
+
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+        <div class="main-title">
+          <h1>GROUP BY,HAVING</h1>
+          <h2>데이터 베이스</h2>
+          <p class="main-title-time">작성일 : 2018-09-27</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+        <pre>
+GROUP BY 함수 다음에는 복수형 함수만 나올수 있습니다.
+Alias는 사용하면 안 됩니다.
+WHERE에 넣으면 서브쿼으
+FROM에 넣으면 인라인 뷰.
+
+HAVING 
+1단계 GROUP BY 먼저 합니다
+2단계 GROUP BY한 결과(복수형 함수를 사용)에 조건을 걸때 HAVING을 사용합니다        
+        </pre>
+        <table>
+   <tbody> 
+         <tr>
+                   <td><pre>
+시험문제 
+사장을 제외한 부서별 평균여가 2000이상인 부서의 부서번허와 평균 급여를 구하시오
+with e
+as
+(select deptno, avg(sal+nvl(comm,0)) avg_sal
+from emp
+where job<> 'PRESIDENT'
+group by deptno)
+select *
+frome e
+where avg_sal >=2000
+
+
+SELECT deptno, avg(sal)
+FROM emp
+WHERE job <> 'PRESIDENT'
+GROUP BY deptno
+HAVING avg(sal)>2000
+/
+    DEPTNO   AVG(SAL)
+---------- ----------
+        20       2175
+
+	                </pre></td> 
+              </tr> 
+           </tbody>
+ </table><br />   
+        단일행 함수는 WHERE<br>
+복수형 함수는 HAVING<br>
+<table>
+   <tbody> 
+         <tr>
+                   <td><pre>
+가장 어려운 문제
+여학생 중에 몸무게가 가장 작은 학과의 학과명과 평균 몸무게를 출력
+//틀린방법이지만 답이 나옴
+SELECT dname "학과명", avg(weight) "평균몸무게"
+FROM student join department on (deptno =deptno1) 
+WHERE  SUBSTR(jumin,7,1)=2
+GROUP BY dname
+HAVING min(weight) =(
+SELECT min(weight)
+FROM student
+WHERE  SUBSTR(jumin,7,1)=2
+)
+/
+//옳은 방법
+SELECT dname "학과명", avg(weight) "평균몸무게"
+FROM student join department on (deptno =deptno1) 
+WHERE  SUBSTR(jumin,7,1)=2
+GROUP BY dname
+HAVING avg(weight) =(
+SELECT min(avg(weight))
+FROM student
+WHERE  SUBSTR(jumin,7,1)=2
+group by deptno1)
+/
+//고급진 표현방법 with =중복을 제거하기 위해서!!!
+with e
+as
+(SELECT deptno1, avg(weight) avg_weight
+FROM student
+WHERe SUBSTR(jumin,7,1)=2
+group by deptno1)
+select dname "학과명", avg_weight  "평균몸무게"
+from e join department on (deptno =deptno1) 
+where avg_weight =(select min(avg_weight)
+		from e)
+/
+//natural join 앨리어스에 " "붙이면 소문자로 인식함. 조인이 안되요 붙이지 마세요!
+with e
+as
+(SELECT deptno1 deptno, avg(weight) avg_weight
+FROM student
+WHERe SUBSTR(jumin,7,1)=2
+group by deptno1)
+select dname "학과명", avg_weight  "평균몸무게"
+from e natural join department
+where avg_weight =(select min(avg_weight)
+		from e)
+/
+
+
+학과명                                                       평균몸무게
+------------------------------------------------------------ ----------
+멀티미디어공학과                                                     42
+	                </pre></td> 
+              </tr> 
+           </tbody>
+   
+		      
+ </table><br />      
+        
+        
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

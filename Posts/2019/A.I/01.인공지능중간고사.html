@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>인공지능 중간고사</title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("../../../include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("../../../include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="sider"></div>
+    <div id="main-wrapper">
+      <div style="maring:30px"><font size="5" color="#f0f0f0">Div 영역입니다.</font></div>
+      <div class="main-post">
+        <div class="main-title">
+          <h1>인공지능중간고사 </h1>
+          <h2>A.I</h2>
+          <p class="main-title-time">작성일 : 2019-01-06</p>
+        </div>
+        <hr>
+        
+         <!--  본문 시작-->
+        <table>
+          <caption>
+            <H3>1.신경망의 장단점</H3>
+          </caption>
+          <thead>
+            <tr>
+              <th>장점</th>
+              <th>단점</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                1.인간의 뇌는 현존하는 어떤 컴퓨터보다 빠르게 그 기능을 수행할 수 있다.<br />
+                2. 과거의 통계학적 기법에 비해서 분석 시간이 짧고 비용이 적게 든다.<br />
+                3. 패턴 인식 , 예측, 분류에 효과적이다.<br />
+                4. 가장 정확한 모델링 접근법 중 하나<br />
+                5. 복잡한 영역의 자료에서도 좋은 결과 도출 가능<br />
+                6. 연속형과 범주형 자료 모두 처리 가능<br />
+              </td>
+              <td>
+                1. 망이 복잡할 경우 계산 집중적이며 훈련이 느리다.<br />
+                2. 훈련 데이터에 지역 최소화에 빠지기 쉽다.<br />
+                3.모든 입력값과 출력값이 0과 1범위에서 정의 되어야 한다.<br />
+                4. 결과의 도출 과정이 명확하지 않다.<br />
+                5. 복잡한 학습과정 때문에 모형 구축에 시간 소요<br />
+              </td>
+          </tbody>
+
+        </table><br />
+
+        <table>
+          <caption>
+            <h3>2.단층 퍼셉트론 알고리즘과 단점</h3>
+          </caption>
+          <thead>
+            <tr>
+              <th>알고리즘</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                입출력을 갖춘 알고리즘<br />
+                가중치와 편향을 매개변수로 설정<br />
+
+                초평면으로 N차원 공간을 두 개의 결정 영역으로 나눈다.<br />
+                그 초평면을 다음과 같은 선형 분리 함수로 정의한다.<br />
+                AND, NAND, OR 논리 회로를 이용해 퍼셉트론이 설명이 가능하다.<br /><br />
+
+                단점<br />
+                1. XOR 연산이 안됨<br />
+                2. 비선형 분류가 되지 않음.<br />
+              </td>
+          </tbody>
+        </table><br />
+
+        <table>
+          <caption>
+            <H3>3. 연상 메모리 (Hopfiled, BAM) 이해</H3>
+          </caption>
+          <thead>
+            <tr>
+              <th>Hopfiled</th>
+              <th>BAM</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                1. 순환 연상 메모리<br />
+                2. 단층 신경망<br />
+                3. 단방향 연상 메모리<br />
+                4. 동질 연상 메모리<br />
+                5. 뉴런 사이의 연결 강도는 대칭이다.<br />
+                6. 입력이랑 출력을 빼서 단위 행렬을 만든다<br />
+              </td>
+              <td>
+                1. 순환 연상 메모리<br />
+                2. 단층 신경망<br />
+                3. 양방향 연상 메모리<br />
+                4, 이질 연상 메모리<br />
+                5. 입력이랑 출력값을 곱해서 연결강도를 만듬<br />
+
+              </td>
+          </tbody>
+        </table><br />
+
+        <table>
+          <caption>
+            <H3>4. 지도학습과 비지도학습의 비교</H3>
+          </caption>
+          <thead>
+            <tr>
+              <th>Hopfiled</th>
+              <th>BAM</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                1. 순환 연상 메모리<br />
+                2. 단층 신경망<br />
+                3. 단방향 연상 메모리<br />
+                4. 동질 연상 메모리<br />
+                5. 뉴런 사이의 연결 강도는 대칭이다.<br />
+                6. 입력이랑 출력을 빼서 단위 행렬을 만든다<br />
+              </td>
+              <td>
+                1. 순환 연상 메모리<br />
+                2. 단층 신경망<br />
+                3. 양방향 연상 메모리<br />
+                4, 이질 연상 메모리<br />
+                5. 입력이랑 출력값을 곱해서 연결강도를 만듬<br />
+
+              </td>
+          </tbody>
+        </table><br />
+
+        <h3>중간고사 실제 문제</h3>
+        1. 지도학습과 비지도학습의 차이와 실행환경을 비교해서 설명하시오<br><br>
+        
+        2. (퍼셉트론 가중치 수식을 주면서).. 학습률에 따라 어떻게 바뀌는지 서술하시오<br><br>
+        
+        3. (입력벡터와 테스트벡터를 주고)...Hopfiled로 연상하는 방법을 보여주세요<br><br>
+      </div>
+      <!--  본문 끝-->
+      
+    </div>
+  </div>
+  
+  <div id="footers"></div>
+  
+</body>
+
+</html>

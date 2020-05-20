@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>아날로그 출력 11교시 </title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Attach.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="sider"></div>
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+        <div class="main-title">
+          <h1>아날로그 출력 11교시</h1>
+          <h2>임베디드 시스템</h2>
+          <p class="main-title-time">작성일 : 2018-04-18</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+  <a href="https://github.com/hunter95001/Embedded/blob/master/15/es-lecture-07.pdf"><div  class ="attachment"><img  class="icon" align="left"  src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Folder.png?raw=true" > 
+		<font class="attach-text">es-lecture-07</font><img class="icon" align="right"src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/File.png?raw=true" ></div></a>      
+        
+        <p class="posts">
+        아날로그 신호<br>
+시간에 따라 전압이 연속적으로 변화하는 신호 [HIGH, LOW 사이의 값]<br>
+한 시점에 HIGH와 LOW사이의 전압을 가지는 신호<br>
+        </p>
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Embedded/15/00.png?raw=true" ><br>
+        <p class="posts">
+ ADC: 아날로그 -> 디지털 (쉽고 아주 저렴하다)<br>
+DAC: 디지털 -> 아날로그 (복잡하고 아주 비싸다)<br>
+PWM(Pulse -Width- Modulation)-> DAC가 아주 비싸기 때문에  Emulation함<br>
+Emulation(하드웨어를 이용해 똑같은 결과를 모방하는것 )<-> Simulation (소프트웨어를 이용해 똑같은 결과를 모방하는것 )<br>
+
+        </p>
+          <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Embedded/15/01.jfif?raw=true" ><br>
+        <h2 class="posts">  Pulse 신호</h2>
+        <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#0086b3">#define</span>&nbsp;LED_PIN&nbsp;<span style="color:#c10aff">9</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">int</span>&nbsp;ledValue<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span><span style="color:#c10aff">0</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">int</span>&nbsp;step&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span><span style="color:#c10aff">5</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">void</span>&nbsp;setup()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#999999">//&nbsp;put&nbsp;your&nbsp;setup&nbsp;code&nbsp;here,&nbsp;to&nbsp;run&nbsp;once:</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">void</span>&nbsp;loop()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#999999">//&nbsp;put&nbsp;your&nbsp;main&nbsp;code&nbsp;here,&nbsp;to&nbsp;run&nbsp;repeatedly:</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">analogWrite(LED_PIN,ledValue);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">ledValue<span style="color:#aaffaa"></span><span style="color:#ff3399">+</span><span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>step;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">if</span>(ledValue<span style="color:#aaffaa"></span><span style="color:#ff3399">&gt;</span><span style="color:#c10aff">255</span><span style="color:#ff3399">|</span><span style="color:#aaffaa"></span><span style="color:#ff3399">|</span>ledValue&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">&lt;</span><span style="color:#aaffaa"></span><span style="color:#ff3399">=</span><span style="color:#c10aff">0</span>)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;step&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">*</span><span style="color:#aaffaa"></span><span style="color:#ff3399">=</span><span style="color:#aaffaa"></span><span style="color:#ff3399">-</span><span style="color:#c10aff">1</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;delay(<span style="color:#c10aff">100</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+  <div id="footers"></div>
+</body>
+</html>

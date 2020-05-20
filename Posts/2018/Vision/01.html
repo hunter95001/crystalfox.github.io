@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>디지털 영상처리의 개요 </title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sider"></div>
+
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+
+
+        <div class="main-title">
+          <h1>디지털 영상처리의 개요 </h1>
+          <h2>Computer Vision</h2>
+          <p class="main-title-time">작성일 : 2018-09-06</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+ 찍을때는 아날로그 신호를 통해서 보여지고 <br>
+촬영시는 디지털 신호로 저장이 됩니다.<br>
+<br>
+디지털 영상이란<br>
+0 또는 1과 같은 이산적인 상태를 의미하는 그림.<br>
+<br>
+픽셀 <br>
+화면을 구성하는 기본 단위로서 비트맵을 이용해서 저장.<br>
+디지털 영상의 한 점<br>
+디지털 영상의 기본 단위<br>
+<table>
+	<tbody>
+              <tr>
+                <th>흑백</th> 
+                <th>그레이</th> 
+                <th>컬러</th> 
+              </tr> 
+           </tbody>
+           	<tbody>
+              <tr>
+                <td>R,G,B</td> 
+                <td>	R=G=B </td> 
+                <td>	R,G,B</td> 
+              </tr> 
+           </tbody> 
+	<tbody>
+              <tr>
+                <td>0,255 </td> 
+                <td>0~255 </td> 
+                <td>0~255</td> 
+              </tr> 
+           </tbody>
+<tbody>
+              <tr>
+                <td>흰색 아니면 검정색<br>
+두가지 색깔로 이루어져 있습니다.</td> 
+                <td>	R,G,B 색상의 값이 다 동일합니다<br>
+230=230=230</td> 
+                <td>
+		     R,G,B색상이 전부다 다름<br>
+123,25,31 
+		      </td> 
+              </tr> 
+           </tbody>           
+ </table><br />
+	      
+RGB 각각의 1Byte =2^8승입니다 [256개 =0~255까지의 수 표현]
+
+Sampling & Quantization 을 통해 analog를 digital로 바꿈<br>
+오차가 가장 작게 나누는 것을 sampling<br>
+나눴을대 값을 디지털로 구해야 하는대 그 값을 양자화라고 합니다.<br>
+
+	      <h2>영상처리</h2>
+영상 개선, 영상 복원, 영상 분석, 영상 변환, 영상 압축[LBQ를 가장 많이 사용].<br>
+Code Book ->영상을 압축할때 비슷한 색상[눈으로 볼때 큰차이가 나지 않는 것]을 묶어서 코드표로 변환시키는것.<br>
+FCM[효율 낮음], SOM,SVM이 있음.<br>
+
+<table>
+	<tbody>
+              <tr>
+                <th></th> 
+                <th>일반적</th> 
+                <th>Deep Learing</th> 
+              </tr> 
+           </tbody>
+           	<tbody>
+              <tr>
+                <td>영상처리</td> 
+                <td>1. 영상 획득<br>
+2. 전처리 = 잡음 제거, 특징 찾기 전에 하는 과정<br>
+3. 분할 = 원하는 특징을 추출해 내는 것.<br>
+4. 표현 및 서술 =분할로 추출한 특징을 분석. </td> 
+                <td>	1. 영상 획득<br>
+2. 전처리 = 잡음 제거, 특징 찾기 전에 하는 과정</td> 
+              </tr> 
+           </tbody> 
+	<tbody>
+              <tr>
+                <td>인공지능 </td> 
+                <td>
+5. 인식 및 번역 =인공지능 기법을 사용인식 함. </td> 
+                <td>
+3. 분할 = 원하는 특징을 추출해 내는 것.<br>
+4. 표현 및 서술 =분할로 추출한 특징을 분석.<br> 
+5. 인식 및 번역 =인공지능 기법을 사용인식 함.</td> 
+              </tr> 
+           </tbody>
+ </table><br />	      
+        
+Smoothing [스무딩] - 잡음을 없애기 위해서 가장 많이 사용하는 기법 [마스크를 사용]<br>
+Shaping [샤프닝] - 흐려지거나 모자이크 처리를 날카롭게 사용<br>
+클러스터링 기법, 지도학습 - 글자인식<br>
+랜더링 -2D를 3D로 바꿔주는 작업. *중요<br>
+<br>
+RGB : 가산 혼합 원리 - 빛, 합칠수록 밝아짐<br>
+CMY : 감산 혼합 원리 - 물감, 합칠수록 어두워짐<br>
+HSI [Hue(색상) ,Saturation(채도) ,Intensity(명도)] -계산량이 많아서 처리 속도가 느려집니다.<br>
+<br>
+대비 -명도의 차이가 많이 날때<br>
+마크밴드 <br>
+
+	      
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

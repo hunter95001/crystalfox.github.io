@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>문자함수 </title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+<style>
+table {
+    width: 100%;
+    border: 1px solid #444444;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #444444;
+  }
+</style>
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sider"></div>
+
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+
+
+        <div class="main-title">
+          <h1>문자함수 </h1>
+          <h2>데이터 베이스</h2>
+          <p class="main-title-time">작성일 : 2018-09-06</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+        <h1>1. 문자 함수</h1>
+
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/DB/02/00.jpg?raw=true"><br>
+<table>
+	<tbody>
+              <tr>
+                <td>
+                
+SELECT ename, sal <br>
+FROM emp <br>
+WHERE upper(job)=upper('&jop') ; //&을 만나면 입력 받을수 있습니다.<br>
+                </td> 
+              </tr> 
+           </tbody> 
+	<tbody>
+              <tr>
+                <td>
+                Wrote file afiedt.buf <br>
+<br>
+  1  SELECT ename, sal <br>
+  2  FROM emp <br>
+  3* WHERE upper(job)=upper('&jop') <br>
+SQL> / <br>
+Enter value for jop: clerk <br>
+old   3: WHERE upper(job)=upper('&jop') <br>
+new   3: WHERE upper(job)=upper('clerk') <br>
+<br>
+ENAME                       SAL <br>
+-------------------- ---------- <br>
+SMITH                       800 <br>
+ADAMS                      1100 <br>
+JAMES                       950 <br>
+MILLER                     1300<br>
+                </td> 
+              </tr> 
+           </tbody> 
+ </table><br />
+        
+	      
+	      <table>
+	<tbody>
+              <tr>
+                <td>
+			SELECT CONCAT(INITCAP(ename),LOWER(job)) AS name <br>
+FROM emp <br>
+WHERE deptno ='&deptno'/<br>
+	                     </td> 
+              </tr> 
+           </tbody> 
+		      <tbody>
+              <tr>
+                <td>
+			SQL> ed <br>
+Wrote file afiedt.buf <br>
+<br>
+  1  SELECT CONCAT(INITCAP(ename),LOWER(job)) AS name <br>
+  2  FROM emp <br>
+  3* WHERE deptno ='&deptno' <br>
+SQL> / <br>
+Enter value for deptno: 10 <br>
+old   3: WHERE deptno ='&deptno' <br>
+new   3: WHERE deptno ='10' <br>
+<br>
+NAME<br> 
+-------------------------------------- <br>
+Clarkmanager <br>
+Kingpresident <br>
+Millerclerk<br>
+	                     </td> 
+              </tr> 
+           </tbody> 
+ </table><br />
+	      
+	        <table>
+	<tbody>
+              <tr>
+                <td>
+			SELECT INITCAP(ename) || ' is'|| ' a(an) ' || LOWER(job) as Name <br>
+FROM emp <br>
+WHERE deptno ='&deptno' /<br>
+	                     </td> 
+              </tr> 
+           </tbody> 
+			
+		      <tbody>
+              <tr>
+                <td>
+			SQL> ed <br>
+Wrote file afiedt.buf <br>
+<br>
+  1  SELECT INITCAP(ename) || ' is'|| ' a(an) ' || LOWER(job) as Name <br>
+  2  FROM emp <br>
+  3* WHERE deptno ='&deptno' <br>
+SQL> / <br>
+Enter value for deptno: 10 <br>
+old   3: WHERE deptno ='&deptno' <br>
+new   3: WHERE deptno ='10' <br>
+<br>
+NAME <br>
+---------------------------------------------------------- <br>
+Clark is a(an) manager <br>
+King is a(an) president <br>
+Miller is a(an) clerk <br>
+<br>
+SQL> / <br>
+Enter value for deptno: 20 <br>
+old   3: WHERE deptno ='&deptno' <br>
+new   3: WHERE deptno ='20' <br>
+<br>
+NAME <br>
+---------------------------------------------------------- <br>
+Smith is a(an) clerk <br>
+Jones is a(an) manager <br>
+Scott is a(an) analyst <br>
+Adams is a(an) clerk <br>
+Ford is a(an) analyst <br>
+<br>
+SQL> / <br>
+Enter value for deptno: 30 <br>
+old   3: WHERE deptno ='&deptno'<br> 
+new   3: WHERE deptno ='30' <br>
+<br>
+NAME<br> 
+---------------------------------------------------------- <br>
+Allen is a(an) salesman <br>
+Ward is a(an) salesman <br>
+Martin is a(an) salesman <br>
+Blake is a(an) manager <br>
+Turner is a(an) salesman <br>
+James is a(an) clerk<br>
+	 </td> 
+              </tr> 
+           </tbody> 
+ </table><br />
+	      
+	      
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

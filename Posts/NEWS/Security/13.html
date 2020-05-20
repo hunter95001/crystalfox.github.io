@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>딥 페이크(Deepfakes) 최신 연구 동향 - 가짜 영상 제작과 탐지 기술 정리(Deep Learning for Deepfakes Creation and Detection) </title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="sider"></div>
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+        <div class="main-title">
+          <h1>딥 페이크(Deepfakes) 최신 연구 동향 - 가짜 영상 제작과 탐지 기술 정리(Deep Learning for Deepfakes Creation and Detection)</h1>
+          <h2>Security</h2>
+          <p class="main-title-time">작성일 : 2020-04-02</p>
+        </div>
+        <hr>
+   
+   
+    <!--  본문 시작-->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/O9UmjWZL3KQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p class="posts">
+간단한 얼굴을 조작하는 기술 <font style="font-size:26px;color:#6799FF;">Facial Manipulations</font>의 기술에는 총 4가지가 있다. <- 얼굴을 다루는 기술을 총집합<br>
+1. <font style="font-weight:600; font-size:26px;">Face Synthesis</font> [가상의 얼굴을 만들어서 합성]<br>
+2. <font style="font-weight:600; font-size:26px;">Facial Attributes</font>[기존의 얼굴에서 특성을 가지고 바꿈] -안경이 없는 사람한테 안경을 적용 등<br>
+3. <font style="font-weight:600; font-size:26px;">Facial Expression</font> [표정을 바꿈]  <-Deepfake<br>
+4. <font style="font-weight:600; font-size:26px;">Face Swap</font> [서로다른 얼굴 바꿈] <-Deepfake<br>
+<font style="font-weight:600; font-size:26px;color:#F15F5F;">*3.4이 합쳐서 실직적으로 Deepfake라고 알려져 있는 기술</font><br>
+<br>
+
+<font style="font-weight:600; font-size:26px;">Face Synthesis</font><br>
+-얼굴을 새롭게 만듬 [GANs]로 생성됨. -> <font style="font-weight:600; font-size:26px;color:#86E57F">StyleGAN</font><br> 을 이용하면 고해상도의 얼굴을 생성가능 [배포가 잘되고 있음]<br>
+<br>
+<font style="font-weight:600; font-size:26px;">Facial Attributes</font><br>
+-사람의 얼굴에 있는 특정 속성들을 추가하거나 삭제. [머리의색상, 피부색상, 안경, 머리등.] -><font style="font-weight:600; font-size:26px;color:#86E57F">StartGan</font><br>을 이용해서 사용<br>
+<br>
+<font style="font-weight:600; font-size:26px;">Facial Expression</font><br>
+-얼굴의 표정을 임의로 변경. <br>
+Source : victim person [피해자]<br>
+Target : reference person<br>
+사람의 입모양등을 바꿔서 실제로 피해자가 하지 않은 말을 강제로 하는것처럼 비디오를 수정해서 공격하는 유형을 보임.<br>
+<br>
+<font style="font-weight:600; font-size:26px;">Face Swap</font><br>   <-Original Deepfakes<br>
+- 서로다른 사람의 얼굴을 Switching하는 기법 <br>
+Source : reference person <br>
+Target : victim person [피해자]<br>
+<br>
+1. 컴퓨터 그래픽 <font style="font-weight:600; font-size:26px;color:#6799FF">일반적으로많이사용</font><br>
+2. 딥러닝베이스
+- <font style="font-weight:600; font-size:26px;">Few-shot</font> : 이미지의 개수가 얼마없지만 그 이미지를 통해 Source 이미지에 잘 적용함 [PRNet 논문] <font style="font-weight:600; font-size:26px;color:#6799FF">일반적으로많이사용</font><br>
+[기본적으로 이미지의 개수가 별로 없기 때문에 Few-shot을 많이슴] -미리학습이된 얼굴인식이된 모델을 사용하기때문에 적은양의 사진을 가지고도 생성이 잘 됨
+- <font style="font-weight:600; font-size:26px;">Multi-shot</font> : 다양한 이미지의 개수를 가지고 사용함 [Deepfakes, DeepFaceLab] [전문가 환경] <- deepfake의 원조기술에 대해서 설명
+<br>
+일반적으로 컴퓨터 그래픽스와 <font style="font-weight:600; font-size:26px;">Few-shot</font> 방식을 많이 사용한다<br>
+스마트폰에있는 내장된 GPU가지고 학습을 시키는것도 어렵지만 실시간으로 Swaping하기 때문에 학습시키는 시간도 적고 이미지또한 스마트폰 앱에서 사용하기 불편하다<br>
+<br>
+<font style="font-weight:600; font-size:28px;">딥페이크의 정의</font><br>
+딥러닝 기술을 정의해서 페이크 이미지 페이크 미디어를 만드는 것을 딥페이크<br>
+특히 딥페이크같은 경우에는 두사람의 이미지를 스왑핑해서 새로운 페이크 미디어를 만드는게 특징<br>
+<br>
+<font style="font-weight:600; font-size:28px;">어원</font><br>
+Reddit에서 deepfkaes라는 아이디를 가진 사람이 머신러닝 기술을 사용하면 선정적인 연예인 비디오를 만들 수 있다고 기제함<br>
+<br>
+다양한 침해 유형을 읽으키고 있다.<br>
+<font style="font-weight:600; font-size:24px;color:#F15F5F">faeks new, 사기, 금융사기 <- 유명 CEO의 이미지나 비디오 영상을 이용하거나 다른 회사에 보내서 돈을 갈취함</font><br>
+<br>
+<font style="font-weight:600; font-size:28px;">기술적인면</font><br>
+AutoEncoder <- 별도의 레이블이 필요없기 때문에 unsupervised   <br>
+Encoder: input x  -> feature z<br>
+Decoder: feature z -> output x'<br>
+<br>
+<br>
+<font style="font-weight:600; font-size:28px;">딥페이크는 3가지 단계로 이루어짐</font><br>
+<font style="font-weight:600; font-size:26px;">1.Extraction</font> 추출 [학습을 위해서  얼굴 부분을 추출] -optionally, alignments file, mask를 생성가능
+ <font style="font-weight:600; font-size:24px;color:#B2CCFF">*alignments file : 68개의 랜드마크를 구성된 형태인데 그 68개의 위치를 기록한 파일이다 [학습과정이나 converting 과정에 도움을 받음]</font><br>
+<font style="font-weight:600; font-size:26px;">2.Training</font><br>
+  
+  <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/NEWS/Security/13/00.png?raw=true" ><br>
+  Target의 identiy features을 source에 적용한다고 가정<br>
+<br>
+<font style="font-weight:600; font-size:28px;">Encoder</font> 부분을 공유하도록 설정 <font style="font-weight:600; font-size:24px;color:#B2CCFF">[두 특징의 공유되어 있는 부분이 학습된다]</font><br>
+-Auto Encoder의 Encoder는 다양한 이미지에 대한 특징이 학습됨 [인코더에서 학습이되는 특징은 공유된다.]<br>
+<br>
+<font style="font-weight:600; font-size:28px;">Decoder</font>는 각각 만들도록 설정<br>
+-실직적으로 identiy features를 학습<br>
+<br>
+Latent Layer<br>
+-특징 사람에 대한 identiy는 배제되고 외각이나 눈코잎의 위치와 같은 이런 특징들만 시각화되는것을 볼 수 있음<br>
+ <br>
+  
+  <font style="font-weight:600; font-size:26px;"> 3.Converting</font><br>
+  <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/NEWS/Security/13/01.png?raw=true" ><br>
+  학습햇던 Encoder와 DecoderB를 사용합니다.<br>
+Latent Layer A에서 DecoderB의 특징을 적용해서 Swaping 합니다<br>
+  
+<font style="font-weight:600; font-size:26px;"> 추가</font><br>
+-1000[약30초 정도의 비디오에서 추출가능 ]~10000만장의 이미지만 있으면 충분하다-<br>
+-얼굴 각도와 조명정보가 결과물이 좋다.<br>
+-트레이닝 데이터의 경우 higih quality 일 수록 좋다<br>
+-Nvida GTX1080 으로 12~48시간 사용 [코랩정도의 GPU만 가지고 하루정도 학습시켜도 성능이 괜찮다.]<br>
+-Original model의 경우 64x64의 Low quality를 사용<br>
+<br>
+최근 페이스북은 Deepfake Detection 챌린지를 시작함<br>
+<br>
+탐지방법<br>
+<font style="font-weight:600; font-size:24px;color:#B2CCFF">[딥페이크 같은 경우 매 프레임 마다 얼굴의 위치를 찾아서 미리 학습시켜놓은 피해자의 identiy 정보를 찾아서 덮어씌움.]</font>
+<br>
+Viusal Artifacts within Frame<br>
+Deep Classifiers [Lietal 논문]<br>
+이미지 한장으로 판단하는게 아니라 Fake Video에서 탐지함.<br>
+<br>
+Temporal Features across Frames [Saboretal 논문]<br>
+매번 프레임마다 얼굴의 위치를 찾아서 판별하는 방법<br>
+프레임 간의 연결관계 즉 시간적인 특징을 잘 확인해서 탐지하는 방법이 존재함<br>
+각 프레임들의 시간정인 정보를 고려하지  않고 프레임마다 매번 스왑핑을 하기 때문에 인접한 프레임대해서 자연스럽지않은 부분이 발생함 이 부분을 디텍션함<br>
+   <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/NEWS/Security/13/02.png?raw=true" ><br>
+  <font style="font-weight:600; font-size:26px;">탐지 결과</font><br>
+Lietal [Deep Classifiers] - CNN을 이용해서 이미지 한장 한장을 판별하는 <br>
+Sabiretal [Temporal Features across Frames] - 각프레임의 상관관계를 판별하는거<br>
+CNN을 이용해서 이미지 한장 한장을 판별하는 방식보다 CNN+RNN을 이용해서 프레임 별 인접관계를 이용해서 디텍션하는 법이 좀더 성능이 좋다.<br>
+
+FaceForensiscs++에 관해서<br>
+명확하면서도 사용하기 좋은 벤치마크를 제시함<br>
+대용량의 데이터셋을 제공하고 [유튜브에서 비디오 천개에서 180만개의 이미지셋을 제공함]<br>
+자동으로 식별함<br>
+실제로 사용되고 잇는 Face Reenactmetn[표정을 바꿈]와 Face swaping 각각 2가지식 페이크 비디오를 만들고 그것들을 데이터셋으로 제공함<br>
+매 프레임마다 얼굴 위치를 찾고 CNN을 적용해서 Real과 Fake를 구분할 수 있도록 구분하는 법을 잘 제공함<br>
+720 Training videos, 140 validation videos, 140 test videos<br>
+<- 연구를 한다면 이 부분을 베이스로해서 시작하는법이 좋음 XceptionNet이 다른 모듈에 비해서 성능이 좋았기 때문에 이를 베이스 라인으로 설정함<br>
+  </p>
+  
+        <h3 class="posts">논문 및 기타 자료</h3>
+    <a class=" posts" href="http://openaccess.thecvf.com/content_cvpr_2016/html/Thies_Face2Face_Real-Time_Face_CVPR_2016_paper.html" target="_blank"><img class="link"src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/link-icon.png?raw=true">http://openaccess.thecvf.com/content_cvpr_2016/html/Thies_Face2Face_Real-Time_Face_CVPR_2016_paper.html</a><br>
+     <a class=" posts" href="https://dl.acm.org/doi/abs/10.1145/3072959.3073640 " target="_blank"><img class="link"src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/link-icon.png?raw=true">https://dl.acm.org/doi/abs/10.1145/3072959.3073640</a><br>
+     <a class=" posts" href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Rossler_FaceForensics_Learning_to_Detect_Manipulated_Facial_Images_ICCV_2019_paper.pdf  " target="_blank"><img class="link"src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/link-icon.png?raw=true">FaceForensiscs++ </a><br>
+       <a class=" posts" href="http://openaccess.thecvf.com/content_CVPRW_2019/papers/Media%20Forensics/Sabir_Recurrent_Convolutional_Strategies_for_Face_Manipulation_Detection_in_Videos_CVPRW_2019_paper.pdf "target="_blank"><img class="link"src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/link-icon.png?raw=true">Temporal Features across Frames </a><br>
+        <br>
+        <a class=" posts" href="https://github.com/deepfakes/faceswap" target="_blank"><img class="link"src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/link-icon.png?raw=true">FaceSwap 라이브러리</a><br>
+        <a class=" posts" href="https://github.com/iperov/DeepFaceLab " target="_blank"><img class="link"src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/link-icon.png?raw=true">DeepFaceLab 라이브러리</a><br>
+        <br>
+        <a class=" posts" href="https://forum.faceswap.dev/viewtopic.php?t=27" target="_blank"><img class="link"src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/link-icon.png?raw=true">Extracting</a><br>
+        
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+  <div id="footers"></div>
+</body>
+</html>

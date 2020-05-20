@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>과제</title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+<style>
+table {
+    width: 100%;
+    border: 1px solid #444444;
+    border-collapse: collapse;
+  }
+  th, td {
+	    width: 100%;
+    border: 1px solid #444444;
+  }
+</style>
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sider"></div>
+
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+
+
+        <div class="main-title">
+          <h1>과제</h1>
+          <h2>데이터 베이스</h2>
+          <p class="main-title-time">작성일 : 2018-09-11</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+
+        <table>
+	<tbody>
+              <tr>
+                <td> 
+과제1. 컴퓨터정보학부에 소속된 학과 이름 앞 3자리만 출력하시오 <br>
+<br>
+SELECT SUBSTR(s.dname,1,3) "학과" <br>
+FROM department s , department d <br>
+WHERE d.dname ='컴퓨터정보학부' AND s.PART = d.deptno <br>
+/<br>
+              </td> 
+		      
+		                      <td> 
+학과 <br>
+------------------------ <br>
+소프트 <br>
+컴퓨터 <br>
+멀티미<br></td> 
+              </tr> 
+           </tbody> 
+  
+  	<tbody>
+              <tr>
+                <td> 
+과제2. 컴퓨터정보학부에 소속된 학과 이름 앞 3를 *로 바꾸고 나머지를 출력하시오 <br>
+SELECT REPLACE(s.dname, SUBSTR(s.dname,1,3),'***')  "학과" <br>
+FROM department s , department d <br>
+WHERE d.dname ='컴퓨터정보학부' AND s.PART = d.deptno <br>
+/</td> 
+		      <td><pre>
+학과 
+--------------------------
+***웨어공학과 
+***공학과 
+***디어공학과
+		      </pre></td>
+              </tr> 
+           </tbody> 
+	<tbody>
+              <tr>
+                <td> 
+Student 테이블을 참조해서 아래 하면과 같이 1전공이 (deptno1 컬럼)201번인 학생의 이름과 전화번호와 지역번호를 출력하세요.  <br>
+단, 지역번호는 숫자만 나와야 합니다.<br>
+<br>
+SELECT name,tel,SUBSTR (tel,1,INSTR(TEL, ')' )-1 ) "지역번호" <br>
+FROM student <br>
+WHERE deptno1 =201 <br>
+/
+	</td> 
+		      <td><pre>
+NAME                           TEL                            지역번호 
+------------------------------ ------------------------------ ---------------------------
+김재수                         02)6255-9875                   02 
+임세현                         02)312-9838                    02 
+안광훈                         053)736-4981                   053 
+김문호                         02)6175-3945                   02 
+안은수                         02)381-5440                    02 
+인영민                         031)345-5677                   031
+		      </pre></td>
+              </tr> 
+	</tbody> 
+			<tbody>
+              <tr>
+                <td> 
+SELECT name,tel,REPLACE(tel, SUBSTR(tel, INSTR(TEL, ')' )+1 ,(INSTR(TEL, '-')-1)- INSTR(TEL, ')' ) ) ,'***') "국번" <br>
+FROM student  <br>
+WHERE (INSTR(TEL, '-')-1) - INSTR(TEL, ')' )=3 <br>
+UNION ALL <br>
+SELECT name,tel,REPLACE(tel, SUBSTR(tel, INSTR(TEL, ')' )+1 ,(INSTR(TEL, '-')-1)- INSTR(TEL, ')' ) ) ,'****') "국번" <br>
+FROM student  <br>
+WHERE (INSTR(TEL, '-')-1) - INSTR(TEL, ')' )=4  <br>
+/
+		</td> 
+		      <td><pre>
+NAME                           TEL                            국번 
+------------------------------ ------------------------------ ---------------------------
+서진수                         055)381-2158                   055)***-2158 
+서재수                         051)426-1700                   051)***-1700 
+이미경                         053)266-8947                   053)***-8947 
+박동호                         031)740-6388                   031)***-6388 
+김신영                         055)333-6328                   055)***-6328 
+신은경                         051)418-9627                   051)***-9627 
+오나라                         051)724-9618                   051)***-9618 
+구유미                         055)296-3784                   055)***-3784 
+임세현                         02)312-9838                    02)***-9838 
+김진욱                         055)488-2998                   055)***-2998 
+안광훈                         053)736-4981                   053)***-4981 
+노정호                         051)785-6984                   051)***-6984 
+이윤나                         055)278-3649                   055)***-3649 
+안은수                         02)381-5440                    02)***-5440 
+인영민                         031)345-5677                   031)***-5677 
+김주현                         055)423-9870                   055)***-9870 
+김재수                         02)6255-9875                   02)****-9875 
+일지매                         02)6788-4861                   02)****-4861 
+김문호                         02)6175-3945                   02)****-3945 
+허우                           02)6122-2345                   02)****-2345
+		      </pre></td>
+              </tr> 
+	</tbody> 
+		      
+ </table><br />
+<pre>
+LPAD =왼쪽에 문자 붙이기 
+RPAD =오른쪽에 문자붙이기 
+LTRIM =왼쪽에 문자 지우기 
+RTRIM =오른쪽에 문자 지우기 
+REPLACE = 대채하라.
+</pre>
+        
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

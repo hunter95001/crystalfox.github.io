@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>디지털 시리얼 통신 10교시  </title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="sider"></div>
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+        <div class="main-title">
+          <h1>디지털 시리얼 통신 10교시</h1>
+          <h2>임베디드 시스템</h2>
+          <p class="main-title-time">작성일 : 2018-04-17</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+        <p class="posts">
+ <font style="font-weight:600; font-size:24px;">병렬 통신</font><br>
+        <font style="font-weight:600; font-size:24px;">직렬 통신</font><br>
+-동기식 =>라인 3개(clock,TX,RX) [<font style="font-weight:600; font-size:24px;color:#FAED7D;">clock에 맞춰서 통신 합니다</font>]<br>
+-비동기식 =>라인 2개 (TX,RX) [<font style="font-weight:600; font-size:24px;color:#FAED7D;">통신하기 전에 통신 parameta를 맞춘다</font>]<br>
+<br>
+          <font style="font-weight:600; font-size:24px;">비동기식 통신하기전에 약속</font><br>
+<font style="font-weight:600; font-size:24px;color:#F361DC;">1. 전송속도 : 9600BPS</font><font style="font-weight:600; font-size:24px;color:#86E57F;">//속도가 다르면 깨진다</font><br>
+          <font style="font-weight:600; font-size:24px;color:#F361DC;">2. data bit =8bit</font><br>
+          <font style="font-weight:600; font-size:24px;color:#F361DC;">3. stop bit =1bit</font><br>
+          <font style="font-weight:600; font-size:24px;color:#F361DC;">4. prating bit, no parting</font><br>
+        </p>
+<img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Embedded/14/00.png?raw=true"><br>
+        <p class="posts">
+Serial 객체의 메소드<br>
+Begin()/end 시작/종료<br>
+available() 데이터의 확인 유무<br>
+read() /peek() 버퍼의 데이터를 읽음 (버퍼에서 읽고 삭제, 버퍼에서 값만 읽음)<br>
+Write / print / println 문자 읽음 /문자열 읽음 /문자열 읽고 띄어쓰기<br>
+Flush -out buffer 지움 [송신 buff - 전부다 보내고 지움, 수신 buff- 전부다 지움]<br>
+        
+        </p>
+        <h2 class="posts">HELLO WORLD(Serial 포트로 출력)</h2>
+        <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">void</span>&nbsp;setup()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#999999">//&nbsp;put&nbsp;your&nbsp;setup&nbsp;code&nbsp;here,&nbsp;to&nbsp;run&nbsp;once:</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">Serial.<span style="color:#4be6fa">begin</span>(<span style="color:#c10aff">115200</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">Serial.println(<span style="color:#ffd500">"Start....."</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">int</span>&nbsp;count<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span><span style="color:#c10aff">0</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">void</span>&nbsp;loop()&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#999999">//&nbsp;put&nbsp;your&nbsp;main&nbsp;code&nbsp;here,&nbsp;to&nbsp;run&nbsp;repeatedly:</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;count<span style="color:#aaffaa"></span><span style="color:#ff3399">+</span><span style="color:#aaffaa"></span><span style="color:#ff3399">+</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;Serial.println(<span style="color:#ffd500">"HELLO,&nbsp;WORLD"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">Serial.println(count);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">delay(<span style="color:#c10aff">2000</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#4f4f4ftext-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#4f4f4f;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+  <div id="footers"></div>
+</body>
+</html>

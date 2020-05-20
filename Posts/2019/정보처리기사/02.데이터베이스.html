@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>데이터베이스 </title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("../../../include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("../../../include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="sider"></div>
+    <div id="main-wrapper">
+      <div style="maring:30px"><font size="5" color="#f0f0f0">Div 영역입니다.</font></div>
+      <div class="main-post">
+        <div class="main-title">
+          <h1>데이터베이스 </h1>
+          <h2>정보처리기사</h2>
+          <p class="main-title-time">작성일 : 2019-06-22</p>
+        </div>
+        <hr>
+        
+        <!--  본문 시작-->
+        <table border="1">
+          <thead>
+            <tr>
+              <th style="text-align:left">외부[External]</th>
+              <td>논리적 구조를 정의<br>
+                사용자나 각 개인의 입장에서 필요로 하는 데이터베이스의 논리적 구조를 정의한 것</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th style="text-align:left">개념[Conceptual] 스키마/th>
+              <td>개체간의 관계와 제약 조건 <br>
+                모든 응용 프로그램이나 사용자들이 필요로 하는 데이터를 통합한 조직 전체의 데이터베이스 명세로서 하나만 존재</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">내부[Internal] 스키마 </th>
+              <td>물리적 구조를 정의<br>
+                데이터베이스의 물리적 구조를 정의한 것으로, 물리적 저장장치의 관점에서 본 전체 데이터베이스의 명세로서 하나만 존재 <br>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">DB설계 </th>
+              <td>요구, 개념, 논리, 물리, 구현</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th><img src="../../../Image/2020/정보처리기사/02.데이터베이스/01.png?raw=true"><br> </th>
+              <th><img src="../../../Image/2020/정보처리기사/02.데이터베이스/02.png?raw=true"><br> </th>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">슈퍼키 </th>
+              <td>유일성O,최소성X, 속성들의 집합</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">후보키 </th>
+              <td>유일성O,최소성O 튜플 식별</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">기본키 </th>
+              <td>유일성O,최소성O,후보키 설정, not null</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">대체키 </th>
+              <td>유일성O,최소성O,기본키를 제외한 키</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">외래키 </th>
+              <td>유일성O,최소성O,Not NULL, 참조</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">무결성 </th>
+              <td>저장된 데이터의 정확성을 보장하기 위해 정확하지 않은 데이터가 데이터베이스 내에 저장되는 것을 방지하기 위한 제약조건</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">SELECT </th>
+              <td>순수 관계 연산자<img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2020/정보처리기사/02.데이터베이스/03.JPG?raw=true"></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">Project </th>
+              <td>순수 관계 연산자 <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2020/정보처리기사/02.데이터베이스/04.JPG?raw=true"></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">Join </th>
+              <td>순수 관계 연산자 <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2020/정보처리기사/02.데이터베이스/05.JPG?raw=true"></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">관계해석 </th>
+              <td>원하는 정보가 무엇이라는 것만 정의하는 비절차적 언어 <br>
+                질의어로 표현한다.</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">이상 </th>
+              <td>테이블의 일부 속성들이 종속으로 인해 데이터 중복이 발생하고 이로 인해 테이블 조작시 문제가 발생하는 현상<br>
+                삽입, 삭제, 갱신</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">함수적 종속 </th>
+              <td>X,Y집합이 Y의 값이 오직 하나만 연관 될 경우</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">정규화 </th>
+              <td>종속 관계 특성을 이용해 무 손실 분해<br>
+                도부이결다조</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">트랜잭션 </th>
+              <td>COMMIT, ROLLBACK</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">-원자성 </th>
+              <td>모두 반영 되거나 안되거나<br>
+                모든 연산들은 완전히 실행되거나 전혀 실행되지 않아야 한다.</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">-일관성 </th>
+              <td>일관성 잇는 DB, 수행 전후가 같다<br>
+                트랜잭션 수행 전과 수행 완료 후의 상태가 같아야 한다.</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">-독립성 </th>
+              <td>접근 불가<br>
+                나의 트랜잭션 실행 중에 다른 연산이 끼어들 수 없다.</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">-연속성 </th>
+              <td>계속 보존<br>
+                시스템이 고장 나더라도 트랜잭션에 의해 변경된 내용은 영구적으로 반영 되어야 한다.</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">회복 </th>
+              <td>트랜잭션들을 실행하는 도중 장애(Failure)가 발생하여 데이터베이스가 손상되었을 경우 손상되기 이전의 상태로 복구하는 작업</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">-실행 장애 </th>
+              <td>사용자의 실수, 무결성 규정 위반 등으로 질의 실행이 실패하는 현상</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">-트랜잭션 장애 </th>
+              <td>트랜잭션들을 실행하는 도중 장애(Failure)가 발생하여 데이터베이스가 손상되었을 경우 손상되기 이전의 상태로 복구하는 작업</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">-시스템 장애 </th>
+              <td>데이터베이스에서는 손상을 입히지 않으나 하드웨어 오동작, 정전, 소프트웨어 오류, 교착 상태 등에 의해 실행중인 모든 트랜잭션들이 더 이상 실행을 계속할 수 없는 현상</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">-미디어 장애 </th>
+              <td>저장 장치인 디스크 블록의 손상이나 디스크 헤드의 충돌 등에 의해 데이터베이스의 일부 또는 전부가 물리적으로 손상되는 현상</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">회복관리기 </th>
+              <td>로그(Log), 메모리 덤프 등을 이용하여 회복 기능을 수행하는 DBMS의 핵심 구성 요소 <br>
+                트랜잭션 실행이 성공적으로 완료되지 못하면 로그를 이용하여 트랜잭션이 데이터베이스에 생성했던 모든 변화를 취소(Undo)시켜서, 트랜잭션 실행 이전의 원래 상태로 되돌리는 역할을 담당</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">-연기 갱신 </th>
+              <td>트랜잭션이 성공적으로 종료될 때까지 데이터베이스에 대한 실질적인 갱신을 연기하는 기법</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">-즉각 갱신 </th>
+              <td>트랜잭션이 데이터를 변경하면 트랜잭션이 부분 완료되기 전이라고 즉시 실제 데이터베이스에 반영하는 기법</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">-그림자 페이지 </th>
+              <td>갱신 이전의 데이터베이스를 일정 크기의 페이지 단위로 구성하여 각 페이지마다 복사본인 그림자 페이지로 별도 보관해 두고, 실제 페이지를 대상으로 트랜잭션에 대한 변경 작업을 수행하는 기법</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">-검사점 </th>
+              <td>가장 최근의 검사점으로 회복</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">-미디어 </th>
+              <td>주기적으로 저장 장치에 덤프</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">병행 제어 </th>
+              <td>다중 프로그램의 이점을 활용하여 동시에 여러 개의 트랜잭션을 병행 수행할 때 실행되는 트랜잭션들이 데이터베이스의 일관성을 파괴하지 않도록 트랜잭션 간의 상호 작용을 제어하는 기술</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">인터리빙 </th>
+              <td>트랜잭션이 번갈아가며 처리, 동시에 여러 트랜잭션을 병행</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">Lock </th>
+              <td>데이터를 다른 트랜잭션이 접근 못하게</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">Tuning </th>
+              <td>프로그램 DB OS를 조정해 성능을 향상 시킴</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">Clusterd Index </th>
+              <td>데이터가 정렬</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">Non-Clusterd </th>
+              <td>데이터 정렬 X</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">트리 인덱스 </th>
+              <td>루트노드->하위노드 X</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">비트맵 </th>
+              <td>1,0</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">역방향 </th>
+              <td>칼럼의 데이터를 역으로</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">Data ware house </th>
+              <td>급증하는 다량의 데이터를 효과적으로 분석하여 정보화함</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">Data mart </th>
+              <td>데이터 웨어하우스의 특정 주체를 추출 소규모 데이터 웨어하우스</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">OLAP </th>
+              <td>다차원으로 이루어진 데이터로부터 통계적으로 요약 정보를 분석하여 의사결정에 활용하는 방식으로, 데이터 웨어하우스나 데이터 마트와 같은 시스템과 상호 연관되는 정보 시스템</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">-Roll up </th>
+              <td>더 요약된 정보보기</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">-Drill down </th>
+              <td>더 구체적인 정보보기</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">-Pivoting</th>
+              <td>보고서의 행/열/페이지 차원을바꾸어 보는 기능</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">Slicing/Dicing</th>
+              <td>다찬원 데이터 항목들의 다양한 각도에서 조회</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">OLTP</th>
+              <td>온라인 업무 처리, 갱신, 검색 단위를 처리</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th style="text-align:left">DSMS</th>
+              <td>무선 네트워크나 인터넷 같은 통신상에서 발생하는 대량의 스트림 데이터를 처리하고 관리하는 시스템이다.</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td colspan='2' style="text-align:left">
+                ○ 삽입<br>
+                - insert into 테이블명 values(숫자,‘문자’ .... );<br>
+                ○ 삭제<br>
+                - delete from 테이블명 where 조건;<br>
+                ○ 갱신<br>
+                - update 테이블명 set 열이름1=변경할값1, 열이름2=변경할값2... where 조건;<br>
+                ○ 조회<br>
+                중복 - distince<br>
+                정렬 - desc(내림차순); 또는 asc(오름차순);<br>
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td colspan='2' style="text-align:left">
+                CREATE TABLE 학생 ( <br>
+                이름 VARCHAR(15) Not NULL<br>
+                학번CHAR(8) PRIMARY KEY,<br>
+                전공 CHAR(5),<br>
+                성별 SEX,<br>
+                생년월일 DATE,<br>
+                CONSTRAINT 생년월일 CHECK(생년월일>=1980-01-01),<br>
+                CONSTAINT FOREIGN KEY (전공) REFERRENCES(학과코드) <br>
+                );
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td colspan='2' style="text-align:left">
+                CREATE VIEW Brazil Customers AS <br>
+                SELECT CustomerName, ContactName<br>
+                FROM Customers<br>
+                WHERE Country = "Brazil";<br>
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td colspan='2' style="text-align:left">
+                CREATE TRIGGER 트리거명 ON 테이블명<br>
+                REFERENCING <br>
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td colspan='2' style="text-align:left">
+                SELECT * <br>
+                FROM table<br>
+                WHERE <br>
+                GROUP by<br>
+                HAVING<br>
+                Order by [desc, asc] =DESC(내림차순{숫자가 큰것부터 내려옴.})
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td colspan='2' style="text-align:left">
+                ALTER TABLE 테이블명<br>
+                ADD 추가할 컬럼명 데이터 유형;<br>
+                <br>
+                ALTER TABLE PLAYER<br>
+                ADD (ADDRESS VARCHAR2(80));
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td colspan='2' style="text-align:left">
+                ALTER TABLE 테이블명 <br>
+                DROP COLUMN 삭제할 컬럼명;<br>
+                <br>
+                ALTER TABLE PLAYER<br>
+                DROP COLUMN ADDRESS
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td colspan='2' style="text-align:left">
+                INSERT INTO 테이블명 (COLUMN_LIST)<br>
+                VALUES (COLUMN_LIST에 넣을 VALUE_LIST);<br>
+                <br>
+                INSERT INTO PLAYER (PLAYER_ID, PLAYER_NAME, TEAM_ID, POSITION, HEIGHT, WEIGHT, BACK_NO)<br>
+                VALUES ('2002007', ' 박지성', 'K07', 'MF' ,178, 73, 7);
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td colspan='2' style="text-align:left">
+                DELETE 테이블명 WHERE =;
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td colspan='2' style="text-align:left">
+                UPDATE 테이블명 <br>
+                SET 수정되어야 할 컬럼명 = 수정되기를 원하는 새로운 값<br>
+                WHERE 변경 데이터 조건 컬럼 = 선택 조건 값;<br>
+                <br>
+                UPDATE PLAYER<br>
+                SET BACK_NO = 99<br>
+                WHERE PLAYER_NAME = '박지성';
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td colspan='2' style="text-align:left">GRANT 권한리스트 ON 테이블 TO 사용자 WITH GRANT OPTION </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td colspan='2' style="text-align:left">REVOKE GRANT OPTION FOR 권한 OIV </td>
+            </tr>
+          </tbody>
+        </table><br />
+        <!-- 본문 끝-->
+        
+      </div><!--main-post-->
+    </div><!-- main-wrapper-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

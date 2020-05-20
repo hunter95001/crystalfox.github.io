@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>DECODE</title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+<style>
+table {
+    width: 100%;
+    border: 1px solid #444444;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #444444;
+  }
+</style>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="sider"></div>
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+        <div class="main-title">
+          <h1>DECODE</h1>
+          <h2>데이터 베이스</h2>
+          <p class="main-title-time">작성일 : 2018-09-17</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+<table>
+
+	          <tbody>
+              <tr>
+                <td colspan='2'>
+ NUMBER(p,s) p=전체 자릿수, s =소수점 자리수 <br>
+VARCHAR = 가변크기로 크기 만큼 작으면 빈 공간 만큼 크기 할당을 하지 않는다. 대신에 길이 확인 함수인 length(4바이트)가 있기 때문에 주민등록번호, 이름이 비효율적이다.  <br>
+CHAR = 고정크기로 빈 공간 만큼에 space bar가 적용되어 있어 크기를 잡아 먹습니다.<br>
+<br>
+insert into emp values (7369,'SMITH','CLERK',7902,'1980-12-17',800,null,20); <br>
+<br>
+제약조건 <br>
+ALTER TABLE EMP ADD CONSTRAINT FK_DEPTNO FOREIGN KEY (DEPTNO) REFERENCES DEPT (DEPTNO); <br><pre>
+변경            추가  제약                외래키                  참조     </pre>        
+// DEPT  라는 테이블에 EMP 라는 외래키를 추가시킴 <br>
+ <br>
+DML :INSERT(입력), UPDATE(변경), DELETE(삭제)  <br>
+DDL :CREATE(생성), ALTER(변경), DROP(삭제)  <br>
+ <br>
+NVL() 함수 : NULL 값을 만나면 다른 값으로 치환해서 출력하는 함수 <br>
+NVL(sal,0) -> sal 컬럼의 값이 null일경우 0으로 치환해라. <br>
+NVL(sal,100) -> sal 컬럼의 값이 null일경우 100으로 치환해라. <br>
+ <br>
+NVL2(comm, comm*2 , comm/2) <br> <br>
+comm 있으면 comm*2 <br><pre>
+            없으면 comm/2 </pre>
+ <br>
+DECODE() (아주 중요합니다!!) <br>
+- SWITCH CASE문 <br>
+DECODE(입력, 조건, 출력, else ) <br>
+                </td> 
+              </tr> 
+           </tbody> 
+       <tbody>
+              <tr>
+                <td>
+ SELECT name "이름", jumin "주민등록번호", DECODE( SUBSTR(jumin,7,1),1,'MAN','WOMAN') "성별" <br>
+FROM student <br>
+WHERE deptno1 =101 <br>
+/</td> 
+                <td><pre>
+이름               주민등록번호               성별 
+----------------- -------------------------- ---------- 
+서진수             7510231901810              MAN 
+김신영             7601232186327              WOMAN 
+일지매             7711291186223              MAN 
+이윤나             7808192157498              WOMAN
+                </pre></td> 
+              </tr> 
+           </tbody>
+   <tbody>
+              <tr>
+                <td>
+SELECT name "이름", tel "연락처",DECODE( SUBSTR (tel,1,INSTR(TEL, ')' )-1 ), <br>
+                                                        02,'서울', 
+                                                        031,'경기도', 
+                                                        051,'부산', 
+                                                        052,'울산', 
+                                                        055,'경남') "지역"</pre>
+FROM student <br>
+WHERE deptno1 =101<br> 
+/
+</pre>
+                </td> 
+                <td><pre>
+이름        연락처              지역 
+----------- ------------------ -------
+서진수       055)381-2158       경남 
+김신영       055)333-6328       경남 
+일지매       02)6788-4861       서울 
+이윤나       055)278-3649       경남
+                </pre></td> 
+              </tr> 
+           </tbody>
+   <tbody>
+              <tr>
+                <td>
+SELECT studno "학번", name "이름" , jumin "주민등록번호" ,grade "학년", DECODE( SUBSTR(jumin,7,1),1,'남','여') "성별" <br>
+FROM student <br>
+WHERE deptno1 IN(SELECT deptno <br>
+FROM department <br>
+WHERE PART=( <br>
+SELECT deptno <br>
+FROM department <br>
+WHERE dname ='컴퓨터정보학부')) <br>
+/
+                </td> 
+                <td><pre>
+                
+학번 이름         주민등록번호              학년 성별 
+----- ---------- ----------------------- ----- ------ 
+9411 서진수       7510231901810              4 남 
+9711 이윤나       7808192157498              1 여 
+9611 일지매       7711291186223              2 남 
+9511 김신영       7601232186327              3 여 
+9412 서재수       7502241128467              4 남 
+9714 김주현       7803241981987              1 남 
+9612 김진욱       7704021358674              2 남 
+9512 신은경       7604122298371              3 여 
+9413 이미경       7506152123648              4 여 
+9715 허우         7802232116780              1 여
+                </pre></td> 
+              </tr> 
+           </tbody>
+ <tbody>
+              <tr>
+                <td>
+SELECT studno "학번", name "이름" , jumin "주민등록번호" ,grade "학년", DECODE( SUBSTR(jumin,7,1),1,'남','여') "성별",  <br>
+REPLACE(tel, SUBSTR (tel,INSTR(TEL, '-' )+1,4),'****')  "전화번호", <br>
+DECODE( SUBSTR (tel,1,INSTR(TEL, ')' )-1 ), <pre>
+                  		 02,'서울',  
+                  		 031,'경기도',  
+                   		 051,'부산',  
+                  		 052,'울산',  
+                  		 053,'대구', 
+                  		 055,'경남') "지역"  </pre>
+FROM student <br>
+WHERE deptno1 IN(SELECT deptno <br>
+FROM department <br>
+WHERE PART=( <br>
+SELECT deptno <br>
+FROM department <br>
+WHERE dname ='컴퓨터정보학부')) <br>
+order by grade <br>
+/
+                </td> 
+                <td><pre>
+학번 이름    주민등록번호     학년 성별  전화번호        지역 
+----- ----- -------------- ----- ---- --------------- ----
+9711 이윤나  7808192157498     1 여    055)278-****    경남 
+9715 허우    7802232116780     1 여    02)6122-****    서울 
+9714 김주현  7803241981987     1 남    055)423-****    경남 
+9611 일지매  7711291186223     2 남    02)6788-****    서울 
+9612 김진욱  7704021358674     2 남    055)488-****    경남 
+9512 신은경  7604122298371     3 여    051)418-****    부산 
+9511 김신영  7601232186327     3 여    055)333-****    경남 
+9413 이미경  7506152123648     4 여    053)266-****    대구 
+9411 서진수  7510231901810     4 남    055)381-****    경남 
+9412 서재수  7502241128467     4 남    051)426-****    부산
+               </pre> </td> 
+              </tr> 
+           </tbody>
+  
+ </table><br />
+        
+        <pre>
+SQL> set linesize 200 
+SQL> set pagesize20 
+SQL> col 전화번호 for a20
+
+실습문제 1번.  테이블 만들고 insert 하기
+실습문제 2번.  서브쿼리 
+실습문제 3번. 단일행 함수 ( DECODE나CASE가 나옵니다 )
+실습문제 4번. 복수행 함수  
+</pre>
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

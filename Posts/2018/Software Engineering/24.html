@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>클래스 다이어그램   </title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+	   <link rel="stylesheet" type="text/css" href="../../../CSS/Attach.css">
+   <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+	
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sider"></div>
+
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+
+
+        <div class="main-title">
+           <h1>클래스 다이어그램  </h1>
+          <h2>Software Engineering</h2>
+          <p class="main-title-time">작성일 : 2019-08-01</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+	       <h1><p style="text-align: center">   클래스 다이어그램</p></h1>
+
+
+	      <h3>클래스 다이어그램</h3>
+-클래스, 속성, 오퍼레이션, 연관관계 등을 이용해 정적인 관점<br>
+문제나 해결책의 정적인 구조를 보여주는 매우 중요한 다이어그램이다.<br>
+시스템을 구성하는 클래스들과 그들 간의 관계를 보여준다.<br>
+<br>
+<h3>클래스 다이어그램의 구성요소</h3>
+	      <font style="font-weight:bold;">1.클래스</font><br>
+-속성과 오퍼레이션의 집합체를 나타낸다.<br>
+<br>
+ <font style="font-weight:bold;">2.연관 관계</font>
+-클래스 사이의 정적인 관계를 나타낸다.<br>
+두 클래스가 서로 어떻게 관련이 있는지를 나타내는 데 사용한다.<br>
+<br>
+ <font style="font-weight:bold;">3.속성</font>
+-클래스 안에 있는 데이터의 정의 ,즉 클래스 인스턴스에서 발견할 수 있는 데이터의 타입이다.<br>
+<br>
+ <font style="font-weight:bold;">4.오퍼레이션</font><br>
+-클래스 안에 포함된 함수, 즉 클래스에 속하는 객체에 적용될 수 있는 함수 정의이다.<br>
+<br>
+ <font style="font-weight:bold;">5.상속</font><br>
+-클래스를 그루핑한 상속 구조를 나타낸다.<br>
+<br>
+ <font style="font-weight:bold;">6.가시성</font><br>
+-가시성은 클래스 안에 있는 정보에 누가 접근할 수 있는지를 명시한 것으로 public, private, protected의 세가지 타입이 있다.<br>
+<br>
+ <font style="font-weight:bold;">7.다중도</font><br>
+-연관 관계를 맺을 때 인스턴스 몇 개가 참여하는지를 나타낸 것으로 연관 관계를 나타내는 선 끝에 표시한다. [0...1, *, 1 등등]<br>
+	 <br>
+ <font style="font-weight:bold;">8.제약사항</font><br>
+- {}안에 제약 사항을 표시한다.<br>
+<br>
+ <font style="font-weight:bold;">9. 일반화 관계</font><br>
+클래스의 상속을 의미한다.<br>
+<br>
+ <font style="font-weight:bold;">10. 전체/부분 관계</font><br>
+- 검은색 다이아몬드 (합성관계) <- 전체와 객체의 부분이 독립적 일떄, 같이 소멸함 <br>
+- 흰색 다이아몬드 (집합관계) <- 전체와 객체의 부분이 종속적 일떄, 독립적으로 존재가능<br>
+<br>
+인터페이스<br>
+- 인터페이스는 객체 집합이 가지는 행위를 일부 가시화하여 나타낸 것이다.<br>
+<br>
+<br>
+
+분류				예제<br>
+물리적인 사물		자동차, 현금인출기<br>
+역할				구매자, 관리자, 교수<br>
+구조체			동아리와 회원, 책과 장, 버스와 승객<br>
+장소				주차장, 은행지점<br>
+트랜잭션			판매, 	예약, 구매, 지불<br>
+외부 시스템또는 장치	센서, 사용자 인증, 시스템<br>
+조직				회계부서, 교무처<br>
+<br>
+	
+       <h1><p style="text-align: center">   클래스 다이어그램 작성 과정</p></h1>
+1. 클래스 후보 집합을 파악한다.<br>
+[명사나 명사구를 추출하면 클래스 정의가 쉽다.]<br>
+2. 가장 중요한 클래스부터 시작하여 연관 관계와 꼭 필요한 속성을 추가한다.<br>
+3. 가장 확실한 일반화 관계부터 시작하여 파악한다. <br>
+[상속,인터페이스등의 구조가 나오는게 있는지]<br>
+4. 클래스의 주요 임무를 찾아 나열한다. 각 클래스에 의해 수행될 기능을 간단한 문장으로 나타 내는 것이다.<br>
+5. 임무를 기준으로 필요한 오퍼레이션을 결정한다.<br>
+[임무 = 클래스가 해야할 역할, 임무는 다양한 오퍼레이션[메소드]을 갖는다. ]<br>
+6. 전체과정을 다시 되풀이한다. 필요하면 클래스, 연관 관계, 속성, 일반화, 임무, 오퍼레이션 등을 추가하거나 삭제하면서 모델을 완성해나간다. 특히 전체/연관 관계, 속성, 오퍼레이션이 설정한 임무를 만족시키는지, 또한 만족시키기 위한 충분한 정보가 있는지 확신할 수 있도록 반복한다. 디자인 패턴을 적용할 수 있다면 적용하여 수정하고 적당한 인터페이스가 되었는지 살펴본다.<br>
+	<br>
+	      
+	      1. □□□ □□□□□ 클래스, 속성, 오퍼레이션, 연관관계 등을 이용해 정적인 관점문제나 해결책의 <font color="#86E57F">정적인 구조</font>를 보여주는 매우 중요한 다이어그램으로 시스템을 구성하는 클래스들과 그들 간의 관계를 보여준다.<br>
+-클래스 다이어그램<br>
+	      <br>
+	      2.클래스 다이어그램의 구성요소 중 <font color="#86E57F">정보에 누가 접근 할 수 있는지</font>에 대한 구성요소는?<br>
+-가시성<br>
+	      <br>
+	      3. 전체와 객체의 부분이 <font color="#86E57F">독립적</font> 일 때 같이 <font color="#86E57F">소멸하는 관계는</font>?<br>
+-합성 관계<br>
+	      <br>
+	      4. □□□□□는 객체 집합이 가지는 행위를 일부 <font color="#86E57F">가시화</font>하여 나타낸 것이다.<br>
+-인터페이스<br>
+	      <br>
+5. 클래스 다이어그램 작성 과정 (참고하세요)<br>
+	      1. 클래스 <font color="#86E57F">후보 집합</font>을 파악한다.<br>
+	      2. 가장 중요한 클래스부터 시작하여 <font color="#86E57F">연관 관계와 꼭 필요한 속성</font>을 추가한다.<br>
+	      3. 가장 확실한 <font color="#86E57F">일반화 관계</font>부터 시작하여 파악한다.<br>
+	      4. 클래스의 <font color="#86E57F">주요 임무를 찾아 나열</font>한다. 각 클래스에 의해 수행될 기능을 간단한 문장으로 나타내는 것이다.<br>
+	      5. 임무를 기준으로 필요한 <font color="#86E57F">오퍼레이션을 결정</font>한다. <br>
+		6. 전체과정을 다시 되풀이한다. <br>
+	      
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

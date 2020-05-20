@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Sub Query</title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sider"></div>
+
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+        <div class="main-title">
+          <h1>Sub Query</h1>
+          <h2>데이터 베이스</h2>
+          <p class="main-title-time">작성일 : 2018-10-11</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+ 
+Sub Query는 값이 1개인지 여러개인지가 중요합니다 <br>
+직급별,학과별, 부서별 =값이 여러개 입니다. <br>
+=>다중칼럼[min,max], 상호 연관[avg]<br>
+아니면 값이 하나입니다.<br>
+단일행 Sub Query <- 값이 하나 일때 <br>
+        
+<table>
+  <tbody>
+              <tr>
+                <th>연산자</th>
+                <th>의미</th> 
+              </tr> 
+           </tbody> 
+ <tbody>
+              <tr>
+                <td>=</td>
+                <td>	동일한,같다</td> 
+              </tr> 
+           </tbody>
+   <tbody>
+              <tr>
+                <td><></td>
+                <td>같지않다, 다르다</td> 
+              </tr> 
+           </tbody>
+   <tbody>
+              <tr>
+                <td>>=</td>
+                <td></td> 
+              </tr> 
+           </tbody>
+   <tbody>
+              <tr>
+                <td><</td>
+                <td></td> 
+              </tr> 
+           </tbody>
+   <tbody>
+              <tr>
+                <td><=</td>
+                <td></td> 
+              </tr> 
+           </tbody>
+ </table><br />
+        다중행 Sub Query <-값이 여러개 나올때 <br>
+ 
+<table>
+  <tbody>
+              <tr>
+                <th>연산자</th>
+                <th>의미</th> 
+              </tr> 
+           </tbody> 
+ <tbody>
+              <tr>
+                <td>IN</td>
+                <td</td> 
+              </tr> 
+           </tbody>
+   <tbody>
+              <tr>
+                <td>EXITSYS</td>
+                <td></td> 
+              </tr> 
+           </tbody>
+   <tbody>
+              <tr>
+                <td>>ANY</td>
+                <td>OR 하나라도 FALS가 있으면 안됨.</td> 
+              </tr> 
+           </tbody>
+   <tbody>
+              <tr>
+                <td><ANY</td>
+                <td></td> 
+              </tr> 
+           </tbody>
+   <tbody>
+              <tr>
+                <td><ALL</td>
+                <td>AND 하나라도 FALS가 있으면 안됨.</td> 
+              </tr> 
+           </tbody>
+     <tbody>
+              <tr>
+                <td>>ALL</td>
+                <td></td> 
+              </tr> 
+           </tbody>
+ </table><br />        
+        
+        <table>
+  <tbody>
+              <tr>
+                <th>1000</th>
+                <th>500<br>
+1000<br>
+200</th> 
+             
+    <th></th>
+     <th></th>
+     <th></th>
+                 </tr> 
+           </tbody> 
+
+            <tbody>
+              <tr>
+                <td>IN (==같다는 뜻.)</td>
+                <td>	T</td> 
+                <td>	NOT IN</td>
+                <td>	F</td>
+                <td></td>
+              </tr>
+           </tbody>
+            <tbody>
+              <tr>
+                <td><ANY</td>
+                <td>T</td> 
+                <td>	NOT <ANY</td>
+                <td>F</td>
+                <td>>ALL</td>
+              </tr>
+           </tbody> 
+               <tbody>
+              <tr>
+                <td><ALL</td>
+                <td>F</td> 
+                <td>NOT <ALL</td>
+                <td>T</td>
+                <td>>ANY</td>
+              </tr>
+           </tbody>  
+          
+ </table><br />     
+        <pre>
+        avg =값이 여러개 나옴 
+min, max= 값이 하나
+Multi Column Sub Query
+대부분 IN을 사용합니다.
+-> 학과별, 직급별  [GROUP BY를 사용합니다 ] ->MIN, MAX,AVG 3개 밖에 사용할수 없습니다.
+Hint
+서진수랑 같은과에 다니는 학생의 이름이랑 전공 출력. 
+
+
++입사순서대로  
+
+전공1이 전자공학과 평균몸무게 구하고 몸무게가 많은 사람들 출력 
+*주의. 남 여 를 따로 구현합니다. 
+
+
+평균연봉이 가장 적은 부서의 연봉 
+
+학년별로 자신의 평균 몸무게보다 작은 사람들을 출력하시오. 
+
+연봉 
+  
+avg =값이 여러개 나옴 
+min, max= 값이 하나 
+min(avgg(sal)) 
+부서별 평균연봉의 최소 
+중에서 평균보다 작은애들.
+        
+        </pre>
+                           
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

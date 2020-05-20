@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>youtube 다운로드 </title>
+  <link rel="stylesheet" type="text/css" href="../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../CSS/Python.css">
+
+  <style type="text/css">
+    .main-post {
+      margin-left: 100px;
+      margin-right: -30px;
+      margin-top: 10px;
+      width: 1000px;
+      background: white;
+    }
+
+    .main-title {
+      margin-top: -20px;
+      margin-left: 30px;
+    }
+
+    .main-title-time {
+      margin-top: -30px;
+      margin-right: 30px;
+      text-align: right;
+    }
+
+    .main-post-text {
+      font-size: 24px;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    .main-h2 {
+      margin-bottom: -20px;
+    }
+
+    .main-h3 {
+      margin-bottom: -30px;
+    }
+  </style>
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+    
+    <div id="sider"></div>
+    
+    <div id="main-wrapper">
+      <div style="maring:30px"><font size="5" color="#f0f0f0">Div 영역입니다.</font></div>
+      
+      <div class="main-post">
+        
+        <div class="main-title">
+          <h1>youtube 다운로드 </h1>
+          <h2>Pyton</h2>
+          <p class="main-title-time">작성일 : 2019-07-08</p>
+        </div>
+        <hr>
+        
+           <!--  본문 시작-->
+        
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Pyton/02.youtube 다운로드/01.png?raw=true"><br><br>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Pyton/02.youtube 다운로드/02.png?raw=true"><br>
+        CMD 창 <br><br>
+        conda info --envs // 콘다의 환경을 확인합니다<br><br>
+        conda create -n test1[가상환경이름] python=3.5[파이썬 버전]<br><br>
+        conda activate test1 //콘다의 test1 환경을 활성화 합니다<br><br>
+        pip install moviepy // import할 폴더나 페키지를 설치합니다.<br><br>
+        
+        <h3>Source</h3>
+
+        <div style="background-color:#EAEAEA; margin: 10px; padding: 10px;>
+          <font class="python-import">from </font> moviepy.editor <font class="python-import">import </font> * # pip install moviepy<br><br>
+          <font class="python-import">import </font> pytube<br><br>
+          <font class="python-function">print </font> (os.<font class="python-function">getcwd </font> ()) # 경로<br>
+          yt <font class="python-equals"> = </font> pytube.<font class="python-function">YouTube </font> ( <font class="python-string">"https://www.youtube.com/watch?v=845l5jilGcE" </font> ) <br>
+          vids <font class="python-equals"> = </font> yt.streams.<font class="python-function">all </font>()<br>
+          for i in <font class="python-function">range </font> (<font class="python-function">len </font> (vids)):<br>
+          &nbsp;&nbsp;<font class="python-function">print </font> (i, ',', vids[i])<br><br>
+          vnum <font class="python-equals"> = </font>
+          <font class="python-function">int </font> (<font class="python-function">input </font> ( <font class="python-string">"다운 받을 화질은?" </font> )) #화질 입니다.<br>
+          #vnum<font class="python-equals"> = </font>
+          <font class="python-int"> 2 </font> # 2 1080p fps30 video/mp4<br><br>
+          parent_dir <font class="python-equals"> = </font>
+          <font class="python-string"> "/Users/gong-yeongjae/Desktop/untitled/"</font> <br>
+          vids[vnum].download(parent_dir)<br><br>
+          new_filename <font class="python-equals"> = </font>
+          <font class="python-function">input </font> ( <font class="python-string">"변환 할 mp3 파일명은?" </font> )<br>
+          default_filename <font class="python-equals"> = </font> vids[vnum].default_filename # 기존 mp4 파일이름<br><br>
+          video <font class="python-equals"> = </font>
+          <font class="python-function">VideoFileClip </font> (os.path. <font class="python-function">join </font> (parent_dir, default_filename)) # mp3로 변환할 기존 mp4파일 경로<br>
+          video.audio.<font class="python-function">write_audiofile </font> (os.path. <font class="python-function">join </font> (parent_dir, new_filename)) # mp3로 변환 후 저장할 경로<br><br>
+          video.<font class="python-function">close </font> () # process를 끝내야 mp4파일을 지울 수 있다.<br><br>
+          <font class="python-function">print </font> (<font class="python-string">'동영상 다운로드 및 mp3 변환 완료!'</font> )
+        </div><br><br>
+                
+        <h3>Key Error ='title' 해결방법. </h3>
+        <a href="https://blog.naver.com/skyshin0304/221619984355"> https://blog.naver.com/skyshin0304/221619984355 </a>                                                                
+                                                                                  
+      <!--  본문 끝-->                                                                  
+      </div><!--main-post-->
+    </div><!--"main-wrapper-->
+  </div> <!--wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

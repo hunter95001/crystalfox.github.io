@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>디자인 패턴 </title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sider"></div>
+
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+
+
+        <div class="main-title">
+           <h1>디자인 패턴</h1>
+          <h2>Software Engineering</h2>
+          <p class="main-title-time">작성일 : 2018-10-15</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+ 디자인 패턴은 자주 접하는 설계 문제를 해결해주는 증명된 솔루션을 체계적으로 정리한 것이다. <br>
+자주 반복되는 설계 문제를 해결해준다.<br>
+체계적으로 문서화하여 범용적으로 사용할 수 있도록 정리한 것이다.<br>
+<br>
+개념 실체패턴<br>
+-각 객체의 정보를 공유할 때 사용<br>
+<br>
+플레이어 역할 패턴<br>
+-하나의 클래스에 다양한 역할을 표현하는 패턴<br>
+개념 클래스 -공유할 정보를 담는 클래스 [1]<br>
+실체 클래스 -공통된 정보를 가진 멤버. [*]<br>
+1:* 관계<br>
+<br>
+상속으로 할경우 - 객체의 수 만큼 중복을 하게 됩니다.  [정보의 중복] <br>
+
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Software Engineering/09/00.png?raw=true"><br>
+Player-Role 형식.<br>
+<br>
+<br>
+위임 패턴<br>
+-다른 클래스가 가진 특정 오퍼레이션을 활용하여 책임을 위임하는 패턴<br>
+결과만 Return<br>
+<img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Software Engineering/09/01.png?raw=true"><br>
+ 결합도 응집력.<br>
+결합도는 낮아야 좋은 것 이고<br>
+응집력은 높아야 좋은 것 이다.<br>
+<br>
+계층 구조 패턴<br>
+게층 관계를 묶어 동일한 처리를 하고 싶을때 사용.<br>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Software Engineering/09/02.png?raw=true"><br>
+        
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

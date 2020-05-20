@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>megaAVR, I/O 메모리 3교시 </title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="sider"></div>
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+        <div class="main-title">
+          <h1>megaAVR, I/O 메모리 3교시 </h1>
+          <h2>임베디드 시스템</h2>
+          <p class="main-title-time">작성일 : 2018-03-14</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+        <p class="posts">
+        1.레지스터 값을 메모리에 로드<br>
+2. 연산<br>
+3. 메모리에 레지스터로 반환<br>
+<br>
+Local 변수<br>
+[Cisc] 일반적 -> 스텍 (레지스터 크기가 커서 상관 없음 )<br>
+[Risc] 최적화 -> 레지스터<br>
+<br>
+기계어<br>
+ldi =로드<br>
+st =저장하라 [메모리에]<br>
+<font style="font-weight:600; font-size:24px;color:#47C83E;">st z+ z에 넣는게 아니라 z가 가리키는 주소에 저장하라,+는 저장하고 1증가하라</font><br>
+<br>
+<font style="font-weight:600; font-size:32px;">megaAVR 메모리{</font><br>
+32개 레지스터<br>
+64개 I/O 레지스터 <font style="font-weight:600; font-size:24px;color:#F361A6;"><- I/O -mapped I/O 지원</font><br>
+160개 확장된 I/O 레지스터 <font style="font-weight:600; font-size:24px;color:#6799FF;"><- 레지스터를 이용해 EERROM 접근</font><br>
+내부 SRAM [4000 byte]<br>
+외부 SRAM  <font style="font-weight:600; font-size:24px;color:#47C83E;"><- MCU 외부에 RAM 장착시 사용 가능</font><br>
+}<br>
+<br>
+<font style="font-weight:600; font-size:32px;">I/O 공간</font><br>
+<br>
+1. memory -mapped I/O<br>
+memory space{<br>
+동일한 주소 공간에<br>
+RAM안에 I/O공간이 있음<br>
+}<br>
+<font style="font-weight:600; font-size:24px;color:#F361A6;">*접근에 사용하는 명령어가 같다 (RAM도 MOV , I/O도 MOV)</font><br>
+1.  I/O -mapped I/O<br>
+memory space + I/O SPACE{<br>
+서로다른 독립적인 공간에 있음 [별도로 할당]<br>
+}<br>
+<font style="font-weight:600; font-size:24px;color:#F361A6;">*접근에 사용하는 명령어가 다름 (RAM도 MOV , I/O도 IN, OUT)</font><br>
+<br>
+<font style="font-weight:600; font-size:32px;">ATMEGA128</font><br>
+memory -mapped I/O 기반<br>
+I/O -mapped I/O  허용 [접근 시간을 빠르게 하기 위해서 라고 생각]<br>
+
+        </p>
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+  <div id="footers"></div>
+</body>
+</html>

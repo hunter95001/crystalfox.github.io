@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>SOM </title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="sider"></div>
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      
+      <div class="main-post">
+      
+        <div class="main-title">
+          <h1>SOM </h1>
+          <h2>Unspervised</h2>
+          <p class="main-title-time">작성일 : 2019-07-08</p>
+        </div>
+        <hr>
+        
+     <!--  본문 시작-->
+        경계변수 설정 
+경계변수보다 크면 새로운 클러스터 
+작으면 기존 
+
+경계변수가 중요함 
+경계 변수가 작으면 클러스터가 많이 나눠지기 때문에 인식율은 높아지지만 유사한 것도 분할해 버리는 효과가 발생한다. 
+경계변수가 크면 클러스터가 적게 나눠지기 때문에 속도는 빠르지만 유사하지 않을것도 군집화 시켜버리는 효과가 발생한다. 
+
+
+<h3>해결방안 1 Dynamic</h3>
+클러스터 개수가 많아지면 경계변수 값을 크게 줘서 군집시켜주고
+클러스터 개수가 적어지면 경계변수 값을 작게 줘서 분할해 줍니다. 
+경계 변수 값을 동적으로 할당해야 합니다. 
+
+<h3>해결방안 2 Deep Art </h3>
+ART2를 이용해서 클러스터 해주고 
+경계 변수 값을 조정하여 다시 ART를 사용하는 방법 입니다.
+    <!--  본문 끝-->
+    
+      </div><!--main-post-->
+    </div><!--"main-wrapper-->
+  </div> <!--wrapper-->
+  
+  <div id="footers"></div>
+  
+</body>
+
+</html>

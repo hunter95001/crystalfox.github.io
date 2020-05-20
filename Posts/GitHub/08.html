@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title> GitHub 폴더삭제 git rm </title>
+  <link rel="stylesheet" type="text/css" href="../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sider"></div>
+
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+
+
+        <div class="main-title">
+          <h1>GitHub 폴더삭제 git rm </h1>
+          <h2>GitHub</h2>
+          <p class="main-title-time">작성일 : 2019-09-04</p>
+        </div>
+        <hr>
+    <!--  본문 시작-->
+
+      <p class="posts">
+
+git rm  "파일명, 폴더명"&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp&nbsp<-파일명, 폴더명 삭제 <br>
+git rm -r "파일명, 폴더명"&emsp;&emsp;&emsp;&emsp;&nbsp&nbsp<-파일명, 폴더명 삭제 <br>
+git rm -rf "파일명, 폴더명"&emsp;&emsp;&emsp;&emsp;&nbsp<-파일명, 폴더명 삭제 <br>
+git rm --cached "파일명, 폴더명"&emsp;&nbsp<-파일명, 폴더명 삭제 , 로컬 저장소 삭제 X <br>
+git rm -r --cached "파일명, 폴더명"&nbsp<-파일명, 폴더명 삭제 , 로컬 저장소 삭제 X <br>
+git rm \*&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<-전부다 삭제 <br>
+git rm -r \*&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<-전부다 삭제 <br> 
+<br> 
+<br> 
+<img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/08/00.JPG?raw=true"><br>        
+연습용 레포지토리 입니다. <br> 
+DB,와 TEST가 있는데 여기서 TEST를 삭제해보도록 합시다 <br> 
+<img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/08/01.JPG?raw=true"><br>
+remote 명령어를 사용해서 레포지토리를 연결해줍니다.    <br>    
+<img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/08/02.JPG?raw=true"><br>
+적용할 폴더에는 DB와 test폴더가 있습니다 <br>        
+<img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/08/03.JPG?raw=true"><br>
+최근에 push를 한 상태이기 때문에 status에는 깨끗한 상태입니다.<br>
+git rm test 명령어가 먹히지 않으면<br>
+git rm -r test를 통해 삭제해주도록 합시다<br>
+<br>
+status에 삭제되었다고 표기 됩니다.        <br>
+<img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/08/04.JPG?raw=true"><br>
+commit을 적용하여 레포지토리를 변경한 후 push를 해줍니다.        
+<img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/08/05.JPG?raw=true"><br>
+push 후에 삭제된게 적용 됩니다.        
+        
+ </p>
+        <h3 class="posts">삭제가 안된다면</h3>
+     
+<img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/08/06.png?raw=true"><br>
+           <p class="posts">>git status<br>
+       delete 부분이 빨간색으로 되어있는지 확인해주세요
+        </p>
+ <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/08/07.png?raw=true"><br>      
+         <p class="posts">
+         > git add .   <br>
+           delete 부분을 초록색으로 바꿔주세요
+        </p> 
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+  
+   <div id="footers"></div>
+  
+  
+
+
+
+</body>
+
+</html>

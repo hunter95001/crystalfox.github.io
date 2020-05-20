@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>의학 통계학</title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("../../../include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("../../../include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="sider"></div>
+    <div id="main-wrapper">
+      <div style="maring:30px"><font size="5" color="#f0f0f0">Div 영역입니다.</font></div>
+      <div class="main-post">
+        <div class="main-title">
+          <h1>의학 통계학 </h1>
+          <h2>Cloud Computing</h2>
+          <p class="main-title-time">작성일 : 2019-07-06</p>
+        </div>
+        <hr>
+
+        <!--  본문 시작-->
+        <h3>의학에서 통계를 사용하는 이유</h3>
+        의학에서는 의학 통계학이라는 통계과목을 배운다. 의학 통계학이란 일반 통계학의 성과물인 제이론들을 의학 분야에 적절히 적용하여 건강-질병 현상의 파악에 통계의 힘을 빌리고자 하는 노력이다. 관측의 오차라는 모든 과학의 일반적인 문제점 말고도 생물학에는 개체 간 특이성이라는 숙명적인 난제가 있기 때문에 생명현상의 관측에는 반드시 "집단성"이 개입될 수밖에 없다. 또한 특정 질병을 유발하는 원인적 요인이나 특정 치료법의 치료효과에
+        대한 경험적/ 주관적 판단의 확신과 관찰 대상 환자가 전체 환자를 대표 할 수 있는지, 적절한 비교군 없이 관찰한 결과로부터 타당한 결과를 내릴 수 있는지에 대해서 합리적이고 객관적인 결론을 이끌어내기 위해 통계 분석을 적용 한다
+
+        <h3> 의학에서 통계 사용 사례1 </h3>
+        20명의 천식 환자를 대상으로 10명에게 새로운 치료제를 투여한 후 추적 관찰한 결과 6명에서 반응이 나타나고 10명에게 기존 치료제를 투여한 결과 3명에서 반응이 나타난다고 가정 한다면 새로운 치료제의 치료 효과가 더 우수하다고 볼 수 없다. 통계적으로 신뢰구간이 0.05의 수치보다 크기 때문이다. 의학 통계 기법에서는 귀무가설과 대립 가설이 있다. 귀무 가설의 경우 대립 가설의 여사상, 통계적 검정의 대상을 뜻하고 대립
+        가설이란 연구자가 주장하고자 하는 가설 또는 연구 가설이다.
+
+        <table border="1">
+          <thead>
+            <tr>
+              <td>실제 검정 결과</td>
+              <td>귀무가설이 옳음</td>
+              <td>귀무가설이 틀림</td>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>귀무가설 채택/td>
+              <td>옳음</td>
+              <td>제 2종 오류</td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <td>귀무가설 기각</td>
+              <td>제 1종 오류</td>
+              <td>옳음</td>
+            </tr>
+          </tbody>
+        </table><br />
+
+        <img class="main-backgroundimage" src="../../../Image/2019/CloudComputing/01.의학통계학/01.png?raw=true"> <br>
+        p-value가 0,05보다 작으면 귀무가설 기각
+
+        <table border="1">
+          <thead>
+            <tr>
+              <td>종속 변수</td>
+              <td>독립 변수</td>
+              <td>통계적 분석법</td>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>연속변수(혈압)</td>
+              <td>명목척도(2개 범주)</td>
+              <td>T검정, paired T 검정</td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <td>범주형 (병 발생 여부)</td>
+              <td>범주형 (투약 여부)</td>
+              <td>
+                카이제곱 검정 (하나의수)<br>
+                로지스틱 회귀 분석 (둘 이상의 변수)
+              </td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <td>연속형 (아기의 체중)</td>
+              <td>연속형 (재태 임신기간)</td>
+              <td>회귀분석</td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <td>연속형 (출생 시 체중)</td>
+              <td>연속형 + 범주형</td>
+              <td>공분산분석(ANCOVA)</td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <td>생존시간 (연속형,>0)</td>
+              <td>연속형 + 범주형</td>
+              <td>생존분석 </td>
+            </tr>
+          </tbody>
+        </table><br />
+
+        <table border="1">
+          <thead>
+            <tr>
+              <th>자료의 성격</th>
+              <th>모수적 방법</th>
+              <th>비모수적 방법</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th>종속 변수가 범주형</th>
+              <td>카이제곱검정</td>
+              <td>
+                Fisher’s exact test<br>
+                Ncnemar test<br>
+                Cochran’s Q<br>
+              </td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th>
+                종속 변수가 연속형<br>
+                두 개의 독립된 집단
+              </th>
+              <td>T-test</td>
+              <td>
+                Wilcoxon rank sum test<br>
+                Man-whiteny mediar<br>
+              </td>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th>두 개의 짝 지은 집단</th>
+              <td>Paired t-test</td>
+              <td>Wilcoxon signed rank test</td>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th>세 개 이상의 집단</th>
+              <td>ANOVA</td>
+              <td>Kruscal-Wallis test</td>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th>제 3의 변수의 영향 고려</th>
+              <td>2-way ANOVA</td>
+              <td>Friedman’s 2-way <br>
+                ANOVA
+              </td>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th>상관분석</th>
+              <td>
+                Pearson<br>
+                correlation<br>
+              </td>
+              <td>
+                Spearman’s correlation<br>
+                Kendall’s tau<br>
+                Stuart’s tau<br>
+              </td>
+          </tbody>
+        </table><br />
+
+        <h3>관측치 비교</h3>
+        모수적 방법<br>
+        - 자료의 정규성 분포가정을 하면 평균과 분산을 통하여 모집단의 성질을 완전히 파악할 수 있다.<br>
+        명칭척도<br>
+        등간척도/등비척도<br>
+        비모수적 방법<br>
+        - 자료의 분포가정을 하지 않는다. 자료의 평균과 분산이 아닌 순위를 이용한 방법을 사용하며 자료의 분포가정이 만족되면 효율이 떨어진다.<br>
+        Wilcoxon rank sum test<br>
+        mann Whitney U-test<br>
+        등비 척도의 경우 18마리를 9마리씩 두 군으로 나누어 각각의 약물 투여 후 관찰 한다.<br>
+
+        <table border="1">
+          <tbody>
+            <tr>
+              <th>T-test[검정법]</th>
+              <td>관심 변수가 연속일 때(정규분포를 따를 때) 두 집단 간에 vdurbs의 차이를 보는 검정</td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th>Paired t-test</th>
+              <td>한 개체에서 짝지은 관찰치들의 동질성을 볼때</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th>비모수적 방법</th>
+              <td>표본수가 적은 경우에는 정규분포 가정을 확인하기 곤란</td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th>ANOVA(분산분석)<br>
+                Analysis of Variance</th>
+              <td>두 개 이상의 집단 혹은 다른 변수로 보정을 할 때.
+                연속 변수 평균들의 비교</td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th>회귀분석<br>
+                Regression Analysis
+              </th>
+              <td>연속 형 설명변수가 연속 형 종속 변수에 미치는 영향을 분석<br>
+                회귀 계수의 의미 <br>
+                단순회귀: X1 단위 증가시 Y 증가분의 기대치<br>
+                중회귀 : 다른 X들이 일정한 값으로 남아 있을 때 관심 X가 1단위 증가시 Y의 기대치의 증가분
+              </td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th>로지스틱 회귀분석<br>
+                Logistic Regression</th>
+              <td>설명변수가 이산형 종속변수에 미치는 영향 분석</td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th>카제곱 검정</th>
+              <td>두 이산 변수 간의 관련성 검정<br>
+                카이 제곱 통계량은 기대치와 실제값의 차이의 제곱 함수이다.<br>
+                카이제곱 통계량이 크다 -> 기대치와 실제값이 다르다 -> 기대치를 계산하기 위한 가정 -> 두 변수간에 상관이 있다.
+              </td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th>유전자형 자료분석의 기본 개념</th>
+              <td>Genotype Freq, Allele Freq,<br>
+                Hardy-Weinberg Disequilibrium,<br>
+                (Mendelian) Genetic Models,<br>
+                LD, Haplotype, Heritability, SNP Association Study,<br>
+                Multiple Comparisons</td>
+            </tr>
+          </tbody>
+
+        </table><br><br>
+
+        통계 분석 과정<br>
+        종속변수 –혈압강하 정도<br>
+        변수의척도 –등비척도<br>
+        검정법 –t-test<br>
+        귀무가설 – 두 치료제의 효과는 차이가 없다<br>
+        유의수준 0.01<br>
+        단측or양측 양측 검정<br>
+
+        <table border="1">
+          <tbody>
+            <tr>
+              <th>평균</th>
+              <td>신약 6.01</td>
+              <td>표준약 4.08</td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th>표준편차</th>
+              <td>신약 1.24 </td>
+              <td>표준약 1.01 </td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th>분산가중치</th>
+              <td colspan='2'>Sp2 =1.279 </td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th>검정통계량</th>
+              <td colspan='2'>t=3.620 </td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th>자유도</th>
+              <td colspan='2'>(9-1)+(9+1) =16 </td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th>유의수준</th>
+              <td colspan='2'>0.01 </td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th>기각치</th>
+              <td colspan='2'>2.921 </td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th>p-값</th>
+              <td colspan='2'>3.620>2.921 P<0.01 </td> </tr> </tbody> <tbody>
+            <tr>
+              <th>판정</th>
+              <td colspan='2'>귀무가설 기각 </td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th>결론</th>
+              <td colspan='2'>두 치료제의 효과에 유의한 차이가 있다 </td>
+            </tr>
+          </tbody>
+        </table><br />
+
+
+        비모수적 방법 -Wilcoxon rank sum test<br>
+        Wilcoxon rank sum 통계량의 누적확률 분포표<br>
+        순위합이 각각 59이하, 112이상일때의 호가률 =0.009<br>
+        양측 검정 0.009*2 =0.018<br>
+        순위합이 54이하 117이상이면 0.018보다 작은 값<br>
+        P<0.05<br>
+          유의수준 5%에서 귀무가설 기각<br>
+          <img class="main-backgroundimage" src="../../../Image/2019/CloudComputing/01.의학통계학/02.png?raw=true"> <br>
+
+          <table border="1">
+            <thead>
+              <tr>
+                <tH>통계분석법</tH>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th>짝지은 관측치 비교 <br>
+                  모수적 방법<br>
+                  비 모수적 방법
+                </th>
+
+                <td>
+                  <br>
+                  Paired-test<br>
+                  sign test , Wilcoxon signed rank test <br>
+                </td>
+              </tr>
+            </tbody>
+
+            <tbody>
+              <tr>
+                <th>3개 이상의 표본평균치 비교<br>
+                  모수적 방법<br>
+                  비모수적 방법
+                </th>
+
+                <td>
+                  <br>
+                  분산분석(ANOVA)<br>
+                  Kruskal Wallis one-way ANOVA
+                </td>
+              </tr>
+            </tbody>
+
+            <tbody>
+              <tr>
+                <th>상관분석<br>
+                  모수적 방법<br>
+                  비모수적 방법
+                </th>
+
+                <td>
+                  <br>
+                  Pearson correlation test<br>
+                  Spearman correlation test
+                </td>
+              </tr>
+            </tbody>
+          </table><br />
+
+          환자군 연구의 한계 <br>
+          비교 평가할 수 있는 기준이 없으므로 결론을 내릴 수 없다. <br>
+          환자군과 유사한 특성을 가진 대조군을 선정. <br>
+          화나-대조군 연구 방법을 사용해야함. <br>
+
+          환자-대조군 연구 방법 <br>
+          질병이 발생한 환자와 질병이 없는 대조군에서 과거 노출 여부를 조사하여 노출률을 비교 <br>
+
+
+
+          <table border="1">
+            <thead>
+              <tr>
+                <th colspan='4'>대응 위험도 OR</th>
+                <th colspan='4'>상대 위험도 RR</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th>질병/노출</th>
+                <td> E(+) </td>
+                <td> E(-) </td>
+                <td> 계 </td>
+                <th>질병/노출</th>
+                <td> E(+) </td>
+                <td> E(-) </td>
+                <td> 계 </td>
+              </tr>
+            </tbody>
+
+            <tbody>
+              <tr>
+                <th>O(+)/</th>
+                <td>a </td>
+                <td>b </td>
+                <td> a+b </td>
+                <th>D(+)/</th>
+                <td>a </td>
+                <td>b </td>
+                <td> a+b </td>
+              </tr>
+            </tbody>
+
+            <tbody>
+              <tr>
+                <th>O(-)/</th>
+                <td>c </td>
+                <td>d </td>
+                <td> c+d </td>
+                <th>D(-)/</th>
+                <td>c </td>
+                <td>d </td>
+                <td> c+d </td>
+              </tr>
+            </tbody>
+
+            <tbody>
+              <tr>
+                <th>계</th>
+                <td>a+c </td>
+                <td>b+d </td>
+                <td> N </td>
+                <th>계</th>
+                <td>a+c </td>
+                <td>b+d </td>
+                <td> N </td>
+              </tr>
+            </tbody>
+
+            <tbody>
+              <tr>
+                <td colspan='4'>OR =환자군의 노출 대응비/대조군의 노출 대응비 <br>
+                  (a/b)/(c/d)<br>
+                  ad/bc<br>
+                  (a/c)/(b/d)<br>
+                  노출군의 질병발생 대응비/ 비노출군의 질병 발생 대응비<br>
+                  Disease OR = exposure OR<br>
+                  OR이 가지는 안정성 </td>
+
+                <td colspan='4'>RR =노출군 발생률 /비노출군 발생률<br>
+                  P1/P0<br>
+                  (a/(a+c))/(b(b+d))<br>
+                  (a(b+d))/(b(a+c)) </td>
+              </tr>
+            </tbody>
+          </table><br />
+
+          임상시험 전 고려사항<br>
+          윤리적 문제:I RB 승인 여부, 피험자 동의취득<br>
+          적절한 연구대상수의 산출<br>
+          비교성의 극대화<br>
+          무작위배정 시행<br>
+          높은 순응도 유지<br>
+          치료 효과 판정의 객관성<br>
+          완전한 추적관찰: 15% 이상의 탈락률<br>
+          교란변수의 보정이 가능한 통계분석 방법 적용<br>
+          <br>
+          생존 분석<br>
+          분석결과가 가망 또는 재발 여부일 경우<br>
+
+          <table border="1">
+            <tbody>
+              <tr>
+                <th>누적 생존률의 추적</th>
+                <td>생명표법 (n>50)<br>
+                  Kaplan-Meier법(n<50) </td> </tr> </tbody> <tbody>
+              <tr>
+                <th>두 구간 생존 률 비교</th>
+                <td>Mantel-haenszel법 (생명표법)<br>
+                  log-rank법(K-M법)<br>
+                  likelihood ratio법(n<50) </td> </tr> </tbody> <tbody>
+              <tr>
+                <th>교란변수의 보정</th>
+                <td>Cox proportion hazard model 이용한 다변량 분석 </td>
+              </tr>
+            </tbody>
+          </table><br />
+
+          cox’s Proportional Hazard Model<br>
+          특정 질환의 치료후 예후에 관련되는 요인을 찾아내고 그러한 예후인자들의 복합적인 영향이 환자의 생존률에 미치는 여향을 상대위험도로 계량화하여 평가<br>
+
+          <img class="main-backgroundimage" src="../../../Image/2019/CloudComputing/01.의학통계학/03.png?raw=true"> <br>
+
+          <p style="text-align:center;">exp(Bi)로부터 해당 예후요인에 대한 상대위험도 (RR) 산출<br>
+            결과변수에 미치는 독립변수의 영향을 일정한 함수식으로 모델화 하는 다변량 분석 기법<br><br></p>
+
+          자연현상 및 사회현상은 일정한 규칙을 적용해 수(number)로 표현될 수 있으며, 특정 목적 하에서 관찰되는 수를 자료(data)라 한다. 자료에는 현상에 내재된 법칙에 관한 일관성(consistency)과 이와 관련된 불규칙성이 반영된 확률성(randomness)이 복합적으로 개입되게 된다. 통계학은 이들 두 특성을 과학적인 방법론을 통해 분리해서 자료가 보여주는 일관된 규칙을 발견하고자 하는 학문이다. 특별히 인간을
+          대상으로 얻어지는 자료는 그 복잡성으로 인해 해석이 훨씬 어렵게 된다.<br><br>
+
+          의학통계학은 의학 및 보건학 등에서 얻어지는 자료의 특성을 효과적으로 분석하기 위해 통계적 이론을 개발하는 학문이다. 즉, 의학통계학은 의학, 보건학 등과 통계학 간의 전문성이 적절히 결합된 현대적인 학술적 요구의 산물이다. 의학통계학은 통계적 전문성을 기반으로 자체적인 이론 개발, 의학 자료의 특성 탐구, 의과학 연구의 방법론적 기틀을 제공하는 학문이다. 의과학 연구에서 의학통계학의 역할 및 비중은 점점 증가하여, 이미 의학
+          통계적으로 객관적인 근거가 제시되지 않는 의과학 연구는 과학적이지 않은 연구로 간주될 만큼 의학통계학은 학문 그 자체로서의 위상도 나날이 높아지고 있다.<br><br>
+          <!--  본문 끝-->
+
+          <h3>출처</h3>
+          <a class=" posts" href="http://healthstat.snu.ac.kr/hokim/seminar/allergy20070617.pdf" target="_blank">
+            <img class="link" src="../../../Image/link-icon.png?raw=true">
+            http://healthstat.snu.ac.kr/hokim/seminar/allergy20070617.pdf
+          </a>
+          <br>
+
+      </div>
+    </div>
+  </div>
+  <div id="footers"></div>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>시퀸스 다이어그램 </title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sider"></div>
+
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+
+
+        <div class="main-title">
+           <h1>시퀸스 다이어그램</h1>
+          <h2>Software Engineering</h2>
+          <p class="main-title-time">작성일 : 2018-11-15</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+        시간의 축을 따라서 이벤트의 흐름을 나타낸 것이 시퀸스 다이어그램 <br>
+객체 사이에 주고받는 메시지를 동적으로 볼 수 있습니다.<br>
+*없어도 문제는 없으나 있으면 객체 사이의 흐름을 파악하기 쉬움.<br>
+=클래스 다이어그램, Use Case 다이어그램을 보고 제작함.<br>
+상호작용하는 다이어그램.<br>
+<img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Software Engineering/13/00.jpg?raw=true"><br>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Software Engineering/13/01.gif?raw=true"><br>
+        
+ 객체<br>
+라이프 라인 [세로줄] -시간축<br>
+메세지[가로선] <br>
+activation box -살아있는 기간<br>
+소멸하면 x표시.<br>
+시퀸스 다이어그램 만드는법 :Star UML -designModel -우클릭 -add diagram -sequenceDiagram<br>
+Actor : designModel -우클릭 만드는법 -add -actor<br>
+Object -만들고 - 더블클릭 - 우측 버튼 클릭<br>
+combined Fragment : 두객체 사이의 행동을 이야기해주고 싶을때 사용합니다.<br>
+ 
+        
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

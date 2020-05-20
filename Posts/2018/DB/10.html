@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ROLLUP,CUBE,PIVOT(가로로 출력형식)</title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+<style>
+table {
+    width: 100%;
+    border: 1px solid #444444;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #444444;
+    background-color:#F3F3F3;
+  }
+</style>
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sider"></div>
+
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+
+
+        <div class="main-title">
+          <h1>ROLLUP,CUBE,PIVOT(가로로 출력형식)</h1>
+          <h2>데이터 베이스</h2>
+          <p class="main-title-time">작성일 : 2018-10-01</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+Rollup Cube =표를 만들때 사용하기 위함<br>
+        
+<table>
+
+
+	<tbody>
+              <tr>
+                <th>ROLLUP</th>
+                 <th>GROUPING SETS</th>
+                 <th>	GROUPING SETS ((deptno,job),deptno,()) 
+/</th>
+              </tr> 
+           </tbody> 
+	<tbody>
+              <tr>
+                <td>가로측(소계합)을 구할때 구함</td>
+                 <td>모든 그룹에대해서</td>
+                 <td>세로축까지 출력합니다.</td>
+              </tr> 
+           </tbody> 
+  	<tbody>
+              <tr>
+                <td><pre>
+    DEPTNO JOB                  COUNT(*) 
+---------- ------------------ ---------- 
+        20 CLERK                       2 
+        30 SALESMAN                    4 
+        20 MANAGER                     1 
+        30 CLERK                       1 
+        10 PRESIDENT                   1 
+        30 MANAGER                     1 
+        10 CLERK                       1 
+        10 MANAGER                     1 
+        20 ANALYST                     2
+                </pre></td>
+                 <td><pre>
+    DEPTNO JOB                  COUNT(*) 
+---------- ------------------ ---------- 
+        20 CLERK                       2 
+        30 SALESMAN                    4 
+        20 MANAGER                     1 
+        30 CLERK                       1 
+        10 PRESIDENT                   1 
+        30 MANAGER                     1 
+        10 CLERK                       1 
+        10 MANAGER                     1 
+        20 ANALYST                     2
+                 
+                 </pre></td>
+                 <td><pre>
+    DEPTNO JOB                  COUNT(*) 
+---------- ------------------ ---------- 
+                                      14 
+           CLERK                       4 
+           ANALYST                     2 
+           MANAGER                     3 
+           SALESMAN                    4 
+           PRESIDENT                   1 
+        10                             3 
+        10 CLERK                       1 
+        10 MANAGER                     1 
+        10 PRESIDENT                   1 
+        20                             5 
+        20 CLERK                       2 
+        20 ANALYST                     2 
+        20 MANAGER                     1 
+        30                             6 
+        30 CLERK                       1 
+        30 MANAGER                     1 
+        30 SALESMAN                    4
+                 
+                 
+                 
+                 </pre></td>
+              </tr> 
+           </tbody> 
+  	<tbody>
+              <tr>
+                <td></td>
+                <td><pre>
+    DEPTNO JOB                  COUNT(*) 
+---------- ------------------ ---------- 
+                                      14 
+           CLERK                       4 
+           ANALYST                     2 
+           MANAGER                     3 
+           SALESMAN                    4 
+           PRESIDENT                   1 
+        10                             3 
+        10 CLERK                       1 
+        10 MANAGER                     1 
+        10 PRESIDENT                   1 
+        20                             5 
+        20 CLERK                       2 
+        20 ANALYST                     2 
+        20 MANAGER                     1 
+        30                             6 
+        30 CLERK                       1 
+        30 MANAGER                     1 
+        30 SALESMAN                    4
+                
+                </pre></td>
+                 <td></td>
+              </tr> 
+           </tbody> 
+ </table><br />
+        212PAGE 1번 시험에 나옵니다
+
+        
+     <table>
+	<tbody>
+              <tr>
+                <td><pre>
+		SELECT *
+FROM (
+SELECT deptno, job, sum(sal) sal
+FROM emp
+GROUP BY GROUPING SETS ((deptno,job),job)
+UNION ALL
+SELECT deptno, 'TOTAL',SUM(sal)sal
+FROM emp
+GROUP BY GROUPING SETS (deptno,())
+)
+PIVOT(
+ SUM(sal) FOR job IN 	('CLERK' AS "CLERK",
+			'MANAGER' AS "MANAGER ",
+			'PRESIDENT' AS "PRESIDENT ",
+			'ANALYST' AS "ANALYST ",
+			'SALESMAN' AS "SALESMAN ",
+			 'TOTAL'AS "TOTAL"
+		)
+)
+ORDER BY deptno
+/
+
+SELECT *
+FROM (
+SELECT deptno, NVL(job,'TOTAL') job, sum(sal) sal
+FROM emp
+GROUP BY CUBE (deptno,job))
+PIVOT(
+ sum(sal) FOR job IN 	('CLERK' AS "CLERK",
+			'MANAGER' AS "MANAGER ",
+			'PRESIDENT' AS "PRESIDENT ",
+			'ANALYST' AS "ANALYST ",
+			'SALESMAN' AS "SALESMAN ",
+			'TOTAL' AS "TOTAL"
+		)
+)
+ORDER BY deptno
+/
+
+
+    DEPTNO      CLERK   MANAGER  PRESIDENT    ANALYST   SALESMAN       TOTAL
+---------- ---------- ---------- ---------- ---------- ---------- ----------
+        10       1300       2450       5000                            15350
+        20       1900       2975                  6000                 10875
+        30        950       2850                             5600       9400
+                 4150       8275       5000       6000       5600      35625
+		</pre></td> 
+              </tr> 
+           </tbody>
+	     
+
+
+ </table><br />   
+        
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

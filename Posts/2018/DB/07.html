@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>CASE</title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+<style>
+table {
+    width: 100%;
+    border: 1px solid #444444;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #444444;
+  }
+</style>
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sider"></div>
+
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+
+
+        <div class="main-title">
+          <h1>CASE</h1>
+          <h2>데이터 베이스</h2>
+          <p class="main-title-time">작성일 : 2018-09-20</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+<table>
+	<tbody>
+              <tr>
+              
+                <td><pre>
+ CASE() (아주 중요합니다!!) 
+- SWITCH CASE문
+CASE(입력 ) WHEN 조건 THEN 출력 ELSE  
+END"어트리뷰트"
+</pre>
+</td> 
+              </tr> 
+           </tbody> 
+  
+  <table>
+	<tbody>
+              <tr>
+              
+                <td><pre>
+SELECT name "이름", tel "연락처", CASE( SUBSTR (tel,1,INSTR(TEL, ')' )-1 )) 
+                                                           WHEN '02' THEN '서울'  
+                                                           WHEN '031' THEN '경기도'  
+                                                           WHEN '051' THEN '부산' 
+                                                           WHEN '052' THEN '울산' 
+                                                           WHEN '053' THEN '대구' 
+                                                           WHEN '055' THEN '경남'     
+                                                           ELSE '기타' 
+END  "지역"  
+FROM student  
+WHERE deptno1 =101  
+/
+
+이름      연락처                         지역 
+--------- ------------------------------ ------------------ 
+서진수    055)381-2158                   경남 
+김신영    055)333-6328                   경남 
+일지매    02)6788-4861                   서울 
+이윤나    055)278-3649                   경남
+</pre>
+</td> 
+              </tr> 
+           </tbody> 
+
+ </table><br />
+  
+  
+  <table>
+	<tbody>
+              <tr>
+              
+                <td><pre>
+3.교수의 이름 월급 보너스 세금을 출력하시오.
+4500이하15%
+4500 ~8800 24%
+8800초과 35% 
+
+SELECT name "이름", pay "급여",NVL(bonus,0) "보너스", 
+					CASE  
+					WHEN (pay*12)+(NVL(bonus,0)*6) <= 4500 THEN (pay+NVL(bonus,0))*0.15
+					WHEN (pay*12)+(NVL(bonus,0)*6) <= 8800 THEN (pay+NVL(bonus,0))*0.24
+					ELSE (pay+NVL(bonus,0)*6)*0.35
+				   	END  "세금"
+FROM professor
+/
+
+이름            급여     보너스       세금 
+--------- ---------- ---------- ---------- 
+조인형           550        100        156 
+박승곤           380         60      105.6 
+송도권           270          0       40.5 
+양선희           250          0       37.5 
+김영조           350         80      103.2 
+주승재           490         90      139.2 
+김도형           530        110      153.6 
+나한열           330         50         57 
+김현정           290          0       43.5 
+심슨             570        130        168 
+최슬기           330          0       49.5 
+박원범           310         50         54 
+차범철           260          0         39 
+바비             500         80      139.2 
+전민             220          0         33 
+허은             290         30         48
+</pre></td> 
+              </tr> 
+           </tbody> 
+
+ </table><br />
+  
+
+        
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

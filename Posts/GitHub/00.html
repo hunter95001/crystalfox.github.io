@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Github</title>
+  <link rel="stylesheet" type="text/css" href="../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="sider"></div>
+
+
+    <div id="main-wrapper">
+      <!--  본문 시작-->
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="container" style="display: block;"></div>
+      <div class="main-post">
+
+        <div class="main-title">
+          <h1>Github 시작[Git Bash] </h1>
+          <h2>Notice</h2>
+          <p class="main-title-time">작성일 : 2019-07-31</p>
+        </div>
+        <hr>
+        <div class="main-post-text">
+          <a class="posts" href="https://gitforwindows.org/">
+            <img class="link" src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/link-icon.png?raw=true">
+            Git Bash 설치</a><br>
+          <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/00/00.jpg?raw=true" width="640"><br>
+          <p class="posts">사이트 모습</p>
+          <h2 class="posts">Git Bash 설치 하는법</h2>
+          <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/00/100.PNG?raw=true" width="640"><br>
+          <p class="posts">라이센스에 대한 간략환 설명입니다. NEXT</p>
+          <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/00/101.PNG?raw=true" width="640"><br>
+          <p class="posts">목적 위치 선택 Next</p>
+          <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/00/102.PNG?raw=true" width="640"><br>
+          <p class="posts">체크 리스트 잘 확인하고 Next<br>
+            - Additional icons > On the Desktop : 윈도우 바탕화면에 Git 아이콘 추가<br>
+            - Windows Explorer integration > Git Bash Here, Git GUI Here : 폴더선택 후 마우스 오른쪽 버튼 클릭 시 Git에 연결 시킬 수 있는 기능 제공<br>
+            - Git LFS (Large File Support) : 용량이 큰 파일 지원<br>
+            - Associate .git* configuration files with the default text editor : .gif* 구성파일을 기본 텍스트 편집기와 연결<br>
+            - Associate .sh files to be run with Bash : Bash 와 같이 실행될 .sh 파일 연결<br>
+            - Use a TrueType font in all console windows : 모든 윈도우 콘솔창에서 올바른 글꼴 사용<br>
+            - Check daily for Git for Windows updates : Git for Windows 업데이트 매일 체크
+          </p>
+          <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/00/103.PNG?raw=true" width="640"><br>
+          <p class="posts">시작메뉴 폴더 선택 <br>
+            -들어진 폴더가 없을 경우 자동으로 생성되고 그 폴더에 추가됩니다<br>
+            -Don't create a Start Menu folder - 추가하기 싫으면 선택해주세요
+          </p>
+          <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/00/104.PNG?raw=true" width="640"><br>
+          <p class="posts">Git에서 사용하는 기본 편집기 선택<br>
+            -Git에서는 Vim 에디터를 사용하기를 권장합니다
+          </p>
+          <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/00/105.PNG?raw=true" width="640"><br>
+          <p class="posts">PATH 환경 설정<br>
+            -Use Git from Git Bash only : 환경 변수를 변경하지 않습니다.<br>
+            -(Recommended)Git from the command line and also from 3rd-party software :이 옵션은 옵션인 Unix 도구로 사용자 환경의 혼란을 방지하기 위해 최소한의 Git 래퍼만 PATH에 추가한다. Git Bash, 명령 프롬프트 및 Windows PowerShell의 Git와 PATH에서 Git를 찾는 타사 소프트웨어를 사용할 수 있음<br>
+            -Use Git and optional Unix tools from the Command Prompt : 위 내용에 Unix 관련 도구 옵션을 추가합니다.<br>
+            Recommended[권장된] 방법으로 사용해주세용
+          </p>
+          <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/00/106.PNG?raw=true" width="640"><br>
+          <p class="posts">HTTPS 선택<br>
+            -Use the OpenSSL library : OpenSSL 라이브러리 사용, 서버인증서는 ca-bundle.crt 파일을 사용하여 유효성 검사.<br>
+            -Use the native Windows Secure Channel library : Windows 인증서 저장소를 사용하여 서버 인증서의 유효성 검사, Active Directory 도메인 서비를 통해서 회사 내부 로트 CA인증서도 사용할 수 있습니다.
+          </p>
+          <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/00/107.PNG?raw=true" width="640"><br>
+          <p class="posts">텍스트 스타일 선택<br>
+            -Checkout Windows-style, commit Unix-style line endings : Checkout 할때는 윈도우 스타일, Commit 할때는 유닉스 스타일로 적용<br>
+            -Checkout as-is, commit Unix-style line endings : Checkout 할때는 스타일 변환 없음, Commit 할때는 유닉스 스타일로 적용<br>
+            -Checkout as-is, commit as-is : Checkout, Commit 둘다 Ending 스타일 변환 없음, 크로스 플랫폼에서는 이 옵션을 선택하지 않는 것이 좋습니다.
+          </p>
+          <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/00/108.PNG?raw=true" width="640"><br>
+          <p class="posts">터미널 선택<br>
+            -Use MinTTY(the default terminal of MSYS2) : MinTTY terminal emulator 사용<br>
+            -Use Windows' default console window : Windows 기본 콘솔 사용
+          </p>
+          <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/00/109.PNG?raw=true" width="640"><br>
+          <p class="posts">기타 옵션 선택 <br>
+            -Enable file system caching : 성능향상을 위해 파일 시스템 데이터를 메모리에 캐시됩니다.<br>
+            -Enable Git Credential Manager : Windows 용 보안 Git 자격증명 저장소를 사용하기 위해 Git Credential Manager 활성화<br>
+            -Enable symbolic links : symbolic links 활성화(기존 저장소는 영향을 받지 않습니다)
+          </p>
+          <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/00/110.PNG?raw=true" width="640"><br>
+          <p class="posts">실험 옵션 구성<br>
+            -이전에는 없었던 새로운 구성 요소이며 git add -i, git add -p가 추가되었습니다. <br>
+            -선택해도 되지만 이는 아직 중요하다고 여겨지지 않습니다. <br>
+            -그냥 Install 해주세요
+          </p>
+          <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/00/111.PNG?raw=true" width="640"><br>
+          <p class="posts">설치중</p>
+          <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/00/112.PNG?raw=true" width="640"><br>
+          <p class="posts">설치 완료</p>
+          <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/00/01.jpg?raw=true"><br>
+          <p class="posts">Git Bash 실행 모습</p>
+
+        </div>
+      </div><!--  본문 끝-->
+    </div>
+    <div id="footers"></div>
+</body>

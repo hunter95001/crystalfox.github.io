@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>시험공부 </title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sider"></div>
+
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <!--  본문 시작-->
+      <div class="main-post">
+
+
+        <div class="main-title">
+          <h1>시험공부 </h1>
+          <h2>Cloud Computing</h2>
+          <p class="main-title-time">작성일 : 2019-07-06</p>
+        </div>
+        <hr>
+        
+<h3>Max_Min Perceptron 설명</h3> 
+입력벡터 x[0,1]<br>
+연결 강도 벡터 w<br>
+학습률 = 0< 학습률<1<br>
+Momentum =학습의 수렴성 (1-PSS )<br><br>
+
+Step1: Tranning pattern<br>
+Step2: 연결강도를 초기화<br>
+Step3: 출력값을 계산<br>
+NET <br>
+Step4: 연결 가중치 변화율 <br>
+Step5: 종료조건<br><br><br>
+ 
+
+        <h3>HCM 알고리즘 설명</h3>
+1. 자율학습<br>
+Hard -> 0,1 로 정의함<br>
+Soft -> 0~1로 정의함<br>
+C -> 무게중심을 통해 가까운 것을 묶어준다.<br><br>
+
+단점- 클러스터개수를 정해줘야함<br><br>
+
+Fuzzy, 비퍼지화, 구조 및 개념 설명<br>
+현상의 불확실한 상태를 그대로 표현해주는 방법으로 애매한 것을 분류해줍니다.<br>
+소속함수 -> fuzzy membership(퍼지수)애매한  수치를 의미한다.<br><br>
+
+퍼지개념 = 객관적인 부분 + 주관적인 부분<br>
+
+퍼지 제어를 통해 오버피팅 문제를 해결 할 수 있다.<br>
+퍼지 가능성을 통해 데이터 분류<br>
+비퍼지화 : 퍼지 는 디지털 값이기 때문에 연속적인 아날로그 값을 바꿔주기 위해서<br>
+<br>
+<br>
+        <h3>실제 문제</h3>
+        
+1. 빅데이터에 인공지능을 사용하는 이유를 서술하시오<br>
+<br>
+2. Fuzzy(소속함수, 규칙, 추론)과 비퍼지화(무게중심)에 대해 자세히 서술하시오<br>
+
+
+      </div>
+    </div><!--  본문 끝-->
+  </div>
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

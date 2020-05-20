@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Anaconda 설치</title>
+  <link rel="stylesheet" type="text/css" href="../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="sider"></div>
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+        <div class="main-title">
+          <h1>Anaconda 설치</h1>
+          <h2>Python</h2>
+          <p class="main-title-time">작성일 : 2019-09-15</p>
+        </div>
+        <hr>
+        <!--  본문 시작-->
+        <p class="posts">
+         텐서플로우를 사용하기위해서 가상환경인 아나콘다를 설치해주도록 합시다.
+        </p>
+        
+        <a class=" posts" href="
+https://www.anaconda.com/distribution/
+  " target="_blank">
+           <img class="link"src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/link-icon.png?raw=true">
+          아나콘다 사이트입니다.
+	   </a>
+ <br>
+        
+        <p class="posts">들어가시면 아래와 같은 사이트가 나옵니다</p>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Python/03/00.png?raw=true"><br>
+         <p class="posts">64비트 짜리</p>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Python/03/01.png?raw=true"><br>
+         <p class="posts">NEXT</p>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Python/03/02.png?raw=true"><br>
+         <p class="posts">I Agree</p>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Python/03/03.png?raw=true"><br>
+         <p class="posts">개인용으로 사용하기 때문에 just me</p>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Python/03/04.png?raw=true"><br>
+         <p class="posts">경로는 건들지 않고 Next</p>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Python/03/05.png?raw=true"><br>
+         <p class="posts">
+        Adding Anaconda to my PATH environment variable(기본 값은 체크 해제)<br>
+           아나콘다 측 설명을 보면 "PATH 환경 변수에 Anaconda를 추가할지 여부를 선택하십시오. PATH 환경 변수 에 다른 소프트웨어를 방해 할 수 있으므로 Anaconda 를 추가하지 않는 것이 좋습니다 . 대신 시작 메뉴에서 Anaconda Navigator 또는 Anaconda Prompt를 열어 Anaconda 소프트웨어를 사용하십시오."
+환경변수에 추가할지를 선택 아나콘다 외에 다른 파이썬 인터프리터를 환경변수에 등록해서 사용 한다면 체크 해제 하고 아나콘다만을 사용하는 경우 또는 아나콘다가 주력일 경우로 윈도우 CMD창에서 파이썬을 실행할 경우 선택
+선택할 경우 윈도우 CMD창 경로와 상관없이 아나콘다를 파이썬으로 인식
+        Register Anaconda as my default Python 3.7(기본값 선택)<br>
+        </p>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Python/03/06.png?raw=true"><br>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Python/03/07.png?raw=true"><br>
+            <p class="posts">Next</p>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Python/03/08.png?raw=true"><br>
+            <p class="posts">Next</p>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Python/03/09.png?raw=true"><br>
+            <p class="posts">Finish -정상적으로 아나콘다 설치가 완료되었습니다.</p>
+	      
+	      <h2 class="posts">가상환경 설정 </h2>
+	      <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Python/03/10.PNG?raw=true"><br>
+	      <p class="posts">
+		      >nvcc -version <br>
+		      -설치된 CUDA정보를 보여줌
+        </p>
+	      <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Python/03/11.PNG?raw=true"><br>
+	      <p class="posts">
+		      >conda --version <br>
+		      -아나콘다 가상환경 버전을 보여줍니다.
+        </p>
+	      <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Python/03/12.PNG?raw=true"><br>
+	      <p class="posts">
+		      >conda update conda <br>
+		      -아나콘다 가상환경의 최신화
+        </p>
+	      <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Python/03/13.PNG?raw=true"><br>
+	      <p class="posts">
+		      >conda create -n "이름" <br>
+		      >conda create -n pytorch <br>
+		      -가상환경을 생성합니다.
+        </p>
+	      <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Python/03/14.PNG?raw=true"><br>
+	      <p class="posts">
+		      >conda info --env <br>
+		      -생성된 가상환경을 확인 합니다.
+        </p>
+        <!--  본문 끝-->
+      </div>
+      <!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

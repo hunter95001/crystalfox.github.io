@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>SOM (Self-Organizing Map)</title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Attach.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="sider"></div>
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+        <div class="main-title">
+          <h1>SOM (Self-Organizing Map)</h1>
+          <h2>Rotator</h2>
+          <p class="main-title-time">작성일 : 2019-09-19</p>
+        </div>
+        <hr>
+        <!--  본문 시작-->
+        <h3 class=posts>SOM 배경지식</h3>
+        <p class="posts">
+          <font style="font-weight:600; font-size:32px;"> Self-Organizing Map</font><br>
+          Helsinki Technology University 의 Teuvo Kohonen에 의해 제안<br>
+          Self-Organizing(자기조직화)란 자기 스스로 학습할 수 있는 능력을 Map으로 형성 <br>
+        </p>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Project/Rotator/09/00.png?raw=true"><br>
+        <p class="posts">
+          특징<br>
+          1.사람의 대뇌피질의 감각기능을 모델로 만든 인공지능 기법 <br>
+          2.고차원 데이터를 축소하여 가시화 하는 방법<br>
+        </p>
+        <h3 class=posts>Kohonen Network</h3>
+
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Project/Rotator/09/01.png?raw=true">
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Project/Rotator/09/04.png?raw=true"><br>
+        <p class="posts">
+          특징 <br>
+          1.모든 연결들은 첫 번째 층에서 두 번째 층의 방향으로 되어 있으니 두 번째 층은 완전 연결 <br>
+          2.뉴런의 연결강도 백터가 임의 값을 가지면서 적합하게 초기화 <br>
+          3.연결강도 백터와 입력백터가 통상 0 에서 1 사이의 정규화된 값 <br>
+          <br>
+          장점 <br>
+          1.빠른 모델 (feedforward flow)- 실시간 학습 처리 가능 <br>
+          2.연속적인 학습이 가능 <br>
+          3.자기조직화를 통한 정확한 모델 <br>
+        </p>
+        <h3 class=posts>SOM Grid</h3>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Project/Rotator/09/03.png?raw=true"><br>
+        <p class="posts">
+          격자의 경계에 있는 신경세포는 이웃이 적기 때문에 다른 신경세포와 상호작용하는 능력이 감소<br>
+          구형의 격자를 사용하는 것은 그 문제에 대한 해결책으로 널리 제안되어 왔다. <br>
+        </p>
+
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <font style="font-weight:600; font-size:32px;">사각형(rectagular)</font><br>
+                전통적인 SOM Grid<br>
+                시각화 및 해석이 용이하다<br>
+                직사각형 그리드의 셀을 결합하여 저해상도의 새로운 그리드를 쉽게 생성<br>
+
+              </td>
+              <td>
+                <font style="font-weight:600; font-size:32px;">육각형(hexa)</font><br>
+                전통적인 SOM Grid<br>
+                가장 가까운 이웃은 직사각형 격자보다 간단하고 모호하지 않습니다.<br>
+                가장 가까운 인근, 이동경로 또는 연결성이 중요한경우 적절합니다.<br>
+                평면상의 방향에 대해 보다 동질적이다<br>
+              </td>
+            </tr>
+          </tbody>
+        </table><br />
+        <h3 class=posts>NeighbourhoodRadius</h3>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Project/Rotator/09/05.png?raw=true"><br>
+        <p class="posts">
+          <font style="font-weight:600; font-size:32px;"> 이웃 노드 감소</font><br>
+          이웃의 반지름을 시간이 지남에 따라 축소시킴 <br>
+          지수 감소 함수를 사용합니다.<br>
+          <p><br>
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Project/Rotator/09/11.png?raw=true"><br>
+
+            <h3 class=posts>학습률</h3>
+            <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Project/Rotator/09/07.png?raw=true"><br>
+            <p class="posts">
+              <font style="font-weight:600; font-size:32px;"> 학습률</font><br>
+              학습률이 시간이 지남에 따라 감소된다.<br>
+              지수 감소 함수를 사용합니다.<br>
+              <p>
+                <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Project/Rotator/09/12.png?raw=true"><br>
+
+                <h3 class=posts>지수함수 그래프</h3>
+                <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Project/Rotator/09/06.png?raw=true"><br>
+                <p class="posts">
+                  지수함수 그래프를 적용하는 이유는 시간이 지남에 따라 그 수치가 점점 감소하기에 가장 어울리는 그래프 입니다.<br>
+                  <p>
+                    <h3 class=posts>순서도 [Flowchart]</h3>
+                    <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Project/Rotator/09/08.png?raw=true" widht="1200" hight="600"><br>
+
+                    <h3 class=posts>맵의 진행</h3>
+                    <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Project/Rotator/09/15.gif?raw=true"><br>
+
+                  </p>
+
+                  <h3 class="posts">출처</h3>
+
+                  <h4 class="posts">SOM기본 구조</h4>
+                  <a class="posts" href="http://fourier.eng.hmc.edu/e161/lectures/nn/node14.html ">
+                    <img class="link" src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/link-icon.png?raw=true">
+                    http://fourier.eng.hmc.edu/e161/lectures/nn/node14.html </a><br>
+
+                  <h4 class="posts">코호넨 네트워크 SOM 설명이 자세히 되어있음</h4>
+                  <a class="posts" href="http://www.aistudy.com/neural/som_kim.htm">
+                    <img class="link" src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/link-icon.png?raw=true">
+                    http://www.aistudy.com/neural/som_kim.ht </a><br>
+
+                  <h4 class="posts">SOM의 맵이 동작하는 법</h4>
+                  <a class="posts" href="https://algobeans.com/2017/11/02/self-organizing-map/ ">
+                    <img class="link" src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/link-icon.png?raw=true">
+                    https://algobeans.com/2017/11/02/self-organizing-map/ </a><br>
+
+                  <h4 class="posts">이웃반경에 대한 설명</h4>
+                  <a class="posts" href="https://kr.mathworks.com/help/deeplearning/ug/cluster-with-self-organizing-map-neural-network.html ">
+                    <img class="link" src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/link-icon.png?raw=true">
+                    Data Mining Algorithms In R/Clustering/Self-Organizing Maps (SOM) </a><br>
+
+                  <h4 class="posts">SOM의 수식이나 시간이 지날수록 바뀌는 이웃 반경 크기에 대한 고찰</h4>
+                  <a class="posts" href=" http://www.ai-junkie.com/ann/som/som4.html">
+                    <img class="link" src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/link-icon.png?raw=true">
+                    http://www.ai-junkie.com/ann/som/som4.html </a><br>
+
+                  <h3 class="posts">논문자료</h3>
+                  <a class="posts" href="https://www.kss.or.kr/jounalDown.php?IDX=348">
+                    <img class="link" src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/link-icon.png?raw=true">
+                    PC-SOM </a><br>
+
+                  <a class="posts" href="https://bi.snu.ac.kr/Publications/Theses/LimJY_MS02.pdf">
+                    <img class="link" src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/link-icon.png?raw=true">
+                    https://bi.snu.ac.kr/Publications/Theses/LimJY_MS02.pdf </a>
+
+      </div><!-- main-wrapper 본문 끝-->
+    </div><!-- wrapper-->
+    <div id="footers"></div>
+</body>
+
+</html>

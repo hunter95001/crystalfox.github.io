@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>클래스 다이어그램 작성. </title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Attach.css">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+	
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sider"></div>
+
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+
+
+        <div class="main-title">
+           <h1>클래스 다이어그램 작성.</h1>
+          <h2>Software Engineering</h2>
+          <p class="main-title-time">작성일 : 2018-10-11</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+ 
+        <table border="1">
+	<tbody>
+              <tr>
+                <th text-align:center; style="background-color:#9DCFFF;">분류 </th>
+                <th text-align:center; style="background-color:#9DCFFF;">예제</th> 
+              </tr> 
+           </tbody> 
+          <tbody>
+              <tr>
+                <td>물리적인 사물 </td>
+                <td>자동차, 현금인출기</td> 
+              </tr> 
+           </tbody> 
+		  <tbody>
+              <tr>
+                <td>역할</td>
+                <td>구매자, 관리자, 교수</td> 
+              </tr> 
+           </tbody>
+	 <tbody>
+              <tr>
+                <td>구조체 </td>
+                <td>동아리와 회원, 책과 장, 버스와 승객</td> 
+              </tr> 
+           </tbody>
+	 <tbody>
+              <tr>
+                <td>장소 </td>
+                <td>주차장, 은행지점</td> 
+              </tr> 
+           </tbody>
+		 <tbody>
+              <tr>
+                <td>트랜잭션 </td>
+                <td>판매, 예약, 구매, 지불</td> 
+              </tr> 
+           </tbody>
+		 <tbody>
+              <tr>
+                <td>외부 시스템또는 장치 </td>
+                <td>센서, 사용자 인증, 시스템</td> 
+              </tr> 
+           </tbody>
+		 <tbody>
+              <tr>
+                <td>조직 </td>
+                <td>회계부서, 교무처</td> 
+              </tr> 
+           </tbody>	
+ </table><br />
+
+        
+        
+        클래스가 아닌거 같넴 <- 에트리뷰트에 넣으면 됩니다!.<br>
+        <h3>클래스 다이어그램 작성 과정</h3>
+1. 클래스 후보 집합을 파악한다.<br>
+[명사나 명사구를 추출하면 클래스 정의가 쉽다.]<br>
+2. 가장 중요한 클래스부터 시작하여 연관 관계와 꼭 필요한 속성을 추가한다.<br>
+3. 가장 확실한 일반화 관계부터 시작하여 파악한다. <br>
+[상속,인터페이스등의 구조가 나오는게 있는지]<br>
+4. 클래스의 주요 임무를 찾아 나열한다. 각 클래스에 의해 수행될 기능을 간단한 문장으로 나타 내는 것이다.<br>
+5. 임무를 기준으로 필요한 오퍼레이션을 결정한다.<br>
+[임무 = 클래스가 해야할 역할, 임무는 다양한 오퍼레이션[메소드]을 갖는다. ]<br>
+6. 전체과정을 다시 되풀이하낟. 필요하면 클래스, 연관 관계, 속성, 일반화, 임무, 오퍼레이션 등을 추가하거나 삭제하면서 모델을 완성해나간다. 특히 전체/연관 관계, 속성, 오퍼레이션이 설정한 임무를 만족시키는지, 또한 만족시키기 위한 충분한 정보가 있는지 확신할 수 있도록 반복한다. 디자인 패턴을 적용할 수 있다면 적용하여 수정하고 적당한 인터페이스가 되었는지 살펴본다.<br>
+ 
+       
+	           <a href="https://github.com/hunter95001/SoftwareEngineering/tree/master/SoftawreEngineering/08"><br>
+	<div  class ="attachment">
+		<img  class="icon" align="left"  src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Folder.png?raw=true" > 
+		<font class="attach-text">2018-10-11 장난감 가게 명세.UML</font> 
+		<img class="icon" align="right"src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/File.png?raw=true" > 	
+	</div>
+	</a>
+	      <div class="empty"> </div>
+	      
+ <h3>장난감 가게 명세</h3>
+김과장은 아들의 생일선물로 장난감을 사려고 장난감 가게에 갔다. 아이에게 적합한 장난감을 추천받기 위해 아이의 나이 등과 같은 사항을 점원에게 일러준다. 점원은 아에게 어울리는 장남감을 추천해준다. 김과장은 추천받은 장난감의 가격을 보고 적당한 가격이면 구입하여 아이에게 생일선물로 준다. 점원은 판매내역을 작성한다.<br>
+클래스<br>
+추천 -연관 클래스로<br> 
+점원<br>
+판매 -연관 클래스<br>
+고객<br>
+가게<br>
+장난감<br>
+-가격<br>
+아이<br>
+-아이의 나이<br>
+-생년월일<br>
+생일선물<br>
+	      
+	      <a href="https://github.com/hunter95001/SoftwareEngineering/tree/master/SoftawreEngineering/08"><br>
+	<div  class ="attachment">
+		<img  class="icon" align="left"  src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Folder.png?raw=true" > 
+		<font class="attach-text">2018-10-11 인터넷 쇼핑몰 -회원.UML</font> 
+		<img class="icon" align="right"src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/File.png?raw=true" > 	
+	</div>
+	</a><div class="empty"> </div>
+ 
+	      <h3> 인터넷쇼핑몰 문제 설명서</h3>
+
+클래스<br>
+고객<br>
+회원<br>
+회원가입<br>
+관리자<br>
+상품 구매<br>
+상품관리<br>
+회원 관리<br>
+카테고리 관리<br>
+   
+
+ 
+        
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

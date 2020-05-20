@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+   <title>cuDNN 설치</title>
+  <link rel="stylesheet" type="text/css" href="../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="sider"></div>
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+        <div class="main-title">
+         <h1>cuDNN 설치</h1>
+          <h2>Python</h2>
+          <p class="main-title-time">작성일 : 2019-09-15</p>
+        </div>
+        <hr>
+        <!--  본문 시작-->
+       <p class="posts">GPU를 사용하기 위해서는 필수로 cuDNN다운로드 해야합니다.</p>
+         
+         <a class=" posts" href="
+ https://developer.nvidia.com/rdp/cudnn-archive
+  " target="_blank">
+           <img class="link"src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/link-icon.png?raw=true">
+          cuDNN 사이트
+	   </a>
+ <br>
+        
+        <p class="posts">들어가시면 아래와 같은 사이트가 나옵니다</p>
+        
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Python/02/00.png?raw=true" width="1400"><br>
+        <p class="posts">
+         자신에게 맞는 CUDA 버전을 설치해주세요<br>
+          저는 이전에 9.0 CUDA를 설치 했기 때문에 9.0을 설치하겠습니다.
+        </p>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Python/02/01.png?raw=true" width="1400"><br>
+           <p class="posts">
+         cnDNN Library for Winodws10을 설치해주시면 됩니다<br>
+        Windows 10이 아니신 분은 맞는 운영체제 선택하셔서 설치하시면 됩니다.<br>
+             <font color="red">*MAC은 GPU 지원하지 않기 때문에 없습니다.</font>
+        </p>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Python/02/02.png?raw=true" width="1400"><br>
+         <p class="posts">
+         다운 받은 cuDNN내용을 다음과 같은 폴더에 옮겨주세요<br>
+           Program Files > NVIDIA GPU Computing Toolkit > CUDA > v9.0<br>
+        </p>
+    
+        <!--  본문 끝-->
+      </div>
+      <!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+/*헤더 글자의 타입이랑 색상*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", helvetica, "Open Sans", sans-serif;
+  color: #D1B2FF
+}
+  /* 링크는 밑줄이 있어서 밑줄을 제거하는 역할을 했습니다.*/
+a {
+  text-decoration: none;
+}
+body{
+color:#2c3e50;
+background-color: #f0f0f0;
+width: 100%;
+border-top: solid #D1B2FF;
+border-width: 4px;
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 14px;
+line-height: 1.428571429;
+margin: 0;
+display: block;
+}
+*{
+  box-sizing: border-box;
+}
+table {
+    width: 100%;
+    border: 1px solid #444444;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #444444;
+  }
+/*가장큰 틀의 div*/
+#wrapper {
+  padding-left: 250px;
+}
+
+/*좌측  div
+자기  소개 및 링크*/
+#sidebar-wrapper {
+  margin-left: -250px;
+  margin-top: -4px;
+  left: 250px;
+  width: 250px;
+  background: #f8f8f8;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  border-top: solid #D1B2FF;
+  border-width: 4px
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 30px 0 0
+}
+
+.sidebar-nav>.sidebar-brand {
+  font-size: 20px
+}
+
+.sidebar-nav>.sidebar-brand>a {
+  color: #999
+}
+
+/*프로필 명 ->KONG*/
+.brand {
+  line-height: 30px;
+  text-indent: 40px;
+  font-weight: 800;
+  color: #6c7077;
+  font-family: "Helvetica Neue", helvetica, "Open Sans", sans-serif;
+  font-size: 14;
+  text-shadow: 1px 1px #fff;
+}
+
+/*마우스 커서가 닿일때 색상이 바뀝니다.*/
+.brand:hover {
+  color: #D1B2FF;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s
+}
+.Life-log{
+  margin-top: -17px;
+
+}
+
+/*프로필 이미지.*/
+.sidebar-nav>.img1 {
+  width: 180px;
+  height: 200px;
+  margin-left: 40px;
+}
+
+.sidebar-nav>.img2 {
+  vertical-align: text-bottom;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.sidebar-nav>a h2 {
+  margin-top: -16px;
+  line-height: 10px;
+  text-indent: 40px;
+  font-size: 17px;
+  font-weight: 100;
+  color: #5d5f67
+}
+
+.sidebar-nav>h3 {
+  line-height: 30px;
+  text-indent: 40px;
+  font-size: 15px;
+  font-weight: 100;
+  color: #5d5f67
+}
+
+.sidebar-nav>p {
+  margin-top: -16px;
+  text-indent: 40px;
+  font-size: 15px;
+  color: #D1B2FF
+}
+
+.sidebar-nav>hr {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+.sidebar-nav li {
+  line-height: 30px;
+  text-indent: 40px;
+  font-family: "Helvetica Neue", helvetica, "Open Sans", sans-serif;
+  font-weight: 200;
+  color: #9c9c9c;
+  text-shadow: 1px 1px #fff;
+}
+
+.sidebar-nav li a {
+  color: #999;
+  display: block;
+  text-decoration: none
+}
+
+.sidebar-nav li a:hover {
+  color: #000;
+  background: #fff;
+  text-decoration: none;
+  transition: all .2s ease 0
+}
+
+.categori1-list{
+  text-indent: 40px;
+  font-weight: 300;
+  color: #6c7077;
+  font-family: "Helvetica Neue", helvetica, "Open Sans", sans-serif;
+  font-size: 1.3em;
+  text-shadow: 1px 1px #fff;
+  margin-bottom: -30px;
+}
+
+.categori-image{
+  margin-left: -20px;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.categori2-list{
+  line-height: 30px;
+  text-indent: 40px;
+  font-weight: 300;
+  color: #6c7077;
+  font-family: "Helvetica Neue", helvetica, "Open Sans", sans-serif;
+  font-size: 1.1em;
+  text-shadow: 1px 1px #fff;
+}
+
+.categori2-image{
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.categori3-list{
+  margin-bottom: -3px;
+  text-indent: 40px;
+  font-weight: 800;
+  color: #FFD9EC;
+  font-family: "Helvetica Neue", helvetica, "Open Sans", sans-serif;
+  font-size: 18px;
+  text-shadow: 1px 1px #fff;
+}
+
+.categori3-image{
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.post-image{
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+/*문구를 보여주기 위해서 사이드 만큼 뛰어줘야 합니다. © 2019 KONG · KONG 2019-03-01 */
+#footers {
+  padding-left: 250px;
+}
+

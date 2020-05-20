@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JOIN</title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+<style>
+table {
+    width: 100%;
+    border: 1px solid #444444;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #444444;
+	background-color:#F3F3F3;
+  }
+</style>
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sider"></div>
+
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+
+
+        <div class="main-title">
+          <h1>JOIN</h1>
+          <h2>데이터 베이스</h2>
+          <p class="main-title-time">작성일 : 2018-10-04</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+        외래키는 기본키의 값등중의 1개.<br>
+기본키(부모) -> 외래키(자식)<br>
+        <font color="blue">from 외래키[기본키 값들중 하나 입니다, null이 가능합니다.] , 기본키[유일성, not null]</font><br>
+        <br>
+<font style="font-weight:600; font-size:32px;color:#8C8C8C;"><br>
+Natural JOIN<br>
+외래키 =기본키 <br>
+(서로 다른 테이블에 이름이 같은게 하나 일때)<br>
+<br>
+JOIN ON<br>
+외래키 !=기본키<br>
+(서로다른 테이블에 이름이 다를때)<br>
+<br>
+JOIN USING<br>
+외래키가 2개 이상<br>
+(서로 다른 테이블에 이름이 다른게가 여러개가 있을때.)<br>
+===============================================<br>
+</font><br>
+        
+<table>
+
+
+	<tbody>
+              <tr>
+                <td>
+                
+    <font color="#FFBB00">SELECT</font> empno "사원번호",Ename "사원이름",dname "부서명"
+            <font color="#FFBB00">FROM</font> emp ,dept 
+          <font color="#FFBB00"><pre>
+/
+      7369 SMITH                ACCOUNTING
+      7499 ALLEN                ACCOUNTING
+      7521 WARD                 ACCOUNTING
+      7566 JONES                ACCOUNTING
+      7654 MARTIN               ACCOUNTING
+      7698 BLAKE                ACCOUNTING
+      7782 CLARK                ACCOUNTING
+      7788 SCOTT                ACCOUNTING
+      7839 KING                 ACCOUNTING
+      7844 TURNER               ACCOUNTING
+      7876 ADAMS                ACCOUNTING
+      7900 JAMES                ACCOUNTING
+      7902 FORD                 ACCOUNTING
+      7934 MILLER               ACCOUNTING
+      7369 SMITH                RESEARCH
+      7499 ALLEN                RESEARCH
+      7521 WARD                 RESEARCH
+      7566 JONES                RESEARCH
+      7654 MARTIN               RESEARCH
+      7698 BLAKE                RESEARCH
+      7782 CLARK                RESEARCH
+      7788 SCOTT                RESEARCH
+      7839 KING                 RESEARCH
+      7844 TURNER               RESEARCH
+      7876 ADAMS                RESEARCH
+      7900 JAMES                RESEARCH
+      7902 FORD                 RESEARCH
+      7934 MILLER               RESEARCH
+      7369 SMITH                SALES
+      7499 ALLEN                SALES
+      7521 WARD                 SALES
+      7566 JONES                SALES
+      7654 MARTIN               SALES
+      7698 BLAKE                SALES
+      7782 CLARK                SALES
+      7788 SCOTT                SALES
+      7839 KING                 SALES
+      7844 TURNER               SALES
+      7876 ADAMS                SALES
+      7900 JAMES                SALES
+      7902 FORD                 SALES
+      7934 MILLER               SALES
+      7369 SMITH                OPERATIONS
+      7499 ALLEN                OPERATIONS
+      7521 WARD                 OPERATIONS
+      7566 JONES                OPERATIONS
+      7654 MARTIN               OPERATIONS
+      7698 BLAKE                OPERATIONS
+      7782 CLARK                OPERATIONS
+      7788 SCOTT                OPERATIONS
+      7839 KING                 OPERATIONS
+      7844 TURNER               OPERATIONS
+      7876 ADAMS                OPERATIONS
+      7900 JAMES                OPERATIONS
+      7902 FORD                 OPERATIONS
+      7934 MILLER               OPERATIONS
+</font>
+//카디션 곱 =>조인을 하기위해서. 하는 연산
+일반적인 <font color="#FFBB00">JOIN</font> 동등 조인입니다
+그래서 <font color="#FFBB00">WHERE</font> 절에 = 을 사용합니다.
+</pre>
+                </td> 
+              </tr> 
+           </tbody> 
+
+ </table><br />
+        
+	      <table>
+	<tbody>
+              <tr>
+                <td>
+                
+ <pre>
+     ///Oracle Join
+<font color="#FFBB00">SELECT</font> empno " <font color="#47C83E">"사원번호"</font>,Ename<font color="#47C83E">"사원이름"</font>,dname<font color="#47C83E">"부서명"</font>
+<font color="#FFBB00">FROM</font> emp e , dept d 
+<font color="#FFBB00">WHERE</font> e.deptno =d.deptno
+/
+
+//Natural JOIN
+<font color="#FFBB00">SELECT</font> empno  <font color="#47C83E">"사원번호"</font>,Ename <font color="#47C83E">"사원이름"</font>,dname <font color="#47C83E">"부서명"</font>
+<font color="#FFBB00">FROM</font> emp Natural   <font color="#FFBB00">JOIN</font> deptno
+/
+//JOIN USING
+<font color="#FFBB00">SELECT</font> empno  <font color="#47C83E">"사원번호"</font>,Ename <font color="#47C83E">"사원이름"</font>,dname <font color="#47C83E">"부서명"</font>
+<font color="#FFBB00">FROM</font> emp join dept   <font color="#F361DC">using</font>(deptno)
+/
+//JOIN ON
+<font color="#FFBB00">SELECT</font> empno  <font color="#47C83E">"사원번호"</font>,Ename <font color="#47C83E">"사원이름"</font>,dname <font color="#47C83E">"부서명"</font>
+<font color="#FFBB00">FROM</font> emp e join dept d  <font color="#F361DC">on</font>(e.deptno=d.deptno)
+/
+</pre>
+<font color="#FFBB00"><pre>
+  사원번호 사원이름             부서명
+---------- -------------------- ----------------------------
+      7782 CLARK                ACCOUNTING
+      7839 KING                 ACCOUNTING
+      7934 MILLER               ACCOUNTING
+      7566 JONES                RESEARCH
+      7902 FORD                 RESEARCH
+      7876 ADAMS                RESEARCH
+      7369 SMITH                RESEARCH
+      7788 SCOTT                RESEARCH
+      7521 WARD                 SALES
+      7844 TURNER               SALES
+      7499 ALLEN                SALES
+      7900 JAMES                SALES
+      7698 BLAKE                SALES
+      7654 MARTIN               SALES
+
+</pre></font>
+                </td> 
+              </tr> 
+           </tbody> 
+
+ </table><br />
+	      <table>
+	<tbody>
+              <tr>
+                <td><pre>
+// 과제1 학번, 학생이름, 지도교수이름
+<font color="#FFBB00">SELECT</font> studno <font color="#47C83E">"학번"</font>,s.name <font color="#47C83E">"학번"</font>,p.name <font color="#47C83E">"지도교수명"</font>
+<font color="#FFBB00">FROM</font> student s  join professor p <font color="#F361DC">using</font>(profno) 
+/
+      학번 이름                           지도교수명
+---------- ------------------------------ ------------------------------
+      <font color="#FFBB00">9411</font>  서진수                         조인형
+      <font color="#FFBB00">9511</font>  김신영                         박승곤
+      <font color="#FFBB00">9611</font>  일지매                         박승곤
+      <font color="#FFBB00">9612</font>  김진욱                         양선희
+      <font color="#FFBB00">9412</font>  서재수                         양선희
+      <font color="#FFBB00">9512</font>  신은경                         김영조
+      <font color="#FFBB00">9413</font>  이미경                         나한열
+      <font color="#FFBB00">9414</font>  김재수                         심슨
+      <font color="#FFBB00">9412</font>  임세현                         심슨
+      <font color="#FFBB00">9613</font>  안광훈                         최슬기
+      <font color="#FFBB00">9415</font>  박동호                         박원범
+      <font color="#FFBB00">9513</font>  오나라                         박원범
+      <font color="#FFBB00">9614</font>  김문호                         박원범
+      <font color="#FFBB00">9615</font>  노정호                         허은
+      <font color="#FFBB00">9514</font>  구유미                         허은
+
+// 과제2 학번, 학생이름, 지도교수이름 학과 이름  (학과이름으로 정렬합니다.)
+<font color="#FFBB00">SELECT</font> studno <font color="#47C83E">"학번"</font>,s.name <font color="#47C83E">"이름"</font>,p.name <font color="#47C83E">"지도교수명"</font>, dname <font color="#47C83E">"부서명"</font>
+<font color="#FFBB00">FROM</font> student s  join professor p <font color="#F361DC">using</font>(profno) join department  d <font color="#F361DC">on</font> (s.deptno1 =d.deptno)
+<font color="#FFBB00">ORDER BY</font> dname
+/
+			
+      학번 이름                           지도교수명                     부서명
+---------- ------------------------------ ------------------------------ ------------------------------------------------------------
+      <font color="#FFBB00">9415</font> 박동호                         박원범                         기계공학과
+      <font color="#FFBB00">9513</font> 오나라                         박원범                         기계공학과
+      <font color="#FFBB00">9612</font> 김진욱                         양선희                         멀티미디어공학과
+      <font color="#FFBB00">9412</font> 서재수                         양선희                         멀티미디어공학과
+      <font color="#FFBB00">9512</font> 신은경                         김영조                         멀티미디어공학과
+      <font color="#FFBB00">9514</font> 구유미                         허은                           문헌정보학과
+      <font color="#FFBB00">9615</font> 노정호                         허은                           문헌정보학과
+      <font color="#FFBB00">9413</font> 이미경                         나한열                         소프트웨어공학과
+      <font color="#FFBB00">9613</font> 안광훈                         최슬기                         전자공학과
+      <font color="#FFBB00">9414</font> 김재수                         심슨                           전자공학과
+      <font color="#FFBB00">9515</font> 임세현                         심슨                           전자공학과
+      <font color="#FFBB00">9614</font> 김문호                         박원범                         전자공학과
+      <font color="#FFBB00">9411</font> 서진수                         조인형                         컴퓨터공학과
+      <font color="#FFBB00">9511</font> 김신영                         박승곤                         컴퓨터공학과
+      <font color="#FFBB00">9611</font> 일지매                         박승곤                         컴퓨터공학과
+
+// 숙제3 컴퓨터공학과 학번, 학생이름, 지도교수이름 학과 이름  (학과이름으로 정렬합니다.)
+<font color="#FFBB00">SELECT</font> studno <font color="#47C83E">"학번"</font>,s.name <font color="#47C83E">"이름"</font>,p.name <font color="#47C83E">"지도교수명"</font>, dname <font color="#47C83E">"학과"</font>
+<font color="#FFBB00">FROM</font> student s  join professor p <font color="#F361DC">using</font>(profno) join department  d <font color="#F361DC">on</font> (s.deptno1 =d.deptno)
+<font color="#FFBB00">WHERE</font> dname ='컴퓨터공학과'
+<font color="#FFBB00">ORDER BY</font> dname
+/ <-틀린답 학생의 학과를 찾고싶은대 교수의 학과를 찾는 꼴이됩니다.
+
+<font color="#FFBB00">SELECT</font> studno <font color="#47C83E">"학번"</font>,s.name <font color="#47C83E">"이름"</font>,p.name <font color="#47C83E">"지도교수명"</font>, dname <font color="#47C83E">"학과"</font>
+<font color="#FFBB00">FROM</font> student s join department  d <font color="#F361DC">on</font> (s.deptno1 =d.deptno) join professor p <font color="#F361DC">using</font> (profno)
+<font color="#FFBB00">WHERE</font> dname =<font color="#47C83E">'컴퓨터공학과'</font>
+<font color="#FFBB00">ORDER BY</font> dname
+/ <-정답
+
+      학번 이름                           지도교수명                     학과
+---------- ------------------------------ ------------------------------ ------------------------------------------------------------
+      <font color="#FFBB00">9611</font> 일지매                         박승곤                         컴퓨터공학과
+      <font color="#FFBB00">9411</font> 서진수                         조인형                         컴퓨터공학과
+      <font color="#FFBB00">9511</font> 김신영                         박승곤                         컴퓨터공학과
+		      </pre>
+		      </td> 
+              </tr> 
+           </tbody> 
+
+ </table><br />
+	<h1>Not Equi Join (비등가 조인) </h1>
+	<pre>
+case문은 프로그램이라서 값이 바뀌면 소스코드를 고쳐야 합니다. 
+table로 관리하면 일반 사용자들도 관리할 수 있다.!
+rename gogak to customer =이름을 바꿔드립니다.
+</pre>
+	
+	<table>
+	<tbody>
+              <tr>
+                <td><pre>
+<font color="#FFBB00">SELECT</font> c.gname 고객명 , <font color="#FFBB00">TO_CHAR</font> (c.point,<font color="#47C83E">'999,999'</font>) 포인트, g.gname 선물이름
+<font color="#FFBB00">FROM</font>  customer c, gift g
+<font color="#FFBB00">WHERE</font>  c.point <font color="#FFBB00">BETWEEN</font>  g.g_start <font color="#FFBB00">AND</font>  g.g_end
+/
+
+//join on만 가능합니다. [중요합니다]
+<font color="#FFBB00">SELECT</font> c.gname 고객명 , <font color="#FFBB00">TO_CHAR</font> (c.point,<font color="#47C83E">'999,999'</font>) 포인트, g.gname 선물이름
+<font color="#FFBB00">FROM</font>  customer c join gift g <font color="#F361DC">on</font>(c.point <font color="#FFBB00">BETWEEN</font> g.g_start <font color="#FFBB00">AND</font> g.g_end )
+/
+
+고객명                         포인트           선물이름
+------------------------------ ---------------- ------------------------------------
+김재수                           <font color="#FFBB00">65,000</font>         참치세트
+서재수                           <font color="#FFBB00">73,000</font>         참치세트
+정현영                           <font color="#FFBB00">99,000</font>         참치세트
+최순규                          <font color="#FFBB00">110,000</font>         샴푸세트
+김신영                          <font color="#FFBB00">153,000</font>         샴푸세트
+박동호                          <font color="#FFBB00">180,000</font>         샴푸세트
+임세현                          <font color="#FFBB00">265,000</font>         세차용품세트
+신은경                          <font color="#FFBB00">273,000</font>         세차용품세트
+모병환                          <font color="#FFBB00">298,000</font>         세차용품세트
+오나라                          <font color="#FFBB00">315,000</font>         주방용품세트
+이미경                          <font color="#FFBB00">320,000</font>         주방용품세트
+노정호                          <font color="#FFBB00">420,000</font>         산악용자전거
+안광훈                          <font color="#FFBB00">470,000</font>         산악용자전거
+김설희                          <font color="#FFBB00">542,000</font>         LCD모니터
+이윤나                          <font color="#FFBB00">598,000</font>         LCD모니터
+안은수                          <font color="#FFBB00">625,000</font>         노트북
+인영민                          <font color="#FFBB00">670,000</font>         노트북
+허우                            <font color="#FFBB00">730,000</font>         벽걸이TV
+김지영                          <font color="#FFBB00">770,000</font>         벽걸이TV
+서진수                          <font color="#FFBB00">980,000</font>         양쪽문냉장고  
+		      
+		      </pre></td> 
+              </tr> 
+           </tbody> 
+
+ </table><br />  
+	      
+	      
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

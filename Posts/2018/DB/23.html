@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>PRAGMA, RAISE 예외 처리</title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sider"></div>
+
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+        <div class="main-title">
+          <h1>PRAGMA, RAISE 예외 처리</h1>
+          <h2>데이터 베이스</h2>
+          <p class="main-title-time">작성일 : 2018-11-12</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+        <pre>
+Stared Procedure => 호출해서 사용합니다.
+<h2>PRAGMA</h2> 
+-ORACLE이 발생시키는 예외처리.
+예외 처리할때 예외에 관련된 이름이 없을경우 이름을 작성합니다. [예외처리]
+
+<h2>RAISE</h2> 
+- 프로그램에서 발생하는 예외처리. [강제 예외처리구문으로 넘어가 버림.]
+주로 INSERT,DELETE할떄 사용.
+SQL%ROWCOUNT
+SQL%NOTFOUND 
+
+사용자는 -20000번 부터 -20999번까지 정의해서 사용할 수 있습니다. 
+[웹이나 서버관리자가 번호를 이용해서 헨들링 가능합니다.]
+Anonymous - 데이터베이스에서만 사용합니다. 
+                       테스트용.
+Procedure - 다른 서버나 웹 프로그램에서 불러 사용 해야 할 경우 호출 이름을 정해줍니다.,
+                    Return이 없어도 되는 경우.
+Function - Return을 받고싶으면 [무조건 입력이 있어야합니다.]
+Trigger - 자동실행되는 Procedure [Function X]
+               실시간 자동으로 메세지를 전달합니다.
+</pre>
+        <div class="colorscripter-code" style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #e5e5e5"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">CREATE</span>&nbsp;OR&nbsp;REPLACE&nbsp;FUNCTION&nbsp;max_sal1</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;(s_deptno&nbsp;emp.deptno%TYPE)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;NUMBER</div><div style="padding:0 6px; white-space:pre; line-height:130%">IS</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;max_sal&nbsp;emp.sal%TYPE;</div><div style="padding:0 6px; white-space:pre; line-height:130%">BEGIN</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">SELECT</span>&nbsp;MAX(sal)&nbsp;<span style="color:#ff3399">INTO</span>&nbsp;max_sal</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">FROM</span>&nbsp;emp</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">WHERE</span>&nbsp;deptno&nbsp;<span style="color:#010101"></span><span style="color:#0099cc">=</span>s_deptno;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;RETURN&nbsp;max_sal;</div><div style="padding:0 6px; white-space:pre; line-height:130%">END;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101"></span><span style="color:#0099cc">/</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">SELECT</span>&nbsp;dname&nbsp;<span style="color:#010101"></span><span style="color:#0099cc">|</span><span style="color:#010101"></span><span style="color:#0099cc">|</span><span style="color:#7DA123">'부서의&nbsp;최고&nbsp;월급은'</span><span style="color:#010101"></span><span style="color:#0099cc">|</span><span style="color:#010101"></span><span style="color:#0099cc">|</span>&nbsp;max_sal1(deptno)<span style="color:#010101"></span><span style="color:#0099cc">|</span><span style="color:#010101"></span><span style="color:#0099cc">|</span>&nbsp;<span style="color:#7DA123">'입니다.'</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">FROM</span>&nbsp;dept</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">WHERE</span>&nbsp;deptno&nbsp;IN&nbsp;(<span style="color:#ff3399">SELECT</span>&nbsp;DISTINCT&nbsp;deptno&nbsp;<span style="color:#ff3399">FROM</span>&nbsp;emp)</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101"></span><span style="color:#0099cc">/</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#e5e5e5text-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

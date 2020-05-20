@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>C# MSSQL 연동 SQL편</title>
+  <link rel="stylesheet" type="text/css" href="../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../CSS/Post.css">
+   <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+  
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="sider"></div>
+
+
+    <div id="main-wrapper">
+      <!--  본문 시작-->
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="container" style="display: block;"></div>
+      <div class="main-post">
+
+        <div class="main-title">
+          <h1>C# MSSQL 연동 SQL편 </h1>
+          <h2>MSSQL</h2>
+          <p class="main-title-time">작성일 : 2019-08-29</p>
+        </div>
+        <hr>
+        <div class="main-post-text">
+          C# MSSQL 연동 하실때 문제되는 부분이 있어서 적어봅니다<br><br>
+          
+          <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/MSSQL/01/00.JPG?raw=true"width="1200"><br>
+          처음에 실행하면 Windows 인증을 통해 연결 해줍니다.<br><br>
+          <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/MSSQL/01/01.JPG?raw=true"width="1200"><br>
+          로그인 우클릭 - 새 로그인<br><br>
+          <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/MSSQL/01/02.JPG?raw=true"width="1200"><br>
+          일반<br>
+          *로그인 이름과 비밀번호 설정.<br>
+          선택 :암호정책 강제적용<br>
+          선택 :암호 만료 강제 적용<br>
+          선택 :다음 로그인할 때 반드시 암호변경<br>
+          <br>
+          확인<br>
+          <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/MSSQL/01/03.JPG?raw=true"width="1200"><br>
+          자기 아이디 우클릭  -상태  -데이터베이스 엔진 연결 권한 허용, 로그인 사용<br>
+          <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/MSSQL/01/04.JPG?raw=true"width="1200"><br>
+          서버 우클릭 -속성 -보안 - SQL Server및 Windows 인증모드<br>
+          <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/MSSQL/01/05.JPG?raw=true"width="1200"><br>
+                사용하는 테이블 우클릭 -속성 -사용권한 설정.<br>
+          전부다 허용눌러도 상관없습니다<br>
+          삽입 삭제, 연결 은 꼭 체크<br>
+   
+          
+        </div>
+      </div><!--  본문 끝-->
+    </div>
+    <div id="footers"></div>
+</body>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>디자인 패턴 및 기말 고사   </title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+	   <link rel="stylesheet" type="text/css" href="../../../CSS/Attach.css">
+   <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+	
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+<style>
+table {
+    width: 100%;
+    border: 1px solid #444444;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #444444;
+  }
+</style>
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sider"></div>
+
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+
+
+        <div class="main-title">
+           <h1>디자인 패턴 및 기말 고사 </h1>
+          <h2>Software Engineering</h2>
+          <p class="main-title-time">작성일 : 2019-08-01</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+<font style="font-weight:600;">디자인 패턴</font> –대표적으로 사용하는 것을 일반화함.<br>
+<font color="red">비슷한 역할의 클래스 유형을</font> 자주 쓰게 된다. <br>
+<font color="red">자주 반복되는 설계 유형</font>을 디자인 패턴이라 한다.<br>
+디자인 패턴은 <font color="red">체계적으로 문서화하여 범용적으로</font> 사용할 수 있도록 정리한 것이다.<br>
+<br>
+가장 널리 알려진 디자인 패턴은 Gang of Four의 23가지 패턴이다.<br>
+<br>
+<font style="font-weight:600;">싱글턴 패턴</font> 사용<br>
+시스템의 형상 정보는 <font color="red">한 객체에만 존재</font>하게 하여 전역 변수처럼 접근해야 한다.<br>
+시스템 로그 파일이나 라이브러리 카탈로그는 시스템에 <font color="red">하나만 존재</font>해야 한다.<br>
+패턴이 자세한 내용은 클래스 다이어그램이나 시퀸스 다이어그램으로 표현한다 <br>
+<font color="red">클래스 다이어그램</font>에는 참여 객체와 그것들의 <font color="red">역할 및 의무, 관계</font>를 나타내고, <br>
+<font color="red">시퀸스 다이어그램</font>에는 참여 객체가 <font color="red">문제를 해결하기 위해 어떻게 상호작용</font> 하는지 나타낸다<br>
+<br>
+적용되지 않은 경우 –<font color="red">반복, 중복</font>되는 코드가 많아 <font color="red">재사용이 어려움</font><br>
+디자인 패턴 명세 – 이름, 배경, 문제, 솔루션, 혜택과 책임, 가이드라인, 관련 패턴<br>
+<br>
+<br>
+<font style="font-weight:600;">개념 실체 패턴</font> – 각 객체의 <font color="red">공통 정보를 공유</font>할 때 사용<br>
+실체 – 공통된 정보를 가진 <font color="red">맴버들의 모임</font><br>
+개념 – 공유하는 <font color="red">정보를 담는 클래스</font><br>
+<br>
+<font style="font-weight:600;">플레이어 역할 패턴</font> – 하나의 클래스에 다양한 역할을 표현하고 싶을 때 사용한다<br>
+<font color="red">역할이 다양한 것</font>을 표현하기 위해 플레이어 객체와 속성의 집합으로 나누는 것<br>
+<br>
+<font style="font-weight:600;">위임 패턴</font> – 다른 클래스가 가진 특정 오퍼레이션을 활용하여 책임을 위임하고 싶을대 사용<br>
+<font color="red">다른 클래스의 오퍼레이션에 작업</font>을 요청하는 것<br>
+<font color="red">코드중복 피함<br>
+근접한 정보에만 접근</font><br>
+<br>
+<font style="font-weight:600;">계층 구조 패턴</font> – 계층 관계를 가진 객체들을 묶어 동일한 처리를 하고 싶을 때.<br>
+트리 구조를 사용한다.<br>
+<font color="red">계층 구조에 잇는 각 객체는 하부 층에 여러 객체를 종속</font>시킬 수 있다.<br>
+<br>
+<font style="font-weight:900;">동적 모델링</font><br>
+<br>
+<font style="font-weight:600;">시퀸스 다이어그램</font>- 시스템의 동적인 행위에 대해 사용 사례 단위로 어떤 객체가 어떤 객체와 메시지를 교환하여 상호작용 하는지 나타낸다.<br>
+<font color="red">메시지의 순서</font>를 쉽게보여줄 때<br>
+메시지의 자세한 사항, <font color="red">매개변수, 리턴 값</font>등을 나타낼 때<br>
+<font color="red">시간 축에 초점을 두고 사건의 흐름을 명시적</font>으로 나타낸다.<br>
+<br>
+<font style="font-weight:600;">커뮤니케이션 다이어그램</font>- 시퀸스 다이어그램과 같이 메시지 흐름을 나타내면서 클래스 사이의 관계도를 나타낸다.<br>
+<font color="red">객체와 액터의 관계에 초점</font>을 두고 사건의 흐름을 <font color="red">네트워크 형태로 압출</font>하여 나타낸다.<br>
+<font color="red">클래스 다이어그램을 검증</font>하려고 할 때.<br>
+<br>
+시간의 축을 따라서 이벤트의 흐름을 나타낸 것이 시퀸스 다이어그램객체 사이에 주고받는 메시지를 동적으로 볼 수 있습니다.*없어도 문제는 없으나 있으면 객체 사이의 흐름을 파악하기 쉬움.=클래스 다이어그램, Use Case 다이어그램을 보고 제작함.상호작용하는 다이어그램.<br>
+<br>
+객체라이프 라인 [세로줄] -시간축메세지[가로선] activation box -살아있는 기간소멸하면 x표시.<br>
+테스트 하는 사람이 보게 된다.결함이 적어야 합니다.private 하고 변수명앞에 _value를 붙여 주는게 좋다.<br>
+다독성 읽기 힘든가.<br>
+<br>
+구현이란 설계 명세를 토대로 분리하여 수현할 수 있는 작은 단위별로 프로그래밍 하는 것<br>
+전 단계의 문서, 아키텍처 서례서 요구분석을 참조<br>
+    <br>
+테스트 하는 사람이 보게 된다.결함이 적어야 합니다.private 하고 변수명앞에 _value를 붙여 주는게 좋다.    <br>
+다독성 읽기 힘든가.    <br>
+    <br>
+구현이란 설계 명세를 토대로 분리하여 수현할 수 있는 작은 단위별로 프로그래밍 하는 것    <br>
+전 단계의 문서, 아키텍처 서례서 요구분석을 참조    <br>
+   <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Software%20Engineering/26/00.png?raw=true"><br>
+  <br>
+ 통합 프로세스 <br>
+<font color="red">개념 정립, 발전, 구축, 전환 단계</font>를 거침 <br>
+ <br>
+	      <font style="font-weight:900;">리팩토링</font> – <font color="red">기능의 변경 없이 코드의 디자인을 개선</font>하는 것으로 문제가 될 만한 부분을 찾아내어 수정하고 재구조화 하는 작업이다. <font color="red">확장 및 재사용, 더 읽기 쉽고, 결합을 낮추고 응집을 높여 코드</font>를 쉽게 변경. <br>
+ <br>
+	      -> <font style="font-weight:900;">코드스멜</font> – 설계를 수정하기 어렵게 만드는 것. <br>
+ <br>
+ <br>
+	      <font style="font-weight:900;">검토 Inspection</font> –구현 단계의 품질을 높이는 중요한 작업 <br>
+코드에 존재하는 <font color="red">결함과 비효율성, 코드 표준 불일치</font> 등 품질에 영향을 주는 결함을 찾는 것이다. <br>
+ <br>
+	      <font style="font-weight:900;">인스팩션의 체크리스트</font> –384쪽 <br>
+-로직 문제 <br>
+-컴퓨팅 문제 <br>
+-인터페이스/타이밍 문제 <br>
+-데이터 처리 <br>
+392Page <br>
+요구분석 -설계 -코딩 -테스트 -유지보수 <br>
+테스트는 시스템을 개발할 때 요구되는 동작과 실제 개발한 후의 동작이 다르지는 않은지 분석하고 확인하는 작업이다.  <br>
+ <br>
+100% 테스트는 불가능 <br>
+- 판단 불가능 <br>
+- 시간 자원 제약 <br>
+중요성 <br>
+- 우주 탐사선 컬럼비아 호 <br>
+- 많은 경험이 필요 <br>
+ <br>
+테스트는 <br>
+-오류가 있음을 보여주려는 작업 <br>
+-오류가 없음을 보여주는 작업은 아님 <br>
+   <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Software%20Engineering/26/01.png?raw=true"><br>
+ <table>
+	<tbody>
+              <tr>
+                <th>테스트명</th>
+                <th>설명</th> 
+              </tr> 
+           </tbody> 
+	 <tbody>
+              <tr>
+                <th>단위 테스트</th>
+                <td>컴퍼넌트[구성요소, 모듈]를 테스틑 한다<br>
+블랙박스 테스트, 화이트박스 테스트, 객체지향 테스트 가 있음. </td> 
+              </tr> 
+           </tbody> 
+	  <tbody>
+              <tr>
+                <th>통합 테스트</th>
+                <td>컴퍼넌트를 독립적으로 테스트한 후 [단위테스트가 끝난 후] 인터페이스를 테스트하는 것이다.<br>
+모듈에서 다른 모듈로 넘어가는 것을 보여줌.</td> 
+              </tr> 
+           </tbody>
+	   <tbody>
+              <tr>
+                <th>시스템 테스트</th>
+                <td>기능 테스트 : 기술된 기능이 잘 수행되는지 테스트 하는 것.<br>
+성능 테스트 <br>
+Stress test : 수강 신청에서 많은 트렌젝션을 받아서 수행하거나 게임 서버의 수용인원 등을 테스트함<br>
+Volume test : 데이터를 계속 보내서 얼마나 견딜 수 있는지 확인<br>
+Security test :보안과 관련된 테스트 <br>
+</td> 
+              </tr> 
+           </tbody>
+	    <tbody>
+              <tr>
+                <th>인수 테스트</th>
+                <td>고객에게 프로그램을 넘겨주고 그 프로그램이 재대로 동작하는 확인하는 테스트.</td> 
+              </tr> 
+           </tbody>
+	    <tbody>
+              <tr>
+                <th>설치 테스트</th>
+                <td>사용자에게 사용할 환경에 시스템을 설치하고 테스트를 정검합니다.</td> 
+              </tr> 
+           </tbody>
+
+ </table><br />
+	      <font style="font-weight:900;">블랙박스 테스트</font> - 안에 있는 내용[소스]은 생각하지 않고 원하는 결과가 나오는지 확인하는 것
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Software%20Engineering/26/02.png?raw=true"><br>
+	        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Software%20Engineering/26/03.png?raw=true"><br>
+	      <font style="font-weight:900;">화이트 박스</font> -내부 구조와 실행 흐름을 자세히 참조하는 방식이다.
+	      <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Software%20Engineering/26/04.png?raw=true"><br>
+	      
+445 P <br>
+유지보수 <br>
+SW가 인수 설치 후 일어나는 직업 <br>
+개발비용: 30%, 유지보수: 70% <br>
+<br>
+동기에 따른 분류<br>
+교정형 - 오류가 인수되어 발견될 경우 오류를 고치는 것.<br>
+적응형 - 소프트웨어를 운영하는 환경이 바껴서 유지보수를 해야 하는 경우 [운영체제가 바꾸거나 서버 교체할 때]<br>
+개선형 – 이미 있는 시스템에 좀 더 낫게 하거나 기능을 추가하거나 바꾸는 것. [60%~]	 <br>     
+	       <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Software%20Engineering/26/05.png?raw=true"><br>
+	       <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Software%20Engineering/26/06.png?raw=true"><br>
+	      450 P<br>
+형상관리를 하자 (CM )<br>
+소프트웨어의 변경을 잘 관리하는 것이다
+소포트웨어를 이루는 부품의 baseline을 정하고 변경을 철저히 통제하는것. [baseline = 464 Page -최종 문서]<br>
+<br>
+관리 구성 요소<br>
+분석서<br>
+설계서<br>
+프로그램<br>
+사용자지침서       <br>
+<br>
+453 P 유지 보수 작업의 문제점과 한계<br>
+S/W에 대한 변경이 수시로 일어남.<br>
+유지보수를 하기 위해서는 기능별로 나눠야 합니다.<br>
+<br>
+463~<br>
+형상관리 절차<br>
+1. 형상 요소 파악<br>
+-고유식별자<br>
+-이름<br>
+-문서 종류<br>
+-문서 파일<br>
+-저자 <br>
+-생성날짜,목표 완성일<br>
+-버전 번호<br>
+-업데이트 이력<br>
+-설명<br>
+SQA 담당자 -품질 보증 책임자<br>
+SCM 담당자 -항목 체크한 책임자<br>
+	        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Software%20Engineering/26/07.png?raw=true"><br>
+	      베이스 라인<br>
+	      <font color="red">미리 정의된 작업 결과물을 완성하고 공식 승인</font>받는 일종의 참조시점이다 제품의 구성항목을 수정하고 공식적으로 변경함으로써 프로젝트 수행 도중 발생할 수 있는 <font color="red">통제되지 않은 변경에대한 취약성을 줄이는 것이 목적이다.</font><br>
+<br>
+2. 형상 변경 제어<br>
+-변경의 이유를 파악<br>
+-변경 분석<br>
+-변경 요청 중비<br>
+-변경 요청 평가<br>
+-변경 추가<br>
+<br>
+3. 형상 감사<br>
+- 소프트웨어 형상에 대해 요청된 변경이 적절히 이루어 졌는지 확인하고 베이스라인과 형상 항목을 검증<br>
+- 베이스라인을 구축하기 위한 메커니즘 정의<br>
+-형상 항목 검토 -영향을 준 다른 베이스 라인이 서로 일치를 하는지.<br>
+-형상 항목 확인<br>
+<br>
+4. 형상 상태 보관<br>
+- 형상 관리 데이터베이스에 보관<br>
+OneCMDB <-라는 프로그램을 통해 관리할 수 있다.<br>
+	     <br>
+	        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Software%20Engineering/26/08.png?raw=true"><br>
+그림1 개념실체	<br> 
+	         <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Software%20Engineering/26/09.png?raw=true"><br>
+	      그림2 위임<br>
+	        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Software%20Engineering/26/10.png?raw=true"><br>
+	      그림3 계층<br>
+	         <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Software%20Engineering/26/11.png?raw=true"><br>
+	      그림 4 시퀸스 다이어 그램<br>
+	         <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Software%20Engineering/26/12.png?raw=true"><br>
+	      그림 5 사용사례 커뮤니케이션<br>
+	       <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Software%20Engineering/26/13.png?raw=true"><br>
+	      그림6 디지털 도어락<br>
+	      <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Software%20Engineering/26/14.png?raw=true"><br>
+	      그림7 요리 주문 시퀸스 다이어 그램<br>
+	      
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

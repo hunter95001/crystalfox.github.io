@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>임베디드 시스템, 전기 1교시 </title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sider"></div>
+
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+
+
+        <div class="main-title">
+          <h1>임베디드 시스템, 전기 1교시 </h1>
+          <h2>임베디드 시스템</h2>
+          <p class="main-title-time">작성일 : 2018-03-07</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+ <pre>
+임베디드(내장형) 시스템
+- 시스템을 동작시키는 소프트웨어를 하드웨어에 내장하여 특수한 기능만을 수행.
+모바일 컴퓨팅 및 유비쿼터스 컴퓨팅 환경 구축
+
+CPS (Cyber Physical System)
+-가상 공간의 행위가 현실세계에 미치도록 하는 것
+ex) 인터넷 주문을 하면 공장에서 생산
+
+임베디드 시스템 분류
+고수준 -{
+CPU, 메모리 용량이 높다.
+지능형 처리. (다양한 어플을 설치)
+스마트폰, 스마트 TV, 의료장비
+}
+저수준{
+운영체제가 없음
+실행시 바로 구동
+}
+
+아두이노 = 프로토 타이핑 플랫폼 (실제 제품을 양산하기 전에 확인 하는 작업)
+PROGRAM [HOST COMPUTER] {
+1. 프로그램 개발,
+2.모니터링[동작 확인]
+}
+- ARUDINO
+-SENSORS, ACTURATORS (서로서로 독립적이다.)
+
+교차 개발 환경 =프로그램 개발환경과 실행환경이 다르다.
+1.CROSS -TOOLCHAIN =업로딩 가능한 상태까지 만드는것 (기계어 번역, 변화, 업로드등)
+-CROSS COMPILER
+-BINARY ATILITIES
+
+MCU =CPU+ RAM +FLASH MEMORY +I/O DEVICES(외부와 통신) + GP IO PORTS (외부 장치 연결 포트)
+MICRO PROCESSOR -CPU를 작게 구현 한것
+회로, 전기.pdf
+전기
+1. 회로(CIRCUIT)
+1.논리 회로 -디지털 신호 (1,0)
+2.전자 회로 -전기 신호가 순환 (아두이노에서 사용)
+
+2. 전기(Electricity) -전자에 의해 생기는 전하와 에너지
+전기의 흐름 = 물에 흐름과 같음
+전기에너지가 많은 곳 -> 전기에너지가 적은곳 (전압 차이가 나야 흐름)
+*전압차이가 안나면 전기가 흐르지 않음 (전자 제품을 끌때)
+
+정류
+교류(AC) - 극성(+,-)이 있음, 멀리 갈수있다.
+직류(DC) -컴퓨터 사용(전자 장비는 직류), 일정한 전압을 유지,
+
+3.전기 특성
+전압 -V (전위차)
+전류 -A (전위차로 인해 흐르는 것)
+저항 -R (전류를 방해)
+전력 -W 전기 에너지로 일하는 양
+
+4. 옴의 법치 (I=V/R)
+저항이 없으면 전기가 그대로 지나감 (쇼트 :높은 양의 전기가 이동하면 불꽃 튐)
+
+5. 저항연결
+전류의 세기는 모두 같다 (직류) V= IR
+전압의 세기가 모두 같다 (병렬) I=V/R
+
+6.LED
+전압이 높다 -> 전압이 낮다 (흐름)
+불을 끄기위해서는 전류가 흐르지 않으면 된다.
+전기에너지를 같게 해준다.
+
+VCC 전기가 들어옴
+GROUND 전기가 나가는곳
+
+8비트 MEGAVR =주변 장치가 많고 가장 많이 사용
+8비트 TINYAVR =소형 장치에 사용
+LI -ION 배터리 = 완전 방전될 시 충전이 안됨
+*PCM [배터리 보호 회로]->일정이상 전압이 흐르지 않음. 
+  </pre>
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

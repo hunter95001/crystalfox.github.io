@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>정보처리기사 필기 </title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sider"></div>
+
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <!--  본문 시작-->
+      <div class="main-post">
+
+
+        <div class="main-title">
+          <h1>필기 요약 </h1>
+          <h2>정보처리기사</h2>
+          <p class="main-title-time">작성일 : 2019-07-11</p>
+        </div>
+        <hr>
+        
+        외부[External] 스키마 = 서브스키마= VIEW -정의 <br>
+개념[Conceptual] 스키마 = 전체적인 논리적 구조 , 데이터 통합<br>
+내부[Internal] 스키마 = 물리적, 실제 저장<br>
+DDL – 디파인 <- 정의 [CREATE ALTER DROP]<br>
+DML – 매니저 <- 조작 [SELECT INSERT DELETE UPDATE]<br>
+DCL – 컨트롤 <- 제어 [COMMIT ROLLBACK GANT REVOKE ]<br>
+개체 – 사각형<br>
+관계 – 마름모<br>
+타원 – 속성<br>
+<br>
+설계 고려 [분석 –개념 –논리 – 물리 -구현]<br>
+무결성, 일관성, 회복성, 보안성, 효율성, 확장성<br>
+<br>
+개념 설계 – 모델링, 명세, 추상개념<br>
+논리적 설계 – 개념 평가, 종속적 설계, 인터페이스, 테이블 설계<br>
+물리적 설계 – 저장, 작성<br>
+<br>
+튜플[가로] = 카디널리티 = 기수 = 대응 <br>
+속성[세로] = 디그리 = 차수 <br>
+도메인[열의 값] <br>
+<br>
+객체 무결성 –null, 중복 제외<br>
+참조 무결성 – 외래키<br>
+도메인 무결성 –속성 도메인에 속한값<br>
+<br>
+
+
+        <h3>정보처리기사 자료</h3>
+        <a href="https://github.com/hunter95001/InformationProcessingArticle">
+  https://github.com/hunter95001/InformationProcessingArticle</a>
+
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

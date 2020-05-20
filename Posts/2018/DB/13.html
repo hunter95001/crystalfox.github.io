@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>OUTER Join</title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+	<style>
+		table{
+		width: 500px;
+		}
+  th, td {
+    border: 1px solid #444444;
+  }
+		pre{
+		
+		}
+	</style>
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sider"></div>
+
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+        <div class="main-title">
+          <h1>OUTER Join</h1>
+          <h2>데이터 베이스</h2>
+          <p class="main-title-time">작성일 : 2018-10-08</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+한쪽이 null 일떄 사용합니다 
+EX) 지도교수와 학생을 출력할떄  (지도학생이 없는 교수가 있을수 있다 = null)
+
+학생의 지도교수를 출력하는 질의.
+     <table>
+	<tbody>
+              <tr>
+                <th>//LEFT </th>
+                <th>//RIGHT </th> 
+                <th>FULL OUTER JOIN</th> 
+              </tr> 
+           </tbody> 
+       	<tbody>
+              <tr>
+                <td><pre>
+SELECT s.name "STU", p.name "PROF" 
+FROM student s, professor p  
+WHERE s.profno=p.profno(+)  
+/
+                </pre></td>
+                            <td><pre>
+SELECT s.name "STU", p.name "PROF" 
+FROM student s, professor p  
+WHERE s.profno(+)=p.profno  
+/
+                </pre></td>                <td><pre>
+SELECT s.name "STU", p.name "PROF" 
+FROM student s, professor p  
+WHERE s.profno=p.profno(+)  
+union all  
+SELECT s.name "STU", p.name "PROF" 
+FROM student s, professor p  
+WHERE s.profno(+)=p.profno 
+/
+                </pre></td>
+              </tr> 
+           </tbody>
+       
+       	<tbody>
+              <tr>
+                <td>
+SELECT s.name "STU", p.name "PROF" <br>
+FROM student s LEFT OUTER JOIN professor p using (profno) <br>
+/
+                </td>
+                            <td>
+SELECT s.name "STU", p.name "PROF" <br>
+FROM student s RIGHT OUTER JOIN professor p using (profno) <br>
+/
+              </td>                
+                <td>
+SELECT s.name "STU", p.name "PROF" <br>
+FROM student s FULL OUTER JOIN professor p using (profno) <br>
+/
+             </td>
+              </tr> 
+           </tbody>
+              	<tbody>
+              <tr>
+                <td><pre>
+STU                            PROF 
+------------------------------ -----
+서진수                         조인형
+일지매                         박승곤 
+김신영                         박승곤 
+김진욱                         양선희 
+서재수                         양선희 
+신은경                         김영조 
+이미경                         나한열 
+임세현                         심슨 
+김재수                         심슨 
+안광훈                         최슬기
+김문호                         박원범 
+오나라                         박원범 
+박동호                         박원범 
+노정호                         허은 
+구유미                         허은 
+허우
+김주현
+인영민
+안은수
+이윤나
+               </pre> </td>
+                            <td><pre>
+STU                            PROF
+------------------------------ -----
+서진수                         조인형 
+김신영                         박승곤 
+일지매                         박승곤 
+                               송도권 
+김진욱                         양선희 
+서재수                         양선희 
+신은경                         김영조 
+                               주승재 
+                               김도형 
+이미경                         나한열 
+                               김현정 
+김재수                         심슨 
+임세현                         심슨 
+안광훈                         최슬기 
+박동호                         박원범 
+오나라                         박원범 
+김문호                         박원범 
+                               차범철 
+                               바비 
+                               전민 
+노정호                         허은 
+구유미                         허은
+               </pre></td>                
+                <td><pre>
+STU                            PROF 
+------------------------------ ----- 
+서진수                         조인형 
+서재수                         양선희 
+이미경                         나한열 
+김재수                         심슨 
+박동호                         박원범 
+김신영                         박승곤 
+신은경                         김영조 
+오나라                         박원범 
+구유미                         허은 
+임세현                         심슨 
+일지매                         박승곤 
+김진욱                         양선희 
+안광훈                         최슬기 
+김문호                         박원범 
+노정호                         허은 
+이윤나 
+안은수 
+인영민 
+김주현 
+허우 
+                               김도형 
+                               전민 
+                               주승재 
+                               바비 
+                               김현정 
+                               송도권 
+                               차범철
+                </pre></td>
+              </tr> 
+           </tbody>
+       
+ </table><br />   
+        
+        <table>
+
+            <thead>
+              <tr>
+                <td colspan='3'>
+컴퓨터공학과의 학생 교수, 학번, 이름, 학생의 지도교수를 출력 <br>
+단 지도교수가 없는 학생도 출력 =>LEFT OUTER JOIN 4명 <br>
+지도학생이 없는 교수도 출력. => RIGTH OUTER JOIN 송도권이 출력
+                </td>
+                
+              </tr>
+            </thead>
+
+	<tbody>
+              <tr>
+                <td><pre>
+컴퓨터공학과의 학생의 학번, 이름, 학생의 지도교
+수를 출력 
+(학생은 컴퓨터공학과 
+교수는? 
+컴퓨터 공학과 학생이 아닐수도 있다.)
+
+단 지도교수가 없는 학생도 출력 =>
+LEFT OUTER JOIN 4명
+                </pre></td>
+                <td><pre>
+컴퓨터공학과의 교수의 지도학생의 학번, 이름, 학생의 지도교수를 출력 
+
+지도학생이 없는 교수도 출력. =>
+RIGTH OUTER JOIN 송도권이 출력
+                </pre></td>
+                <td><pre>
+3 full outer join                
+                </pre></td>
+              </tr> 
+           </tbody>
+          
+          	<tbody>
+              <tr>
+                <td>
+SELECT s.studno "학번",s.name "이름",grade "학년",profno"교번", p.name"교수명"  <br>
+FROM student s LEFT OUTER Join professor p using (profno) <br>
+WHERE deptno1=( <br>
+SELECT deptno <br>
+FROM department <br>
+WHERE dname like '컴퓨터공학과' <br>
+)    
+                </td>
+                <td width=50>
+SELECT s.studno "학번",s.name "이름",grade "학년",profno"교번", p.name"교수명" <br> 
+FROM student s RIGHT OUTER Join professor p using (profno) <br>
+WHERE deptno=( <br>
+SELECT deptno <br>
+FROM department <br>
+WHERE dname like '컴퓨터공학과'<br> 
+) <br>
+/                
+               </td>
+                <td>
+SELECT s.studno "학번",s.name "이름",grade "학년",profno"교번", p.name"교수명"  <br>
+FROM student s FULL OUTER Join professor p using (profno) <br>
+WHERE deptno1=( <br>
+SELECT deptno <br>
+FROM department <br>
+WHERE dname like '컴퓨터공학과' <br>
+) <br>
+OR deptno =( <br>
+SELECT deptno <br>
+FROM department <br>
+WHERE dname like '컴퓨터공학과' <br>
+) <br>
+/                
+               </td>
+              </tr> 
+           </tbody> 
+           <tbody>
+              <tr>
+                <td><pre>
+                </pre></td>
+                <td><pre>
+                </pre></td>
+                <td>
+SELECT s.studno "학번",s.name "이름",grade "학년",profno"교번", p.name"교수명"  <br>
+FROM student s FULL OUTER Join professor p using (profno)  <br>
+WHERE  (  <br>
+SELECT deptno  <br>
+FROM department  <br>
+WHERE dname like '컴퓨터공학과'  <br>
+) IN (deptno1,deptno)   <br>
+/
+                </td>
+              </tr> 
+           </tbody> 
+          
+           <tbody>
+              <tr>
+                <td><pre>
+
+학번 이름   학년   교번 교수명 
+---- ------ ----  ---------- 
+9411 서진수 4       1001 조인형 
+9611 일지매 2       1002 박승곤 
+9511 김신영 3       1002 박승곤 
+9711 이윤나 1 
+          
+                </pre></td>
+                <td><pre>
+학번 이름   학년    교번 교수명 
+---- ----- ----    ---------
+9411 서진수 4       1001 조인형 
+9511 김신영 3       1002 박승곤 
+9611 일지매 2       1002 박승곤 
+                   1003 송도권                
+                
+                </pre></td>
+                <td><pre>
+학번 이름    학년       교번 교수명 
+----------  ---------- ---------- -----
+9411 서진수  4       1001 조인형 
+9511 김신영  3       1002 박승곤 
+9611 일지매  2       1002 박승곤 
+9711 이윤나  1 
+                     1003 송도권                
+                </pre></td>
+              </tr> 
+           </tbody> 
+
+
+ </table><br />
+        
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

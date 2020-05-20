@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>클래스 다이어그램 </title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css"> 
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Attach.css">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+	
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sider"></div>
+
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+
+
+        <div class="main-title">
+           <h1>클래스 다이어그램</h1>
+          <h2>Software Engineering</h2>
+          <p class="main-title-time">작성일 : 2018-10-08</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+
+        <a href="https://github.com/hunter95001/SoftwareEngineering/tree/master/SoftawreEngineering/07"><br>
+	<div  class ="attachment">
+		<img  class="icon" align="left"  src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Folder.png?raw=true" > 
+		<font class="attach-text">2018-10-08 클래스다이어그램</font> 
+		<img class="icon" align="right"src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/File.png?raw=true" > 	
+	</div>
+	</a> <div class="empty"> </div>
+
+
+	        <br>
+	        <br>
+클래스 다이어그램은 문제나 해결책의 정적인 구조를 보여주는 매우 중요한 다이어그램이다. <br>
+클래스 다이어그램은 시스템을 구성하는 클래스들과 그들간의 관계를 보여준다.<br>
+<br>
+클래스 이름<br>
+속성<br>
+오퍼레이션으로 구분<br>
+<br>
+속성이름 : 속성타입<br>
+ 
+        
+<table border="1">
+	<tbody>
+              <tr>
+                <th>접근 제어자</th>
+                <th>표시</th>
+                <th>설명</th>
+              </tr> 
+           </tbody> 
+  	        <tbody>
+              <tr>
+                <th>Public</th>
+                <td>+</td>
+                <td>모든 클래스 적용가능</td>
+              </tr> 
+           </tbody> 
+  	        <tbody>
+              <tr>
+                <th>Private</th>
+                <td>-</td>
+                <td>클래스 안에서만 가능</td>
+              </tr> 
+           </tbody> 
+  	        <tbody>
+              <tr>
+                <th>Protected</th>
+                <td>#</td>
+                <td>클래스 안에서만 가능</td>
+              </tr> 
+           </tbody> 
+ </table><br />
+
+- id :String<br />
+- 주소 :String<br />
++ 연락처 :String<br />
+<br />
+제약조건<br />
+{}나 노드심볼 을 이용하여 기술<br />
+salay : int{salary >0}<br />
+
+ <table border="1">
+	<tbody>
+              <tr>
+                <th>관계</th>
+                <th>설명</th>
+              </tr> 
+           </tbody> 
+  	        <tbody>
+              <tr>
+                <td>연관 관계(160Page)</td>
+                <td>선으로 그은것. (역할, 연관관계이름,다중성)</td>
+              </tr> 
+           </tbody> 
+  	        <tbody>
+              <tr>
+                <td>일반화 관계</td>
+                <td>상속을 나타냄</td>
+              </tr> 
+           </tbody> 
+  	        <tbody>
+              <tr>
+                <td>의존 관계</td>
+                <td>잠시 객체가 생겼다 사라질 경우</td>
+              </tr> 
+           </tbody> 
+      <tbody>
+              <tr>
+                <td>집합 관계 (160Page)</td>
+                <td>고급 클래스를 만들때, 집약, 합성</td>
+              </tr> 
+           </tbody> 
+         <tbody>
+              <tr>
+                <td>실체화 관계 (160Page)</td>
+                <td>인터페이스를 표현할 때 -공통속성이 있을때.</td>
+              </tr> 
+           </tbody> 
+ </table><br />
+        
+        <table border="1">
+	<tbody>
+              <tr>
+                <th>다중성표기</th>
+                <th>	의미</th>
+              </tr> 
+           </tbody> 
+  	        <tbody>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+              </tr> 
+           </tbody> 
+  	        <tbody>
+              <tr>
+                <td>* =0..*</td>
+                <td>0또는 그이상</td>
+              </tr> 
+           </tbody> 
+  	        <tbody>
+              <tr>
+                <td>1..*</td>
+                <td>1이상.</td>
+              </tr> 
+           </tbody> 
+ </table><br />
+양방향 화살표로 표시 없음 <br/>
+        단방향 화살표로 표시<br/>
+<br/>
+일반화관계 -상속<br/>
+집약 =빈마름모 <br/>
+-전체와 객체의 부분이 종속적일떄<br/>
+합성 =채워진 마름모<br/>
+-전체와 객체의 부분이 독립적일떄<br/>
+<br/>
+다중상속 -> 점선과 세모. <br/>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Software Engineering/07/00.jpg?raw=true"><br>
+        Class와 Interface를 이용해서 그리면 됨.<br/>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Software Engineering/07/01.jpg?raw=true"><br>
+        Toolbox를 이용하면 노트를 이용할수 있음<br/>
+    <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/2018/Software Engineering/07/02.jpg?raw=true"><br>
+        관계 설명할려면 연관선을 클릭하면 됨.<br/>
+Attributes 숨기기 Format ->Suppress Attributes<br/>
+Operations 숨기기 Format ->Suppress Operations<br/>
+모양 바꾸기 Format ->Stereotype Display-> textual[사각형] Iconic [원]<br/>
+        
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

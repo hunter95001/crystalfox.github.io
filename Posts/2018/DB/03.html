@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>과제 해결</title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+<style>
+table {
+    width: 100%;
+    border: 1px solid #444444;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #444444;
+  }
+</style>
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sider"></div>
+
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+
+
+        <div class="main-title">
+          <h1>과제 해결 </h1>
+          <h2>데이터 베이스</h2>
+          <p class="main-title-time">작성일 : 2018-09-10</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+숫자와 문자의 차이 <br>
+문자 2=02   '&deptno'<br>
+숫자 2!=02  &deptno <br>
+<table>
+	<tbody>
+              <tr>
+                <td>
+                
+SQL>SET verify ON  <br>
+SQL> ed <br>
+Wrote file afiedt.buf <br>
+<br>
+  1  SELECT INITCAP(ename) || ' is'|| ' a(an) ' || LOWER(job) as Name <br>
+  2  FROM emp <br>
+  3* WHERE deptno =&deptno<br>
+SQL> / <br>
+Enter value for deptno: 10 <br>
+old   3: WHERE deptno ='&deptno'<br> 
+new   3: WHERE deptno ='10' <br>
+<br>
+NAME<br> 
+---------------------------------------------------------- <br>
+Clark is a(an) manager <br>
+King is a(an) president <br>
+Miller is a(an) clerk<br>
+                </td> 
+              </tr> 
+           </tbody> 
+  
+  	<tbody>
+              <tr>
+                <td>
+SQL>SET verify OFF <br>
+SQL>SELECT INITCAP(ename) || ' is'|| ' a(an) ' || LOWER(job) ||'.' as Name  <br>
+FROM emp  <br>
+WHERE deptno =&deptno;<br>
+<br>
+Enter value for deptno: 10 <br>
+<br>
+NAME<br> 
+------------------------------------------------------------ <br>
+Clark is a(an) manager. <br>
+King is a(an) president. <br>
+Miller is a(an) clerk.<br>
+	                     </td> 
+              </tr> 
+           </tbody> 
+		      
+ </table><br />
+        
+	      
+	      <table>
+	<tbody>
+              <tr>
+                <td>
+		컴퓨터정보학부에 소속된 학과 이름 앞 3자리만 출력하시오 <br>
+SELECT dname,SUBSTR(dname,1,3) <br>
+FROM department <br>
+/
+	                     </td> 
+                 <td>
+			 <pre>
+DNAME								SUBSTR(DNAME,1,3)  <br>
+------------------------------------------------------------ ------------------------ <br>
+컴퓨터공학과							 컴퓨터 <br>
+멀티미디어공학과 						멀티미 <br>
+소프트웨어공학과						소프트 <br>
+전자공학과							전자공 <br>
+기계공학과							기계공 <br>
+화학공학과							화학공 <br>
+문헌정보학과							문헌정 <br>
+컴퓨터정보학부							컴퓨터 <br>
+메카트로닉스학부						메카트 <br>
+인문사회학부							인문사 <br>
+공과대학							공과대 <br>
+인문대학 							인문대 <br>
+</pre>
+
+12 rows selected.<br>
+	                     </td> 
+              </tr> 
+           </tbody> 
+		      <tbody>
+              <tr>
+                <td>
+		Student 테이블을 참조해서 아래 하면과 같이 1전공이 (deptno1 컬럼)201번인 학생의 이름과 전화번호와 지역번호를 출력하세요.  <br>
+단, 지역번호는 숫자만 나와야 합니다. <br>
+<br>
+SELECT name,tel,SUBSTR (tel,1,INSTR(TEL, ')' )-1 ) <br>
+FROM student <br>
+WHERE deptno1 =201 <br>
+/
+	                     </td> 
+		       <td></td> 
+              </tr> 
+           </tbody> 
+	<tbody>
+              <tr>
+                <td>
+		      SELECT MOD(-121,10) "MOD", <br>
+CEIL(-123.45) "CEIL", <br>
+FLOOR(-123.45) "FLOOR" <br>
+FROM dual <br>
+/<br>
+		      </td> 
+		       <td>
+			       <pre>
+		      	SQL> / 
+
+       MOD       CEIL      FLOOR 
+---------- ---------- ---------- 
+        -1       -123       -124
+	</pre>
+		      </td> 
+              </tr> 
+           </tbody> 
+		      <tbody>
+              <tr>
+                <td>
+			<pre>
+	SELECT MOD(121,10) "MOD", 
+CEIL(123.45) "CEIL", 
+FLOOR(123.45) "FLOOR" 
+FROM dual 
+/
+</pre>
+	                     </td> 
+		       <td>
+		       <pre>
+		       SQL> / 
+
+       MOD       CEIL      FLOOR 
+---------- ---------- ---------- 
+         1        124        123
+		       </pre>
+		       </td> 
+              </tr> 
+           </tbody> 
+		      
+ </table><br />
+        
+        MOD 나머지 값을 구하는 함수<br>
+CEIL 주어진 숫자가 가장 가까운 큰 정수<br>
+FLOOR 자강 가까운 작은 정수를 구하는것<br>
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

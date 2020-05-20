@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>복수형 함수 ,숙제</title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+  
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+<style>
+table {
+    width: 100%;
+    border: 1px solid #444444;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #444444;
+  }
+</style>
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <div id="sider"></div>
+
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+
+
+        <div class="main-title">
+          <h1>복수형 함수 ,숙제</h1>
+          <h2>데이터 베이스</h2>
+          <p class="main-title-time">작성일 : 2018-09-20</p>
+        </div>
+        <hr>
+ <!--  본문 시작-->
+<table>
+   <tbody> 
+         <tr>
+                   <td><pre>
+복수형 함수란 -입력이 여러개.
+단수형 함수란 -입력이 하나
+
+사원수는 12명이고 수당을 받는 수는 4명이라는 뜻 입니다. 
+SELECT count(*) , count(comm) 
+from emp 
+
+우리 회사의 총 수당은 얼마인가.? 
+SELECT count(comm) , sum(comm) 
+from emp 
+
+AVG는 Round와 함깨 사용합니다. 
+평균의 평균은 평균이 아닙니다.
+
+STDDEV -표준편차
+VARIANCE -분산.
+	                </pre></td> 
+              </tr> 
+           </tbody>
+     <tbody> 
+         <tr>
+                   <td><pre>
+숙제
+부서명 임건비합, 평균임건비.
+임건비 sal +comm
+평균임건비가 가장 높은 순서대로 정렬.
+	                </pre></td> 
+              </tr> 
+           </tbody> 
+       <tbody> 
+         <tr>
+                   <td><pre>
+숙제
+부서명 임건비합, 평균임건비.
+임건비 sal +comm
+평균임건비가 가장 높은 순서대로 정렬. [대부분 소수점 2째 자리가지함 (미국은 센트라 2째자리까지 나옴.)]
+select dname, sum(sal+nvl(comm,0)) 합  ,Round(avg(sal+NVL(comm,0)),1) 평균  
+from emp natural join dept
+group by dname
+order by 평균 desc
+/
+
+DNAME                                합       평균
+---------------------------- ---------- ----------
+ACCOUNTING                         8750     2916.7
+RESEARCH                          10875       2175
+SALES                             11600     1933.3
+
+	                </pre></td> 
+              </tr> 
+           </tbody> 
+		      
+ </table><br />       
+        
+<!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>

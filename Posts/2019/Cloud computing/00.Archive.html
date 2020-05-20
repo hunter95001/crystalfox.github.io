@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Archive</title>
+  <link rel="stylesheet" type="text/css" href="../../../CSS/Style.css">
+    <link rel="stylesheet" type="text/css" href="../../../CSS/Article.css">
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("../../../include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("../../../include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="sider"></div><!-- include sider-->
+    <div class="main-post" style="display:block;">
+      <div class="main-post" style="display:block;">
+        <div id="article">
+          <h1> <img class="article-image" src="../../../Image/Archive-icon.png?raw=true"> Archive</h1>
+          
+           <!--  본문 시작-->
+          <ul class="posts">
+            <li>
+              <span>
+                <a class="article-list" href="../../..//Posts/2019/Cloud computing/01.의학통계학.html"><img src="../../../Image/post-icon.png?raw=true">
+                  01.의학 통계학</a>
+                <time class="post-time" datetime="2019-06-06">June 06, 2019</time>
+              </span>
+            </li>
+            <li>
+              <span>
+                <a class="article-list" href="../../../Posts/2019/Cloud computing/02.시험공부.html"><img src="../../../Image/post-icon.png?raw=true">
+                  02.시험 공부</a>
+                <time class="post-time" datetime="2019-06-06">May 02, 2019</time>
+              </span>
+            </li>
+          </ul>
+          <!--  본문 끝-->
+          
+        </div><!-- article-->
+      </div><!-- main-post-->
+    </div><!-- main-post-->
+  </div><!-- wrapper Div-->
+  <div id="footers"></div><!-- include footers-->
+</body>
+
+</html>

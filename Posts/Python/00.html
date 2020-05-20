@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>아나콘다에서 텐서플로우 GPU, 케라스, 파이토치 설치</title>
+  <link rel="stylesheet" type="text/css" href="../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../CSS/Post.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="sider"></div>
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+        <div class="main-title">
+          <h1>윈도우 텐서플로우[아나콘다] GPU 설치</h1>
+          <h2>Python</h2>
+          <p class="main-title-time">작성일 : 2019-09-15</p>
+        </div>
+        <hr>
+        <!--  본문 시작-->
+        <p class="posts">맥에서는 GPU가 돌아가지 않는 관계로 Lab실에 있는 윈도우 환경으로 설치해볼려고합니다.<br>
+        인공지능 개발하는 장소이다 보니 컴퓨터가 왠만한 PC방 급이네요 ㄷㄷ;;</p>
+        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Python/00/00.png?raw=true" width="1400"><br>
+         <p class="posts"> 왼쪽 - 컴퓨터- 속성 
+           &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        오른쪽 - 실행- dxdiag </p>
+     
+  
+        <h3 class="posts">GPU 를 사용하기 위해서는 아래와 같은 환경이 구축되어야 합니다.</h3>
+	      <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/Python/00/01.png?raw=true" width="1400">
+	      <p class="posts">설치할 TensorFlow와 CUDA의 버전을 알아야되기 때문에 위의 표를 보고 확인해주세요!</p>
+        <p class="posts">
+          -CUDA 지원 GPU 카드<br>
+          <br>
+          -NVIDIA GPU 드라이버 384.x 이상 (for CUDA 9.0)<br>
+          <br>
+          -CUDA Toolkit (현재 CUDA 9.0 지원)<br>
+          <br>
+          -cuDNN SDK (7.2 이상)<br>
+        </p>
+        <br>
+        <h3 class="posts">설치 순서는 다음과 같습니다</h3>
+	      <p class="posts">Python은 Anaconda 설치시 설치되기 때문에 설치하지 않습니다!<br>
+	      *충돌이 일어날 가능성이 있습니다.</p>
+          <a class="posts" href="
+                                 https://hunter95001.github.io/crystalfox.github.io/Posts/Python/01.html
+  " target="_blank">
+           <img class="link"src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/link-icon.png?raw=true">
+           1.CUDA 설치
+	   </a><br>
+	      
+        <a class="posts" href="
+                                 https://hunter95001.github.io/crystalfox.github.io/Posts/Python/02.html
+  " target="_blank">
+           <img class="link"src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/link-icon.png?raw=true">
+           2.cuDNN 설치
+	   </a><br>
+	      
+        <a class="posts" href="
+                                 https://hunter95001.github.io/crystalfox.github.io/Posts/Python/03.html
+  " target="_blank">
+           <img class="link"src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/link-icon.png?raw=true">
+           3.Anaconda 설치
+	   </a><br>
+	      
+	      
+          
+        <!--  본문 끝-->
+      </div>
+      <!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+
+  <div id="footers"></div>
+
+</body>
+
+</html>
