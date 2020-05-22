@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title> Github Pull [하위폴더] </title>
+  <title> Github Pull,clone [하위폴더] </title>
   <link rel="stylesheet" type="text/css" href="../../CSS/Style.css">
   <link rel="stylesheet" type="text/css" href="../../CSS/Post.css">
    <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
@@ -11,8 +11,8 @@
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
-      $("#sider").load("https://hunter95001.github.io/crystalfox.github.io/include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
-      $("#footers").load("https://hunter95001.github.io/crystalfox.github.io/include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+      $("#sider").load("../../include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("../../include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
     });
   </script>
 
@@ -36,68 +36,65 @@
           <p class="main-title-time">작성일 : 2019-07-12</p>
         </div>
         <hr>
- <!--  본문 시작-->
- <h3> 명령어 모음 [이것만 그대로 복붙 하면 끝.]</h3>
- 
-git init crystalfox.github.io<br>
-cd crystalfox.github.io<br>
-git config core.sparseCheckout true<br>
-git remote add -f origin https://github.com/hunter95001/crystalfox.github.io<br>
-echo "Posts/" >> git/info/sparse-checkout<br>
-git pull origin master<br>
- <br><br>
- 
-     
+            <!--  본문 시작-->
+            <h3> 명령어 모음 [이것만 그대로 복붙 하면 끝.]</h3>
+            <img src="../../Image/GitHub/04/000.JPG?raw=true"><br>
+            git Clone "주소"<br>
+            git clone https://github.com/hunter95001/crystalfox.github.io<br>
+            git Clone이란 주소에 있는 github 저장소에 있는 내용을 가지고오는 것을 이야기합니다. <br>
+            <br>
         
- git init crystalfox.github.io <br>
- cd crystalfox.github.io<br>
- <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/04/00.jpg?raw=true"><br>
- init "폴더명"하면 폴더명으로 폴더가 새로 생기게 됩니다.<br>
- <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/04/01.jpg?raw=true"><br>
-git config core.sparseCheckout true<br>
-<img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/04/02.jpg?raw=true"><br>
-git remote add -f origin https://github.com/hunter95001/crystalfox.github.io<br>
-  <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/04/03.jpg?raw=true"><br>
-echo "Posts/" >> git/info/sparse-checkout<br>
-<img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/04/04.jpg?raw=true"><br>
-git pull origin master<br>
-<img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/04/05.jpg?raw=true"><br><br>
+            git init crystalfox.github.io<br>
+            cd crystalfox.github.io<br>
+            git config core.sparseCheckout true<br>
+            git remote add -f origin https://github.com/hunter95001/crystalfox.github.io<br>            
+            echo "Posts/" >> git/info/sparse-checkout<br>
+            git pull origin master<br>
+            <br><br>
+ 
+            git init crystalfox.github.io <br>
+            cd crystalfox.github.io<br>
+            <img src="../../Image/GitHub/04/00.jpg?raw=true"><br>
+            init "폴더명"하면 폴더명으로 폴더가 새로 생기게 됩니다.<br>
+            <img src="../../Image/GitHub/04/01.jpg?raw=true"><br>
+            git config core.sparseCheckout true<br>
+            <img src="../../Image/GitHub/04/02.jpg?raw=true"><br>
+            git remote add -f origin https://github.com/hunter95001/crystalfox.github.io<br>
+            <img src="../../Image/GitHub/04/03.jpg?raw=true"><br>
+            echo "Posts/" >> git/info/sparse-checkout<br>
+            <img src="../../Image/GitHub/04/04.jpg?raw=true"><br>
+            git pull origin master<br>
+            <img src="../../Image/GitHub/04/05.jpg?raw=true"><br><br>
         
-        <h3> 원격 저장소 지우는법</h3>     
-        git remote -v [현재 remote 확인]<br>
-        git remote remove origin [origin 제거] <br>
-        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/04/06.jpg?raw=true"><br><br>
+            <h3> 원격 저장소 지우는법</h3>     
+            git remote -v [현재 remote 확인]<br>
+            git remote remove origin [origin 제거] <br>
+            <img src="../../Image/GitHub/04/06.jpg?raw=true"><br><br>
 
-   <h3> 구조</h3>
-        CSS/ <br>
-        &emsp;&emsp;&emsp; Article.css<br>
-        &emsp;&emsp;&emsp; Posts.css<br>
-        &emsp;&emsp;&emsp; Python.css<br>
-        &emsp;&emsp;&emsp; Style.css<br>
-        Posts/<br>
-        &emsp;&emsp;&emsp; 2018<br>
-        &emsp;&emsp;&emsp; 2020<br>
-        &emsp;&emsp;&emsp; A.I<br>
-        &emsp;&emsp;&emsp; Notice<br>
-        &emsp;&emsp;&emsp; Python<br>
-        &emsp;&emsp;&emsp;  일본어<br>
-        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/04/07.jpg?raw=true"><br>
-        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/04/08.jpg?raw=true"><br>
-        <hr><br>        
-        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/04/09.jpg?raw=true"><br>
-        <img src="https://github.com/hunter95001/crystalfox.github.io/blob/master/Image/GitHub/04/10.jpg?raw=true"><br>
-  
- 
-  
-<!-- 본문 끝-->
+            <h3> 구조</h3>
+            CSS/ <br>
+            &emsp;&emsp;&emsp; Article.css<br>
+            &emsp;&emsp;&emsp; Posts.css<br>
+            &emsp;&emsp;&emsp; Python.css<br>
+            &emsp;&emsp;&emsp; Style.css<br>
+            Posts/<br>
+            &emsp;&emsp;&emsp; 2018<br>
+            &emsp;&emsp;&emsp; 2020<br>
+            &emsp;&emsp;&emsp; A.I<br>
+            &emsp;&emsp;&emsp; Notice<br>
+            &emsp;&emsp;&emsp; Python<br>
+            &emsp;&emsp;&emsp;  일본어<br>
+            <img src="../../Image/GitHub/04/07.jpg?raw=true"><br>
+            <img src="../../Image/GitHub/04/08.jpg?raw=true"><br>
+            <hr><br>        
+            <img src="../../Image/GitHub/04/09.jpg?raw=true"><br>
+            <img src="../../Image/GitHub/04/10.jpg?raw=true"><br>
+            <!-- 본문 끝-->
+
       </div><!--main-post-->
     </div><!-- main-wrapper 본문 끝-->
   </div><!-- wrapper-->
   
-  
-  
-  
-
   <div id="footers"></div>
 
 </body>
