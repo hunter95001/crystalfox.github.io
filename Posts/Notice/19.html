@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>TTF(Text To Face) </title>
+  <link rel="stylesheet" type="text/css" href="../../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../../CSS/Post.css">
+  <link rel="shortcut icon" href="../../Image/favicon.ico">
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("../../include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("../../include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="sider"></div>
+    <div id="main-wrapper">
+      <div style="maring:30px"><font size="5" color="#f0f0f0">Div 영역입니다.</font></div>
+      <div class="main-post">
+        <div class="main-title">
+          <h1>TTF(Text To Face) </h1>
+          <h2>Notice</h2>
+          <p class="main-title-time">작성일 : 2020-07-29</p>
+        </div>
+        <hr>
+        <!--  본문 시작-->
+        <p class="posts">
+        Text To Face 입니다<br>
+        얼굴을 묘사한 텍스를 입력받아 얼굴 이미지를 생성하는 신경망이라고 하네요<br>
+        pdf:<a class="posts" href="https://arxiv.org/pdf/2006.07606.pdf" target="_blank"><img class="link" src="../../../Image/link-icon.png?raw=true">https://arxiv.org/pdf/2006.07606.pdf </a>
+        </p>
+        <!-- 출처 -->
+        <h2 class="posts"> 출처 <h2>
+            <a class="posts" href="https://www.facebook.com/permalink.php?story_fbid=1827204407419663&id=100003903638122&substory_index=3" target="_blank">
+              <img class="link" src="../../../Image/link-icon.png?raw=true">
+              TFKR
+            </a>
+        <!-- 출처 끝 -->
+        
+        <!-- 본문 끝-->
+      </div><!--main-post-->
+    </div><!-- main-wrapper 본문 끝-->
+  </div><!-- wrapper-->
+  
+  <div id="footers"></div>
+  
+</body>
+
+</html>
