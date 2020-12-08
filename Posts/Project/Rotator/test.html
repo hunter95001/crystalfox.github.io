@@ -34,15 +34,10 @@ function panTo(lat, lng) {
  }
     
 function mark2(lat, lng) {  // "송파구 가락동 10-1", "동남로 12길" 형태.
-var geocoder = new kakao.maps.services.Geocoder();
-geocoder.addressSearch(address, function(result, status)
-{
-     if (status === kakao.maps.services.Status.OK) {
         var coords = new kakao.maps.LatLng(lat, lng);
         var marker = new kakao.maps.Marker({ map: map, position: coords });
         map.setCenter(coords);
-    }
-});
+  
   }
     
 
