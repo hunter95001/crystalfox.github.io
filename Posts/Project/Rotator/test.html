@@ -6,7 +6,7 @@ html, body { width: 99%; height: 98%; }
 <html>
 <head>
     <meta charset="utf-8">
-    <title>지도 생성하기</title>
+    <title>지도 생성하기1</title>
 </head>
 <body>
 <div id="map" style="width:800Ppx; height:600px; "></div>
@@ -45,17 +45,7 @@ geocoder.addressSearch(address, function(result, status)
 });
   }
     
-function zoomIn()
-{
-var level = map.getLevel();
-map.setLevel(level-1);
-}
 
-function zoomOut()
-{
-var level = map.getLevel();
-map.setLevel(level+1);
-}
 
 function geo(address) {  // "송파구 가락동 10-1", "동남로 12길" 형태.
 var geocoder = new kakao.maps.services.Geocoder();
