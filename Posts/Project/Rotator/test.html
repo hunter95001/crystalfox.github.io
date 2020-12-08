@@ -24,6 +24,14 @@ function panTo(lat, lng) {
     var loc = new kakao.maps.LatLng(lat, lng);
     map.panTo(loc);
 }
+    
+    function mark(lat, lng){
+    var markerPosition  = new kakao.maps.LatLng(lat, lng); 
+    var marker = new kakao.maps.Marker({
+    position: markerPosition
+});
+    marker.setMap(map);
+ }
 
 function zoomIn()
 {
