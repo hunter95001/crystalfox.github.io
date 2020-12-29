@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Profile</title>
+  <link rel="stylesheet" type="text/css" href="../CSS/Style.css">
+  <link rel="stylesheet" type="text/css" href="../CSS/Attach.css">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/hunter95001/crystalfox.github.io/master/Image/favicon.ico">
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#sider").load("../include/sider.html"); // 원하는 파일 경로를 삽입하면 된다
+      $("#footers").load("../include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
+  <style>
+  .main-post {
+  margin-left: 15px;
+  margin-right: -30px;
+  margin-top: 10px;
+  width: 1510px;  
+  background: white;
+  }
+  a.posts{
+  color:#FFB2F5;
+  font-size :24px;
+  }
+  a:hover {
+  color:#636363;
+  }
+  .link{
+  width:25px; 
+  height:25px;
+  }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="sider"></div>
+    <div id="main-wrapper">
+      <div style="maring:30px">
+        <font size="5" color="#f0f0f0">Div 영역입니다.</font>
+      </div>
+      <div class="main-post">
+      <!--  본문 시작-->
+        <!-- I used "deep fakes" to fix the Lion King -->
+        <iframe width="1024" height="450" src="https://www.youtube.com/embed/Y1HGgICqZ3c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+        <a class="posts" href="https://hunter95001.github.io/crystalfox.github.io/Posts/NEWS/A.I/02.html" target="_blank"><img class="link"src="../../Image/link-icon.png?raw=true">CG 영화 라이언킹을 딥페이크 기술로 애니와 은 영상</a><br>
+        <br>
+        <!-- U-GAT-IT -->
+        <iframe width="1024" height="450" src="https://www.youtube.com/embed/MOMashl-W7M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br> 
+        <a class="posts" href="https://hunter95001.github.io/crystalfox.github.io/Posts/Notice/20.html" target="_blank"><img class="link"src="../../Image/link-icon.png?raw=true">사람을 2D 캐릭터로 [UGATIT]</a><br>
+        <br>
+        <!-- GauGAN -->
+        <iframe width="1024" height="450" src="https://www.youtube.com/embed/NKFrg9HMYaY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+        <a class="posts" href="https://hunter95001.github.io/crystalfox.github.io/Posts/NEWS/A.I/31.html" target="_blank"><img class="link"src="../../Image/link-icon.png?raw=true">스케치를 그림으로 [GauGAN]</a><br>
+        <br>
+        <!-- Saya Project -->
+        <iframe width="1024" height="450" src="https://www.youtube.com/embed/7varuEDr9mQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+        <a class="posts" href="https://hunter95001.github.io/crystalfox.github.io/Posts/NEWS/A.I/58.html" target="_blank"><img class="link"src="../../Image/link-icon.png?raw=true">Virtual Human Project Saya </a><br>
+        <br>
+        
+      </div><!-- main-wrapper 본문 끝-->
+    </div><!-- wrapper-->
+    <div id="footers"></div>
+</body>
+
+</html>
