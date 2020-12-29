@@ -4,6 +4,7 @@
     <title>Profile</title>
     <style>
         p.typing-txt{
+  font-weight:600;
   position:relative;
   display: inline-block;
   height: 20px; overflow: hidden;
@@ -16,7 +17,8 @@ p.typing-txt::after{
   width: 20px; 
   height: 13px;
   top : 3px;
-  right:0; 
+  bottom : 40px;
+  right:0;
   border-right: 1px solid #000;
   animation: cursor 0.1s step-end infinite;
 }
@@ -36,7 +38,15 @@ p.typing-txt::after{
     }, 1000)
     </script>
 </head>
+
+<body>
+<div>
 이곳에 <p class="typing-txt">타이핑될 텍스트 입니다.</p> 
+</div>
+<div>
+안녕하세요
+</div>
 
 </body>
+
 </html>
