@@ -60,6 +60,8 @@
   주소
   "target="_blank"><div  class ="attachment"><img  class="icon" align="left"  src="../../../Image/Folder.png?raw=true" > 
 		<font class="attach-text">
+			
+<a class="posts" href="https://hunter95001.github.io/crystalfox.github.io/Posts/NEWS/A.I/02.html" target="_blank"><img class="link"src="../../Image/link-icon.png?raw=true">CG 영화 라이언킹을 딥페이크 기술로 애니와 은 영상</a><br>
 	
 </font><img class="icon" align="right"src="../../../Image/File.png?raw=true" ></div></a>      
 	    
