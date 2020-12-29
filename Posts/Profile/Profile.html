@@ -18,7 +18,7 @@ p.typing-txt::after{
   top : 3px;
   right:0; 
   border-right: 1px solid #000;
-  animation: cursor 0.5s step-end infinite;
+  animation: cursor 0.51s step-end infinite;
 }
 @keyframes typingAni {
   0%{width:0%}
@@ -26,15 +26,17 @@ p.typing-txt::after{
 }
 @keyframes cursor{
   0%{opacity:0;}
-  50%{opacity:1;}
+  50%{opacity:0;}
   100%{opacity:0;}
 }
     </style>
     <script type="text/javascript">
-     
+     var timer1 = setInterval(function(){
+        console.log("Hello");
+    }, 1000)
     </script>
 </head>
-<p class="typing-txt">타이핑될 텍스트 입니다.</p> 
+이곳에 <p class="typing-txt">타이핑될 텍스트 입니다.</p> 
 
 </body>
 </html>
