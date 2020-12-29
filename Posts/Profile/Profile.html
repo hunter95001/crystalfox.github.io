@@ -2,24 +2,39 @@
 <html>
 <head>
     <title>Profile</title>
+    <style>
+        p.typing-txt{
+  position:relative;
+  display: inline-block;
+  height: 15px; overflow: hidden;
+  animation: typingAni 4s steps(30, end) 1;
+}
+p.typing-txt::after{
+  position:absolute; 
+  display:block;
+  content:""; 
+  width: 20px; 
+  height: 13px;
+  top : 3px;
+  right:0; 
+  border-right: 1px solid #000;
+  animation: cursor 0.5s step-end infinite;
+}
+@keyframes typingAni {
+  0%{width:0%}
+  100%{width: 150px};
+}
+@keyframes cursor{
+  0%{opacity:0;}
+  50%{opacity:1;}
+  100%{opacity:0;}
+}
+    </style>
     <script type="text/javascript">
-        var imgArray = new Array();
-        textArray[0] = "hi";
-        textArray[1] = "hello";
-        textArray[2] = "안녕";
-    
-        function showImage() {
-            var imgNum = Math.round(Math.random() * 3);
-            var objImg = document.getElementById("introImg");
-            objImg.src = textArray[imgNum];
- 
-            setTimeout("showImage()", 200);
-        }
- 
-        
+     
     </script>
 </head>
-<body onload="showImage()">
-        <img id="introImg" border="0">
+<p class="typing-txt">타이핑될 텍스트 입니다.</p> 
+    안녕
 </body>
 </html>
