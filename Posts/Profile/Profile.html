@@ -4,14 +4,14 @@
     <title>Profile</title>
     <script type="text/javascript">
         var imgArray = new Array();
-        imgArray[0] = "http://madalla.kr/script/img/a1.jpg";
-        imgArray[1] = "http://madalla.kr/script/img/a2.jpg";
-        imgArray[2] = "http://madalla.kr/script/img/a3.jpg";
-
+        textArray[0] = "hi";
+        textArray[1] = "hello";
+        textArray[2] = "안녕";
+    
         function showImage() {
             var imgNum = Math.round(Math.random() * 3);
             var objImg = document.getElementById("introImg");
-            objImg.src = imgArray[imgNum];
+            objImg.src = textArray[imgNum];
  
             setTimeout("showImage()", 200);
         }
