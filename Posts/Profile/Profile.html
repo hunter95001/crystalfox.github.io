@@ -2,67 +2,70 @@
 <html>
 <head>
     <title>Profile</title>
-    <script src="http://jquerymobile.com/demos/1.2.0/docs/pages/page-transitions.html"></script>
-    <style>
-        p.typing-txt{
-  color:#FFFFFF;
-  font-weight:600;
-  position:relative;
-  display: inline-block;
-  height: 20px; overflow: hidden;
-  animation: typingAni 3s steps(30, end) 1;
-  
+   /* keyframes 정의 */
+@keyframes circleLeft {
+  0%{
+    transform: translateX(-20px);
+  }
+  50%{
+    transform: translateX(20px);
+  }
+  100%{
+    transform: translateX(-20px);
+  }
 }
-p.typing-txt::after{
-  position:absolute; 
-  display:block;
-  content:""; 
-  width: 20px; 
-  height: 13px;
-  top : 3px;
-  bottom : 40px;
-  right:0;
-  border-right: 1px solid #000;
-  animation: cursor 0.1s step-end infinite;
+@keyframes circleRight {
+  0%{
+    transform: translateX(20px);
+  }
+  50%{
+    transform: translateX(-20px);
+  }
+  100%{
+    transform: translateX(20px);
+  }
 }
-#wrap{
-    width:100%;
-    height:100%;
-   
-    position:relative;
-    width:1550px;
-    height:1550px;
-    position:absolute;
-  
-} 
-
-@keyframes typingAni {
-  0%{width:0%}
-  100%{width: 150px};
+.loader-moving{
+  position: fixed;
+  width:100%;
+  height: 100%;
+  left:0;
+  top:0;
+  background: #fff;
+  z-index:100;
+  transition:all 1s;
 }
-@keyframes cursor{
-  0%{opacity:0;}
-  50%{opacity:0;}
-  100%{opacity:0;}
+.loader-moving > span{
+  position: absolute;
+  top:50%;
+  left:50%;
+  width:20px;
+  height:20px;
+  border-radius: 100%;
+  margin:-10px 0 0;
 }
-    </style>
-    <script type="text/javascript">
-     var timer1 = setInterval(function(){
-        console.log("Hello");
-    }, 1000)
-    </script>
+.loader-moving > span.left{
+  background: olive;
+  transform: translateX(-30px);
+  animation:circleLeft 1s cubic-bezier(.645,.045,.355,1) infinite;
+}
+.loader-moving > span.right{
+  background: crimson;
+  transform: translateX(30px);
+  animation:circleRight 1s cubic-bezier(.645,.045,.355,1) infinite;
+}
+.loader-moving.end{
+  opacity: 0;
+  z-index:-1;
+}
 </head>
 
 <body>
-<div id="wrap">
-이곳에 <p class="typing-txt">타이핑될 텍스트 입니다.</p> 
+<div class="loader-moving">
+  <span class="left"></span>
+  <span class="right"></span>
+</div>
 
-</div>
-<a href="https://www.youtube.com/watch?v=hVStqBhvXyY&list=LL&index=137",data-transition="fade">이동!!</a>
-    <a href="https://www.youtube.com/watch?v=hVStqBhvXyY&list=LL&index=137" data-transition="fade">이동212</a>
-<div>
-안녕하세요
-</div>
 
 </body>
 
