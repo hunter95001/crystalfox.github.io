@@ -15,7 +15,16 @@
             display: inline-block; /*한줄로 표기*/
             overflow: hidden;
             word-spacing: 20px;
-            animation: typing 3s steps(30, end) 3;
+            /*animation: typing 3s steps(30, end) 3;*/
+            animation-name: typing;  /*애니메이션 이름*/
+            animation-duration: 3s; /*몇초동안 반복한건지*/
+    animation-iteration-count: infinite; /*몇번 반복할건지*/
+    animation-direction: reverse;
+    animation-timing-function: linear;
+    animation-fill-mode: none;
+    animation-delay: 5s;
+	animation-fill-mode:forwards;
+            
         }
         @keyframes typing {
             0%{width:0%}
