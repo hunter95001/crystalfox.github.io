@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Title</title>
+  <title>타이틀</title>
   <link rel="stylesheet" type="text/css" href="CSS/Style.css">
   <link rel="shortcut icon" href="Image/favicon.ico">
   <style type="text/css">
@@ -15,12 +15,13 @@
       margin-top: -50px;
       z-index: -4;
       background-image:url("Image/showcase.jpg");
+      background-repeat:no-repeat;
+      background-size:cover;
+      position:relative;
+      position:absolute;
     }
 
-    .main-backgroundimage {
-      width: 100%;
-      height: 100%;
-    }
+ 
 
     .main-text {
       position: absolute;
@@ -28,11 +29,11 @@
       font-family: "Helvetica Neue", helvetica, "Open Sans", sans-serif;
       font-weight: 900;
       color: #FAED7D;
-      top: 20%;
-      left: 35%;
+      margin-top: 20%;
+      margin-left: 35%;
       letter-spacing: 1%px;
       /*글자간의 간격*/
-      word-spacing: 7%;
+      word-spacing: 10%;
       /*단어간의 간격*/
     }
 
@@ -43,8 +44,8 @@
       font-family: "Helvetica Neue", helvetica, "Open Sans", sans-serif;
       font-weight: bolder;
       color: #fff;
-      top: 50%;
-      left: 25%;
+      margin-top: 50%;
+      margin-left: 25%;
       letter-spacing: 1%; /*7*/
       /*글자간의 간격*/
       word-spacing: 3%; /*48*/
@@ -124,10 +125,8 @@
     <div class="container" style="display: block;"></div>
     
     <div class="main-wrapper" stlye="display:block;">
-      <div class="main-image"> <img class="main-backgroundimage" src="Image/showcase.jpg?raw=true">
         <div class="main-text"> <p>A W A K E N<p> </div>
         <div class="main-text2"> <p>Experience   is   the   best   teacher<p></div>
-      </div>
     </div>
 
     <div class="container" style="display: block;"> </div>
