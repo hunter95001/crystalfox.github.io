@@ -25,9 +25,12 @@
             overflow-x: scroll;
             white-space:nowrap
         }
-        
-        
     </style>
+     <script type="text/javascript">
+    $(document).ready(function() {
+      $("#footers").load("include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>
 </head>
 
 <body>
@@ -105,9 +108,7 @@
                 <img style="padding:2%; width:30%; height:80%;" src="certificate4.JPG"> 
             </div>
       
-            <div style="background: black;">
-            <p style="color:white;"> © 2019 <a href="/crystalfox.github.io/">KONG</a>. 2019-03-01 </p>
-            </div>
+              <div id="footers"></div>
         </div>
     </div>
     
