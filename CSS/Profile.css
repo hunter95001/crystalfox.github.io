@@ -1,5 +1,4 @@
- /*타이핑 효과 텍스트*/
-        font.typing-txt{
+        font.typing-txt{    /*타이핑 효과 텍스트*/
             top: 20px;
             position:relative;
             font-family: "Helvetica Neue", helvetica, "Open Sans", sans-serif;
@@ -8,14 +7,14 @@
             overflow: hidden;
             animation-name: typing;  /*애니메이션 이름*/
             animation-duration: 3s; /*몇초동안 반복한건지*/
-    	    animation-iteration-count: infinite; /*몇번 반복할건지*/
-    	    animation-timing-function: steps(30,end); /*애니메이션 속도(가속/감속 시간간격등 설정)*/
+            animation-iteration-count: infinite; /*몇번 반복할건지*/
+            animation-timing-function: steps(30,end); /*애니메이션 속도(가속/감속 시간간격등 설정)*/
         }
-        @keyframes typing {
+        @keyframes typing { /*애니메이션 */
             0%{width:0%}
             100%{width: 380px};
         }
-      
+
         p.iam{
         margin-top:13%;
         margin-left:30%;
@@ -128,3 +127,14 @@
             background-color:black;
             position:absolute;
          }
+        div.post4-in2{
+            margin-left: 5%;
+            overflow-y:hidden; 
+            width:90%; 
+            height:70%;
+            overflow-x: scroll;
+            white-space:nowrap
+        }
+        #footers {
+            padding :3%;
+        }
