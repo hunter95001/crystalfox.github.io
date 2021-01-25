@@ -4,10 +4,152 @@
 <head>
     <meta charset="utf-8">
     <title>profile</title>
-    <link rel="stylesheet" type="text/css" href="../../CSS/Profile.css">
+    <!--<link rel="stylesheet" type="text/css" href="../../CSS/Profile.css">-->
     <link rel="shortcut icon" href="../../Image/favicon.ico">
     <style>
-    .post4 img{
+     
+    font.typing-txt{    /*타이핑 효과 텍스트*/
+            top: 20px;
+            position:relative;
+            font-family: "Helvetica Neue", helvetica, "Open Sans", sans-serif;
+            font-weight:600;
+            display: inline-block; /*한줄로 표기*/
+            overflow: hidden;
+            animation-name: typing;  /*애니메이션 이름*/
+            animation-duration: 3s; /*몇초동안 반복한건지*/
+            animation-iteration-count: infinite; /*몇번 반복할건지*/
+            animation-timing-function: steps(30,end); /*애니메이션 속도(가속/감속 시간간격등 설정)*/
+        }
+        @keyframes typing { /*애니메이션 */
+            0%{width:0%}
+            100%{width: 380px};
+        }
+
+        p.iam{
+        margin-top:13%;
+        margin-left:30%;
+        position:relative;
+        color:#FFFFFF;
+        font-family: "Helvetica Neue", helvetica, "Open Sans", sans-serif;
+        font-size : 60px;
+        }
+        
+        /* Div 1번*/
+        #wrap{
+            width:100%;
+            height:400%;
+            position:absolute;
+            margin: -8px -8px 0px -8px;
+        }
+        div.post1{
+            width:100%;
+            height:25%;
+            background-image:url("../Posts/Profile/background.jpg");
+            background-repeat:no-repeat;
+            background-size:cover;
+            position:absolute;
+         }
+        /*banner*/
+        div.banner{
+            margin-left:5%;
+            margin-top: 5%;
+            width:95%;
+            text-align: center;
+        }
+        a.banner{
+            margin-right: 4%;
+            text-decoration:none;
+            color:#FFFFFF;
+            font-size : 36px;
+        }
+       /*Image*/
+        img.icon{
+            width: 25px;
+            height: 25px;
+        }
+        /*sns*/
+        div.sns{
+            margin-top: -3%;
+            width:100%;
+            text-align: center;
+        }
+        a.sns{
+            margin-right: 1%;
+            text-decoration:none;
+            color:#FFFFFF;
+            font-size : 24px;
+        }
+        /* Div 2번*/
+        div.post2{
+            top: 100%;
+            width:100%;
+            height:100%;
+            background-color:black;
+            position:absolute;
+         }
+        img.post2-image{
+            margin: 30px 0px 20px 20px;
+            width: 300px;
+            height 500px;
+        }
+        p.post2-txt{
+           color:#FFFFFF;
+           font-size : 18px;
+        }
+        div.post3{
+            top: 200%;
+            width:100%;
+            height:100%;
+            background-color:#212121;
+            position:absolute;
+         }
+        div.post3-in1{
+            margin-top: 2%; 
+            margin-botttom: 2%;  
+            float: left; 
+            width: 100%; 
+            text-align: center;
+        }
+        div.post3-in2{
+            padding: 30px 0px 20px 20px; 
+            float: left; 
+            width: 30%;"
+        }
+        .post3-txt{
+            font-weight:600; 
+            font-size:64px;
+            color:#FFFFFF; 
+            letter-spacing: 30px;
+        }
+        img.post3{
+            width: 400px;
+            height 800px;
+        }
+        font.post3{
+            font-weight:600; 
+            font-size:24px; 
+            color:#FFFFFF;
+        }
+        div.post4{
+            top: 300%;
+            width:100%;
+            height:100%;
+            background-color:black;
+            position:absolute;
+         }
+        div.post4-in2{
+            margin-left: 5%;
+            overflow-y:hidden; 
+            width:90%; 
+            height:70%;
+            overflow-x: scroll;
+            white-space:nowrap
+        }
+
+        #footers { /* © 2019 KONG · 2019-03-01 로고 스타일*/
+            padding :3%;
+        }
+        .post4 img{
         padding:2%;  
         width:30%; 
         height:80%;
@@ -22,7 +164,9 @@
         -moz-transition: .5s;
         -webkit-transition: .5s;
         transition: .5s
-    }
+    }       
+
+        
     </style>
     
 </head>
@@ -94,7 +238,7 @@
             <div class="post3-in1"> <font class="post3-txt">자격증 & 수료증</font></div>
             <div class="post4-in2">
                 
-                <img class=""style="padding:2%;  width:30%; height:80%" src="certificate5.JPG">
+                <img src="certificate5.JPG">
                 <img src="certificate4.JPG">
                 <img src="certificate3.jpg">
                 <img src="certificate2.jpg">
