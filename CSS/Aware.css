@@ -44,14 +44,13 @@
             width:50%;
             height:30%;
         }
-            div.pic{
+        div.pic{
             padding-left: 5%;
         }
         #footers { /* © 2019 KONG · 2019-03-01 로고 스타일 */
             padding-left:5%;
             padding-right:3%;
         }
-        
         #footers p {
             color: white;
         }
