@@ -1,11 +1,10 @@
 /*헤더 글자의 타입이랑 색상*/
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6{
   font-family: "Helvetica Neue", helvetica, "Open Sans", sans-serif;
   color: #D1B2FF
 }
-  /* 링크는 밑줄이 있어서 밑줄을 제거하는 역할을 했습니다.*/
-a {
-  text-decoration: none;
+a{
+  text-decoration: none; /* 링크는 밑줄이 있어서 밑줄을 제거하는 역할을 했습니다.*/
 }
 body{
 color:#2c3e50;
@@ -35,8 +34,7 @@ table {
   padding-left: 250px;
 }
 
-/*좌측  div
-자기  소개 및 링크*/
+/*좌측  div 자기  소개 및 링크*/
 #sidebar-wrapper {
   margin-left: -250px;
   margin-top: -4px;
@@ -99,14 +97,12 @@ table {
   height: 200px;
   margin-left: 40px;
 }
-
 .sidebar-nav>.img2 {
   vertical-align: text-bottom;
   width: 20px;
   height: 20px;
   margin-left: 10px;
 }
-
 .sidebar-nav>a h2 {
   margin-top: -16px;
   line-height: 10px;
@@ -115,7 +111,6 @@ table {
   font-weight: 100;
   color: #5d5f67
 }
-
 .sidebar-nav>h3 {
   line-height: 30px;
   text-indent: 40px;
@@ -123,21 +118,18 @@ table {
   font-weight: 100;
   color: #5d5f67
 }
-
 .sidebar-nav>p {
   margin-top: -16px;
   text-indent: 40px;
   font-size: 15px;
   color: #D1B2FF
 }
-
 .sidebar-nav>hr {
   margin-top: 10px;
   margin-bottom: 20px;
   border: 0;
   border-top: 1px solid #eee;
 }
-
 .sidebar-nav li {
   line-height: 30px;
   text-indent: 40px;
@@ -146,13 +138,11 @@ table {
   color: #9c9c9c;
   text-shadow: 1px 1px #fff;
 }
-
 .sidebar-nav li a {
   color: #999;
   display: block;
   text-decoration: none
 }
-
 .sidebar-nav li a:hover {
   color: #000;
   background: #fff;
@@ -160,6 +150,7 @@ table {
   transition: all .2s ease 0
 }
 
+/*카테고리*/
 .categori1-list{
   text-indent: 40px;
   font-weight: 300;
@@ -169,14 +160,12 @@ table {
   text-shadow: 1px 1px #fff;
   margin-bottom: -30px;
 }
-
 .categori-image{
   margin-left: -20px;
   width: 15px;
   height: 15px;
   margin-right: 5px;
 }
-
 .categori2-list{
   line-height: 30px;
   text-indent: 40px;
@@ -186,7 +175,6 @@ table {
   font-size: 1.1em;
   text-shadow: 1px 1px #fff;
 }
-
 .categori2-image{
   width: 15px;
   height: 15px;
@@ -202,20 +190,36 @@ table {
   font-size: 18px;
   text-shadow: 1px 1px #fff;
 }
-
 .categori3-image{
   width: 15px;
   height: 15px;
   margin-right: 5px;
 }
-
 .post-image{
   width: 15px;
   height: 15px;
   margin-right: 5px;
 }
+
 /*문구를 보여주기 위해서 사이드 만큼 뛰어줘야 합니다. © 2019 KONG · KONG 2019-03-01 */
 #footers {
-  padding-left: 20%;
+padding-left: 20%;
+}
+#footers p {
+  color: #5D5D5D;
+}
+#footers a{
+  text-decoration:none; /*a 태그 밑줄 표기 안함*/
+  color:#FFD9EC;
+  font-weight:600; 
+  font-size:20px;
+}    
+#footers a:hover {
+  color: #D1B2FF;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s
 }
 
