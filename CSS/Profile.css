@@ -138,3 +138,20 @@
         #footers { /* © 2019 KONG · 2019-03-01 로고 스타일*/
             padding :3%;
         }
+        #footers font {
+            color: white;
+        }
+        #footers a{
+            text-decoration:none; /*a 태그 밑줄 표기 안함*/
+            color:#FFD9EC;
+            font-weight:400; 
+            font-size:18px;
+        }    
+        #footers a:hover { /*a 태그에 커서를 가져가면 색이 */
+            color: #D1B2FF;
+            -o-transition: .5s;
+            -ms-transition: .5s;
+            -moz-transition: .5s;
+            -webkit-transition: .5s;
+            transition: .5s
+        } 
