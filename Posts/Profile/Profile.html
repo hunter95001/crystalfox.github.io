@@ -6,6 +6,13 @@
     <title>profile</title>
     <link rel="stylesheet" type="text/css" href="../../CSS/Profile.css">
     <link rel="shortcut icon" href="../../Image/favicon.ico">
+    
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $("#footers").load("../../include/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+    });
+  </script>	
 </head>
 
 <body>
@@ -84,6 +91,7 @@
                 <img src="completion1.jpg">
             </div><!--post3 -->    
             <div id="footers"> <font> © Copyright 2019. CrystalFox developer by <a href="/crystalfox.github.io">KONG</a>. 2019-03-01</font></div>
+            <div id="footers"></div>
         </div><!--post4 -->
            
     </div><!--wrap -->
