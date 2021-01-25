@@ -3,37 +3,11 @@
     
 <head>
     <meta charset="utf-8">
-    <title>profile1</title>
+    <title>profile2</title>
     <!--<link rel="stylesheet" type="text/css" href="../../CSS/Profile.css">-->
     <link rel="shortcut icon" href="../../Image/favicon.ico">
     <style>
      
-        .banner font{    /*타이핑 효과 텍스트*/
-            top: 20px;
-            position:relative;
-            font-family: "Helvetica Neue", helvetica, "Open Sans", sans-serif;
-            font-weight:600;
-            display: inline-block; /*한줄로 표기*/
-            overflow: hidden;
-            animation-name: typing;  /*애니메이션 이름*/
-            animation-duration: 3s; /*몇초동안 반복한건지*/
-            animation-iteration-count: infinite; /*몇번 반복할건지*/
-            animation-timing-function: steps(30,end); /*애니메이션 속도(가속/감속 시간간격등 설정)*/
-        }
-        @keyframes typing { /*애니메이션 */
-            0%{width:0%}
-            100%{width: 380px};
-        }
-
-        .banner  p{
-        margin-top:13%;
-        margin-left:30%;
-        position:relative;
-        color:#FFFFFF;
-        font-family: "Helvetica Neue", helvetica, "Open Sans", sans-serif;
-        font-size : 60px;
-        }
-        
         /* Div 1번*/
         #wrap{
             width:100%;
@@ -56,13 +30,36 @@
             width:95%;
             text-align: center;
         }
-        a.banner{
+        .banner  p{
+            margin-top:13%;
+            margin-left:30%;
+            position:relative;
+            color:#FFFFFF;
+            font-family: "Helvetica Neue", helvetica, "Open Sans", sans-serif;
+            font-size : 60px;
+        }
+        .banner a{
             margin-right: 4%;
             text-decoration:none;
             color:#FFFFFF;
             font-size : 36px;
         }
-       /*Image*/
+        .banner font{    /*타이핑 효과 텍스트*/
+            top: 20px;
+            position:relative;
+            font-family: "Helvetica Neue", helvetica, "Open Sans", sans-serif;
+            font-weight:600;
+            display: inline-block; /*한줄로 표기*/
+            overflow: hidden;
+            animation-name: typing;  /*애니메이션 이름*/
+            animation-duration: 3s; /*몇초동안 반복한건지*/
+            animation-iteration-count: infinite; /*몇번 반복할건지*/
+            animation-timing-function: steps(30,end); /*애니메이션 속도(가속/감속 시간간격등 설정)*/
+        }
+        @keyframes typing { /*애니메이션 */
+            0%{width:0%}
+            100%{width: 380px};
+        }
         img.icon{
             width: 25px;
             height: 25px;
