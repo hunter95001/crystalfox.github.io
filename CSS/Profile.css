@@ -76,7 +76,8 @@
             position:absolute;
          }
         .post2>txt-intro{
-            padding-top: 2%; 
+            padding-top: 2%;
+	    padding-righy: 1%; 
             float: left; 
             width: 66%; 
             height: 66%
